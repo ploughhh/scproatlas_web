@@ -1,0 +1,81 @@
+.mainCon {
+	margin-left: 3%;
+}
+
+.el-table {
+  font-size: 22px;
+  font-family: "'Montserrat', sans-serif";
+}
+.el-table .cell {
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-all;
+  line-height: 22px;
+  padding: 5px 12px;
+  text-align: center;
+}
+/* .el-table--border .el-table__cell:first-child .cell {
+  height: 30px;
+  padding-left: 10px;
+  text-align: center;
+  line-height: 30px;
+} */
+
+.demo-image .demonstration {
+  display: block;
+  color: var(--el-text-color-secondary);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.imageContainner {
+  width: 50%;
+  height: 50%;
+  margin-bottom: 3%;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+.el-form-item__label {
+  font-size: 20px;
+}
+
+body {
+  font-family:"'Montserrat', sans-serif";
+  font-size: 20px;
+}
+
+.el-form-item__label {
+    color: #000000;
+    font-size: 20px;
+}
+.el-input__inner {
+  font-size: 20px;
+}
+.el-button--text {
+  font-size: 18px;
+}
+.title {
+  background-color: #185ADB;
+  text-align: center;
+  color: white;
+  width: 1700;
+}
+.atac_ti {
+  background-color: #660033;
+  text-align: center;
+  color: white;
+  width: 1700;
+}
+/* .dTitle {
+  background-color: #333366;
+  text-align: center;
+  color: white;
+  width: 1700;
+} */
+/* .little_title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 25px;
+} */
