@@ -1,70 +1,216 @@
 <template>
-  <div>
-    <el-header>
-      <Menus />
-    </el-header>
-    <el-main>
-      <el-image
-        style="width: 50%; height: auto; margin-bottom: 20px"
-        src="/examples/endo_plas.png"
-        alt="endo_plas"
-      />
-      <el-image
-        style="width: 50%; height: auto; margin-bottom: 20px"
-        src="/examples/follicle.png"
-        alt="follicle"
-      />
-      <el-image
-        style="width: 50%; height: auto; margin-bottom: 20px"
-        src="/examples/innate.png"
-        alt="innate"
-      />
-      <el-image
-        style="width: 50%; height: auto; margin-bottom: 20px"
-        src="/examples/muscle.png"
-        alt="muscle"
-      />
-      <el-image
-        style="width: 50%; height: auto; margin-bottom: 20px"
-        src="/examples/seg_epi_nerve.png"
-        alt="epi_nerve"
-      />
-      <el-image
-        style="width: 50%; height: auto; margin-bottom: 20px"
-        src="/examples/seg_T.png"
-        alt="T"
-      />
-      <el-image
-        style="width: 100%; height: auto; margin-bottom: 20px"
-        src="/examples/reg001neighborhood_network.png"
-        alt="reg001neighborhood_network"
-      />
-    </el-main>
+  <div id="app">
+    <el-container>
+      <el-header>
+        <Menus />
+      </el-header>
+      <el-container>
+        <el-aside width="300px" class="aside-custom">
+          <el-menu
+            default-active="1"
+            class="el-menu-vertical-demo"
+            @open="handleOpen"
+            @close="handleClose"
+          >
+            <template v-for="(technology, index) in treeData" :key="index">
+              <el-sub-menu :index="String(index)">
+                <template #title>
+                  <span>{{ technology.label }}</span>
+                </template>
+                <template v-for="(dataset, dIndex) in technology.children" :key="dIndex">
+                  <el-sub-menu :index="`${index}-${dIndex}`">
+                    <template #title>
+                      <span>{{ dataset.label }}</span>
+                    </template>
+                    <template v-for="(tissue, tIndex) in dataset.children" :key="tIndex">
+                      <el-sub-menu :index="`${index}-${dIndex}-${tIndex}`">
+                        <template #title>
+                          <span>{{ tissue.label }}</span>
+                        </template>
+                        <template v-for="(region, rIndex) in tissue.children" :key="rIndex">
+                          <el-menu-item :index="`${index}-${dIndex}-${tIndex}-${rIndex}`" @click="handleNodeClick(region)">
+                            <span>{{ region.label }}</span>
+                          </el-menu-item>
+                        </template>
+                      </el-sub-menu>
+                    </template>
+                  </el-sub-menu>
+                </template>
+              </el-sub-menu>
+            </template>
+          </el-menu>
+        </el-aside>
+        <el-main>
+          <div v-if="selectedImagePaths.length">
+            <div v-for="(path, index) in selectedImagePaths" :key="index" class="image-container">
+              <img :src="path" class="image-style" @error="imageLoadError" />
+            </div>
+          </div>
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
 
 <script>
-import { ElHeader, ElMain, ElImage } from 'element-plus';
-import 'element-plus/dist/index.css';
-import Menus from '../layout/menu-item';
+import axios from 'axios';
+import Menus from '../layout/menu-item'; // 导入Menus组件
 
 export default {
-  name: 'NeighborhoodNet',
   components: {
-    ElHeader,
-    ElMain,
-    ElImage,
-    Menus,
+    Menus, // 注册Menus组件
+  },
+  data() {
+    return {
+      treeData: [],
+      selectedImagePaths: []
+    };
+  },
+  created() {
+    this.loadExcelData();
+  },
+  methods: {
+    async loadExcelData() {
+      try {
+        const response = await axios.get('/neighborhood_network/datasets.xlsx', { responseType: 'arraybuffer' });
+        const data = new Uint8Array(response.data);
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheet = workbook.Sheets[workbook.SheetNames[0]];
+        const jsonData = XLSX.utils.sheet_to_json(sheet);
+        this.treeData = this.buildTree(jsonData);
+      } catch (error) {
+        console.error('Error loading Excel data:', error);
+      }
+    },
+    buildTree(data) {
+      const tree = [];
+      const map = new Map();
+
+      data.forEach(row => {
+        const { Technology, Dataset, Tissue, Region } = row;
+        if (!map.has(Technology)) {
+          map.set(Technology, { label: Technology, children: new Map(), parent: null });
+          tree.push(map.get(Technology));
+        }
+        if (!map.get(Technology).children.has(Dataset)) {
+          const datasetNode = { label: Dataset, children: new Map(), parent: map.get(Technology) };
+          map.get(Technology).children.set(Dataset, datasetNode);
+        }
+        if (!map.get(Technology).children.get(Dataset).children.has(Tissue)) {
+          const tissueNode = { label: Tissue, children: [], parent: map.get(Technology).children.get(Dataset) };
+          map.get(Technology).children.get(Dataset).children.set(Tissue, tissueNode);
+        }
+        const regionNode = { label: Region, parent: map.get(Technology).children.get(Dataset).children.get(Tissue) };
+        map.get(Technology).children.get(Dataset).children.get(Tissue).children.push(regionNode);
+      });
+
+      const convertToArray = node => {
+        if (node.children instanceof Map) {
+          node.children = Array.from(node.children.values()).map(convertToArray);
+        }
+        return node;
+      };
+
+      return tree.map(convertToArray);
+    },
+    async handleNodeClick(region) {
+      const path = this.getNodePath(region);
+      if (path.length === 4) {
+        const [technology, dataset, tissue, regionLabel] = path;
+        const imagePathBase = `neighborhood_network/${technology}/${dataset}/${tissue}/${regionLabel}/`;
+
+        try {
+          const response = await axios.get(`/api/images?path=${imagePathBase}`);
+          this.selectedImagePaths = response.data.imagePaths.map(image => `${imagePathBase}${image}`);
+        } catch (error) {
+          console.error('Error loading image paths:', error);
+        }
+      }
+    },
+    getNodePath(node) {
+      const path = [];
+      while (node) {
+        path.unshift(node.label);
+        node = node.parent;
+      }
+      return path;
+    },
+    imageLoadError(event) {
+      console.error(`Failed to load image: ${event.target.src}`);
+    },
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath)
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath)
+    },
   },
 };
 </script>
 
-<style scoped>
-.el-header {
-  background-color: #b3c0d1;
-  color: #333;
-  line-height: 60px;
-  text-align: center;
-  font-size: 24px;
+<style>
+body, html, #app {
+  height: 100%;
+  margin: 0;
+}
+
+.aside-custom {
+  background-color: #f5f5f5; /* 设置背景颜色 */
+  border-right: 1px solid white; /* 添加右边分割线 */
+  padding: 10px; /* 添加内边距 */
+}
+
+.el-menu-vertical-demo {
+  background-color: #bec3c9; /* 自定义背景颜色 */
+  color: #fff; /* 自定义字体颜色 */
+}
+
+.el-sub-menu__title,
+.el-menu-item {
+  font-size: 18px; /* 放大字体 */
+}
+
+.el-menu-item:hover {
+  background-color: #FFC947; /* 设置悬停背景颜色 */
+}
+
+.image-container {
+  margin-bottom: 20px;
+}
+
+.image-title {
+  margin-bottom: 10px;
+  text-align: left; /* 标题靠左对齐 */
+}
+
+.title {
+  font-size: 24px; /* 增大字体 */
+}
+
+.cell-line,
+.neighborhood-line {
+  border: 1px solid rgb(159, 159, 216); /* 改为灰色细线 */
+}
+
+.image-style {
+  width: 100%;
+  max-width: 1350px;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 400px; /* 调整饼图和折线图容器的高度 */
+  margin-top: 40px; /* 增加饼图与上方图片的间隔 */
+}
+
+.chart {
+  width: 45%; /* 调整每个图表占据容器的比例 */
+  height: 100%;
+}
+
+.rose-chart {
+  margin-right: 10px; /* 增加玫瑰饼图和堆叠折线图之间的间距 */
 }
 </style>

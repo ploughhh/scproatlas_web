@@ -211,6 +211,10 @@ export default {
       if (this.$refs.chart) {
         const chart = echarts.init(this.$refs.chart);
         const option = {
+          title: {
+            text: 'Whole neighborhood statistics in this dataset',
+            top: '1%',
+          },
           tooltip: {
             trigger: 'item',
             formatter: '{a} <br/>{b} : {c} ({d}%)'
