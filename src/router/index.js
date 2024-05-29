@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-
+import FileList from '../components/FileList.vue';
 const routes = [
   {
     path: '/',
@@ -205,6 +205,11 @@ const routes = [
     path: '/taxonomyDetail',
     name: 'taxonomyDetail',
     component: () => import('../components/taxonomyDetail.vue')
+  },
+  {
+    path: '/file',
+    name: 'file',
+    component: FileList
   }
 ]
 

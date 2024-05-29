@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     loadTableData() {
-      axios.get('/sheets/DataArchive.xlsx', { responseType: 'arraybuffer' })
+      axios.get('/data_archive/datasets.xlsx', { responseType: 'arraybuffer' })
       .then(response => {
         const data = new Uint8Array(response.data);
         try {

@@ -58,6 +58,13 @@
             <div ref="chart" class="chart rose-chart"></div>
             <div ref="lineChart" class="chart line-chart"></div>
           </div>
+          <div v-if="heatmapData.length" class="heatmap-container">
+            <div class="heatmap-title">
+              <h3 class="title">Cell Type In Different Clusters</h3>
+              <hr class="cell-line" />
+            </div>
+            <div ref="heatmap" class="heatmap-chart"></div>
+          </div>
         </el-main>
       </el-container>
     </el-container>
@@ -85,7 +92,10 @@ export default {
       chartData: [],
       lineChartData: [],
       xAxisData: [],
-      seriesData: []
+      seriesData: [],
+      heatmapData: [], // 新增用于热力图的数据
+      heatmapColumns: [],
+      heatmapRows: [],
     };
   },
   created() {
@@ -152,6 +162,8 @@ export default {
 
         // 加载并处理统计数据
         await this.loadStatisticsData(technology, dataset, tissue, regionLabel);
+        // 加载并处理热力图数据
+        await this.loadHeatmapData(technology, dataset, tissue);
       }
     },
     getNodePath(node) {
@@ -206,6 +218,47 @@ export default {
       } catch (error) {
         console.error('Error loading statistics data:', error);
       }
+    },
+    async loadHeatmapData(technology, dataset, tissue) {
+      try {
+        const response = await axios.get(`/datasets/${technology}/${dataset}/${tissue}/fc.tsv`, { responseType: 'text' });
+        const rows = response.data.split('\n').map(row => row.split('\t'));
+        const headers = rows[0];
+        const data = rows.slice(1);
+
+        // 解析热力图数据
+        const heatmapData = [];
+        const heatmapColumns = headers.slice(1);
+        const heatmapRows = data.map(row => row[0]);
+
+        data.forEach((row, rowIndex) => {
+          row.slice(1).forEach((value, colIndex) => {
+            heatmapData.push([colIndex, rowIndex, parseFloat(value)]);
+          });
+        });
+
+        // 标准化热力图数据到 -1 到 1 之间
+        const standardizedData = this.standardizeHeatmapData(heatmapData);
+
+        this.heatmapData = standardizedData;
+        this.heatmapColumns = heatmapColumns;
+        this.heatmapRows = heatmapRows;
+
+        this.$nextTick(() => {
+          this.renderHeatmap();
+        });
+      } catch (error) {
+        console.error('Error loading heatmap data:', error);
+      }
+    },
+    standardizeHeatmapData(data) {
+      const values = data.map(item => item[2]);
+      const min = Math.min(...values);
+      const max = Math.max(...values);
+      return data.map(item => {
+        const normalizedValue = ((item[2] - min) / (max - min)) * 2 - 1;
+        return [item[0], item[1], parseFloat(normalizedValue.toFixed(2))];
+      });
     },
     renderChart() {
       if (this.$refs.chart) {
@@ -293,7 +346,7 @@ export default {
               data: this.xAxisData,
               axisLabel: {
                 interval: 0,
-                rotate: 45
+                rotate: 60 // 旋转标签
               }
             }
           ],
@@ -307,6 +360,70 @@ export default {
         lineChart.setOption(option);
       } else {
         console.error('Line Chart DOM element not found.');
+      }
+    },
+    renderHeatmap() {
+      if (this.$refs.heatmap) {
+        const heatmap = echarts.init(this.$refs.heatmap);
+        const option = {
+          tooltip: {
+            position: 'top',
+          },
+          grid: {
+            height: '70%', // 增加热力图的高度
+            width: '70%', // 增加热力图的宽度
+            top: '10%',
+            left: '15%',
+          },
+          xAxis: {
+            type: 'category',
+            data: this.heatmapColumns,
+            splitArea: {
+              show: true,
+            },
+            axisLabel: {
+              interval: 0, // 每个标签都显示
+              rotate: 30 // 旋转标签
+            }
+          },
+          yAxis: {
+            type: 'category',
+            data: this.heatmapRows,
+            splitArea: {
+              show: true,
+            },
+          },
+          visualMap: {
+            min: -1,
+            max: 1,
+            calculable: true,
+            orient: 'horizontal',
+            left: 'center',
+            // bottom: '15%',
+            top: '10%',
+            color: ['#006E54', '#FCBB7B'],
+          },
+          series: [
+            {
+              name: 'Heatmap',
+              type: 'heatmap',
+              data: this.heatmapData,
+              label: {
+                show: true,
+                formatter: ({ value }) => value[2], // 仅显示数值
+              },
+              emphasis: {
+                itemStyle: {
+                  shadowBlur: 10,
+                  shadowColor: 'rgba(0, 0, 0, 0.5)',
+                },
+              },
+            },
+          ],
+        };
+        heatmap.setOption(option);
+      } else {
+        console.error('Heatmap DOM element not found.');
       }
     },
     imageLoadError(event) {
@@ -352,7 +469,7 @@ body, html, #app {
   margin-bottom: 20px;
 }
 
-.image-title {
+.image-title, .heatmap-title {
   margin-bottom: 10px;
   text-align: left; /* 标题靠左对齐 */
 }
@@ -386,5 +503,18 @@ body, html, #app {
 
 .rose-chart {
   margin-right: 10px; /* 增加玫瑰饼图和堆叠折线图之间的间距 */
+}
+
+.heatmap-container {
+  display: flex;
+  flex-direction: column; /* 改为列方向布局 */
+  width: 100%;
+  height: 750px; /* 增加热力图容器的高度 */
+  margin-top: 40px; /* 增加热力图与上方图表的间隔 */
+}
+
+.heatmap-chart {
+  width: 90%; /* 调整热力图的宽度 */
+  height: 100%;
 }
 </style>

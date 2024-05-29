@@ -1,26 +1,41 @@
 const express = require('express');
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
+
 const app = express();
+const port = 5000;
 
-const baseDir = path.join(__dirname, 'public', 'neighborhood_network');
+app.use(express.json());
 
-app.get('/api/files', (req, res) => {
-  const { path: dirPath } = req.query;
-  const fullPath = path.join(baseDir, dirPath);
+app.get('/api/images', async (req, res) => {
+  const { path: directoryPath } = req.query;
 
-  console.log(`Attempting to read directory: ${fullPath}`);
+  if (!directoryPath) {
+    return res.status(400).json({ error: 'Path query parameter is required' });
+  }
 
-  fs.readdir(fullPath, (err, files) => {
-    if (err) {
-      console.error(`Error reading directory: ${fullPath}`, err);
-      return res.status(500).json({ error: 'Unable to scan directory', details: err.message });
+  try {
+    const absolutePath = path.join(__dirname, directoryPath);
+
+    // 检查目录是否存在
+    if (!await fs.pathExists(absolutePath)) {
+      return res.status(404).json({ error: 'Directory not found' });
     }
-    res.json(files);
-  });
+
+    // 读取目录中的文件
+    const files = await fs.readdir(absolutePath);
+
+    // 过滤出图片文件
+    const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.bmp'];
+    const imageFiles = files.filter(file => imageExtensions.includes(path.extname(file).toLowerCase()));
+
+    res.json({ imagePaths: imageFiles });
+  } catch (error) {
+    console.error('Error reading directory:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });
