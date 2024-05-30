@@ -8,7 +8,7 @@ export const getItem = () => {
     { value: 'Proximity analysis', path: 'proximity', icon: 'images/icon/proximity.png' },
     { value: 'Multi-modal integration', path: 'multimo', icon: 'images/icon/integration.png' },
     { value: 'Spatial viariable gene', path: 'svg', des: '', icon: 'images/icon/svg.png' },
-    { value: 'Integration of aging hallmarks', path: 'integration', icon: 'images/icon/integration.png' },
+    { value: 'Cell-cell Interaction', path: 'cci', icon: 'images/icon/interaction.jpg' },
     // { value: 'Anti-aging interventions', path: 'interventions', icon: 'images/icon/interventions.png' },
     // { value: 'Lifespan regulators', path: 'lifespan', icon: 'images/icon/lifespan.png' }
   ]

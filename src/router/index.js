@@ -210,6 +210,16 @@ const routes = [
     path: '/file',
     name: 'file',
     component: FileList
+  },
+  {
+    path: '/cci',
+    name: 'cci',
+    component: () => import('../components/cci.vue')
+  },
+  {
+    path: '/wholePipeline',
+    name: 'wholePipeline',
+    component: () => import('../views/wholePipeline.vue')
   }
 ]
 

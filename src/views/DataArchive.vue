@@ -3,13 +3,20 @@
     <el-header>
       <Menus />
     </el-header>
-    <el-main style="margin-left: auto; width: 1600px; margin-right: auto; font-size: 23px;">
-      <div style="margin: auto; width: 1400px;">
-        <el-table :data="tableData" stripe :row-style="{ height: '65px' }" width="1400">
-          <el-table-column prop="Technology" label="Technology" width="180" />
-          <el-table-column prop="Dataset" label="Dataset" width="100" />
-          <el-table-column prop="Tissue" label="Tissue" width="100" />
-          <!-- 添加更多列，根据你的数据结构 -->
+    <el-main style="display: flex; justify-content: center; align-items: center; flex-direction: column; font-size: 23px;">
+      <div style="width: 1600px; margin-left: 250px;">
+        <el-table :data="tableData" stripe :row-style="{ height: '65px' }" width="100%">
+          <el-table-column prop="Technology" label="Technology" width="200" />
+          <el-table-column prop="Dataset" label="Dataset" width="200" />
+          <el-table-column prop="Tissue" label="Tissue" width="200" />
+          <el-table-column prop="Region" label="Region" width="400" />
+          <el-table-column label="Link" width="200">
+            <template #default="scope">
+              <router-link :to="{ name: 'wholePipeline', query: { Technology: scope.row.Technology, Dataset: scope.row.Dataset, Tissue: scope.row.Tissue, Region: scope.row.Region } }" style="color: #40A578;">
+                details
+              </router-link>
+            </template>
+          </el-table-column>
         </el-table>
         <el-pagination
           @size-change="handleSizeChange"
@@ -30,7 +37,6 @@ import axios from 'axios';
 import * as XLSX from 'xlsx';
 import Menus from "../layout/menu-item"
 
-
 export default {
   components: {
     Menus
@@ -40,7 +46,7 @@ export default {
       tableData: [],
       pagination: {
         currentPage: 1,
-        pageSize: 10,
+        pageSize: 20,
         totalItems: 0
       }
     };
@@ -50,7 +56,7 @@ export default {
   },
   methods: {
     loadTableData() {
-      axios.get('/data_archive/datasets.xlsx', { responseType: 'arraybuffer' })
+      axios.get('/datasets/datasets.xlsx', { responseType: 'arraybuffer' })
       .then(response => {
         const data = new Uint8Array(response.data);
         try {
