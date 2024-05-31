@@ -27,8 +27,14 @@
                         <template #title>
                           <span>{{ tissue.label }}</span>
                         </template>
-                        <template v-for="(region, rIndex) in tissue.children" :key="rIndex">
-                          <el-menu-item :index="`${index}-${dIndex}-${tIndex}-${rIndex}`" @click="handleNodeClick(region)">
+                        <template
+                          v-for="(region, rIndex) in tissue.children"
+                          :key="rIndex"
+                        >
+                          <el-menu-item
+                            :index="`${index}-${dIndex}-${tIndex}-${rIndex}`"
+                            @click="handleNodeClick(region)"
+                          >
                             <span>{{ region.label }}</span>
                           </el-menu-item>
                         </template>
@@ -42,7 +48,11 @@
         </el-aside>
         <el-main>
           <div v-if="selectedImagePaths.length">
-            <div v-for="(path, index) in selectedImagePaths" :key="index" class="image-container">
+            <div
+              v-for="(path, index) in selectedImagePaths"
+              :key="index"
+              class="image-container"
+            >
               <div v-if="index === 0" class="image-title">
                 <h3 class="title">Marker Protein Visualization</h3>
                 <hr class="cell-line" />
@@ -51,7 +61,11 @@
                 <h3 class="title">Delaunay Triangle</h3>
                 <hr class="neighborhood-line" />
               </div>
-              <img :src="path" :class="index === 1 ? 'image-style-small' : 'image-style'" @error="imageLoadError" />
+              <img
+                :src="path"
+                :class="index === 1 ? 'image-style-small' : 'image-style'"
+                @error="imageLoadError"
+              />
             </div>
           </div>
         </el-main>
@@ -61,9 +75,9 @@
 </template>
 
 <script>
-import axios from 'axios';
-import * as XLSX from 'xlsx';
-import Menus from '../layout/menu-item'; // 导入Menus组件
+import axios from "axios";
+import * as XLSX from "xlsx";
+import Menus from "../layout/menu-item"; // 导入Menus组件
 
 export default {
   components: {
@@ -73,8 +87,8 @@ export default {
     return {
       treeData: [],
       defaultProps: {
-        children: 'children',
-        label: 'label',
+        children: "children",
+        label: "label",
       },
       selectedImagePaths: [],
     };
@@ -85,39 +99,56 @@ export default {
   methods: {
     async loadExcelData() {
       try {
-        const response = await axios.get('/marker_viz/datasets.xlsx', { responseType: 'arraybuffer' });
+        const response = await axios.get("/marker_viz/datasets.xlsx", {
+          responseType: "arraybuffer",
+        });
         const data = new Uint8Array(response.data);
-        const workbook = XLSX.read(data, { type: 'array' });
+        const workbook = XLSX.read(data, { type: "array" });
         const sheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(sheet);
         this.treeData = this.buildTree(jsonData);
       } catch (error) {
-        console.error('Error loading Excel data:', error);
+        console.error("Error loading Excel data:", error);
       }
     },
     buildTree(data) {
       const tree = [];
       const map = new Map();
 
-      data.forEach(row => {
+      data.forEach((row) => {
         const { Technology, Dataset, Tissue, Region } = row;
         if (!map.has(Technology)) {
           map.set(Technology, { label: Technology, children: new Map(), parent: null });
           tree.push(map.get(Technology));
         }
         if (!map.get(Technology).children.has(Dataset)) {
-          const datasetNode = { label: Dataset, children: new Map(), parent: map.get(Technology) };
+          const datasetNode = {
+            label: Dataset,
+            children: new Map(),
+            parent: map.get(Technology),
+          };
           map.get(Technology).children.set(Dataset, datasetNode);
         }
         if (!map.get(Technology).children.get(Dataset).children.has(Tissue)) {
-          const tissueNode = { label: Tissue, children: [], parent: map.get(Technology).children.get(Dataset) };
+          const tissueNode = {
+            label: Tissue,
+            children: [],
+            parent: map.get(Technology).children.get(Dataset),
+          };
           map.get(Technology).children.get(Dataset).children.set(Tissue, tissueNode);
         }
-        const regionNode = { label: Region, parent: map.get(Technology).children.get(Dataset).children.get(Tissue) };
-        map.get(Technology).children.get(Dataset).children.get(Tissue).children.push(regionNode);
+        const regionNode = {
+          label: Region,
+          parent: map.get(Technology).children.get(Dataset).children.get(Tissue),
+        };
+        map
+          .get(Technology)
+          .children.get(Dataset)
+          .children.get(Tissue)
+          .children.push(regionNode);
       });
 
-      const convertToArray = node => {
+      const convertToArray = (node) => {
         if (node.children instanceof Map) {
           node.children = Array.from(node.children.values()).map(convertToArray);
         }
@@ -128,11 +159,11 @@ export default {
     },
     async handleNodeClick(region) {
       const path = this.getNodePath(region);
-      console.log('Node path:', path); // 调试信息
+      console.log("Node path:", path); // 调试信息
       if (path.length === 4) {
         const [technology, dataset, tissue, regionLabel] = path;
         const imagePathBase = `/marker_viz/${technology}/${dataset}/${tissue}/${regionLabel}/`;
-        console.log('Image paths:', [
+        console.log("Image paths:", [
           `${imagePathBase}marker_viz.png`,
           `${imagePathBase}delaunay.png`,
         ]); // 调试信息
@@ -154,17 +185,19 @@ export default {
       console.error(`Failed to load image: ${event.target.src}`);
     },
     handleOpen(key, keyPath) {
-      console.log(key, keyPath)
+      console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath)
+      console.log(key, keyPath);
     },
   },
 };
 </script>
 
 <style>
-body, html, #app {
+body,
+html,
+#app {
   height: 100%;
   margin: 0;
 }
@@ -186,7 +219,7 @@ body, html, #app {
 }
 
 .el-menu-item:hover {
-  background-color: #FFC947; /* 设置悬停背景颜色 */
+  background-color: #ffc947; /* 设置悬停背景颜色 */
 }
 
 .image-container {

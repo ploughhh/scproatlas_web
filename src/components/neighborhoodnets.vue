@@ -28,8 +28,16 @@
                         <template #title>
                           <span>{{ tissue.label }}</span>
                         </template>
-                        <template v-for="(region, rIndex) in tissue.children" :key="rIndex">
-                          <el-menu-item :index="`${index}-${dIndex}-${tIndex}-${rIndex}`" @click="handleNodeClick(region, index, dIndex, tIndex, rIndex)">
+                        <template
+                          v-for="(region, rIndex) in tissue.children"
+                          :key="rIndex"
+                        >
+                          <el-menu-item
+                            :index="`${index}-${dIndex}-${tIndex}-${rIndex}`"
+                            @click="
+                              handleNodeClick(region, index, dIndex, tIndex, rIndex)
+                            "
+                          >
                             <span>{{ region.label }}</span>
                           </el-menu-item>
                         </template>
@@ -57,9 +65,9 @@
 </template>
 
 <script>
-import axios from 'axios';
-import * as XLSX from 'xlsx';
-import Menus from '../layout/menu-item';
+import axios from "axios";
+import * as XLSX from "xlsx";
+import Menus from "../layout/menu-item";
 
 export default {
   components: {
@@ -79,40 +87,57 @@ export default {
   methods: {
     async loadExcelData() {
       try {
-        const response = await axios.get('/neighborhood_network/datasets.xlsx', { responseType: 'arraybuffer' });
+        const response = await axios.get("/neighborhood_network/datasets.xlsx", {
+          responseType: "arraybuffer",
+        });
         const data = new Uint8Array(response.data);
-        const workbook = XLSX.read(data, { type: 'array' });
+        const workbook = XLSX.read(data, { type: "array" });
         const sheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(sheet);
         this.treeData = this.buildTree(jsonData);
         this.defaultOpeneds = this.generateDefaultOpeneds(); // 调用方法生成默认展开的菜单项
       } catch (error) {
-        console.error('Error loading Excel data:', error);
+        console.error("Error loading Excel data:", error);
       }
     },
     buildTree(data) {
       const tree = [];
       const map = new Map();
 
-      data.forEach(row => {
+      data.forEach((row) => {
         const { Technology, Dataset, Tissue, Region } = row;
         if (!map.has(Technology)) {
           map.set(Technology, { label: Technology, children: new Map(), parent: null });
           tree.push(map.get(Technology));
         }
         if (!map.get(Technology).children.has(Dataset)) {
-          const datasetNode = { label: Dataset, children: new Map(), parent: map.get(Technology) };
+          const datasetNode = {
+            label: Dataset,
+            children: new Map(),
+            parent: map.get(Technology),
+          };
           map.get(Technology).children.set(Dataset, datasetNode);
         }
         if (!map.get(Technology).children.get(Dataset).children.has(Tissue)) {
-          const tissueNode = { label: Tissue, children: [], parent: map.get(Technology).children.get(Dataset) };
+          const tissueNode = {
+            label: Tissue,
+            children: [],
+            parent: map.get(Technology).children.get(Dataset),
+          };
           map.get(Technology).children.get(Dataset).children.set(Tissue, tissueNode);
         }
-        const regionNode = { label: Region, parent: map.get(Technology).children.get(Dataset).children.get(Tissue) };
-        map.get(Technology).children.get(Dataset).children.get(Tissue).children.push(regionNode);
+        const regionNode = {
+          label: Region,
+          parent: map.get(Technology).children.get(Dataset).children.get(Tissue),
+        };
+        map
+          .get(Technology)
+          .children.get(Dataset)
+          .children.get(Tissue)
+          .children.push(regionNode);
       });
 
-      const convertToArray = node => {
+      const convertToArray = (node) => {
         if (node.children instanceof Map) {
           node.children = Array.from(node.children.values()).map(convertToArray);
         }
@@ -164,30 +189,32 @@ export default {
     },
     async loadFiles(folderPath) {
       try {
-        const response = await axios.get(`http://localhost:3000/api/files?path=${encodeURIComponent(folderPath)}`);
+        const response = await axios.get(
+          `http://localhost:3000/api/files?path=${encodeURIComponent(folderPath)}`
+        );
         const files = response.data;
         this.specialFile = null;
         this.otherFiles = [];
 
-        files.forEach(file => {
+        files.forEach((file) => {
           const filePath = `${folderPath}/${file}`;
           console.log(`Loading file: ${filePath}`); // 打印文件路径以进行调试
 
-          if (file === 'neighborhood_network.png') {
+          if (file === "neighborhood_network.png") {
             this.specialFile = `http://localhost:3000/${filePath}`;
           } else {
             this.otherFiles.push(`http://localhost:3000/${filePath}`);
           }
         });
       } catch (error) {
-        console.error('Error loading files:', error);
+        console.error("Error loading files:", error);
       }
     },
     handleOpen(key, keyPath) {
-      console.log('open:', key, keyPath);
+      console.log("open:", key, keyPath);
     },
     handleClose(key, keyPath) {
-      console.log('close:', key, keyPath);
+      console.log("close:", key, keyPath);
     },
   },
 };
