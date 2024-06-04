@@ -1,0 +1,182 @@
+source	target	count
+B cell	CD4-positive, alpha-beta T cell	22
+B cell	CD8-positive, alpha-beta T cell	22
+B cell	enterocyte of epithelium of large intestine	53
+B cell	fibroblast	46
+B cell	gut endothelial cell	25
+B cell	intestinal crypt stem cell of large intestine	34
+B cell	intestinal enteroendocrine cell	24
+B cell	intestinal tuft cell	7
+B cell	large intestine goblet cell	49
+B cell	monocyte	40
+B cell	paneth cell of colon	31
+B cell	plasma cell	5
+B cell	transit amplifying cell of colon	32
+CD4-positive, alpha-beta T cell	B cell	16
+CD4-positive, alpha-beta T cell	CD8-positive, alpha-beta T cell	41
+CD4-positive, alpha-beta T cell	enterocyte of epithelium of large intestine	110
+CD4-positive, alpha-beta T cell	fibroblast	96
+CD4-positive, alpha-beta T cell	gut endothelial cell	55
+CD4-positive, alpha-beta T cell	intestinal crypt stem cell of large intestine	69
+CD4-positive, alpha-beta T cell	intestinal enteroendocrine cell	52
+CD4-positive, alpha-beta T cell	intestinal tuft cell	25
+CD4-positive, alpha-beta T cell	large intestine goblet cell	90
+CD4-positive, alpha-beta T cell	monocyte	81
+CD4-positive, alpha-beta T cell	paneth cell of colon	70
+CD4-positive, alpha-beta T cell	plasma cell	11
+CD4-positive, alpha-beta T cell	transit amplifying cell of colon	64
+CD8-positive, alpha-beta T cell	B cell	12
+CD8-positive, alpha-beta T cell	CD4-positive, alpha-beta T cell	45
+CD8-positive, alpha-beta T cell	enterocyte of epithelium of large intestine	117
+CD8-positive, alpha-beta T cell	fibroblast	99
+CD8-positive, alpha-beta T cell	gut endothelial cell	56
+CD8-positive, alpha-beta T cell	intestinal crypt stem cell of large intestine	75
+CD8-positive, alpha-beta T cell	intestinal enteroendocrine cell	56
+CD8-positive, alpha-beta T cell	intestinal tuft cell	23
+CD8-positive, alpha-beta T cell	large intestine goblet cell	90
+CD8-positive, alpha-beta T cell	monocyte	87
+CD8-positive, alpha-beta T cell	paneth cell of colon	74
+CD8-positive, alpha-beta T cell	plasma cell	7
+CD8-positive, alpha-beta T cell	transit amplifying cell of colon	68
+enterocyte of epithelium of large intestine	B cell	28
+enterocyte of epithelium of large intestine	CD4-positive, alpha-beta T cell	121
+enterocyte of epithelium of large intestine	CD8-positive, alpha-beta T cell	115
+enterocyte of epithelium of large intestine	fibroblast	373
+enterocyte of epithelium of large intestine	gut endothelial cell	181
+enterocyte of epithelium of large intestine	intestinal crypt stem cell of large intestine	235
+enterocyte of epithelium of large intestine	intestinal enteroendocrine cell	170
+enterocyte of epithelium of large intestine	intestinal tuft cell	69
+enterocyte of epithelium of large intestine	large intestine goblet cell	363
+enterocyte of epithelium of large intestine	monocyte	302
+enterocyte of epithelium of large intestine	paneth cell of colon	239
+enterocyte of epithelium of large intestine	plasma cell	14
+enterocyte of epithelium of large intestine	transit amplifying cell of colon	203
+fibroblast	B cell	30
+fibroblast	CD4-positive, alpha-beta T cell	116
+fibroblast	CD8-positive, alpha-beta T cell	109
+fibroblast	enterocyte of epithelium of large intestine	391
+fibroblast	gut endothelial cell	172
+fibroblast	intestinal crypt stem cell of large intestine	232
+fibroblast	intestinal enteroendocrine cell	169
+fibroblast	intestinal tuft cell	74
+fibroblast	large intestine goblet cell	344
+fibroblast	monocyte	290
+fibroblast	paneth cell of colon	226
+fibroblast	plasma cell	13
+fibroblast	transit amplifying cell of colon	199
+gut endothelial cell	B cell	16
+gut endothelial cell	CD4-positive, alpha-beta T cell	66
+gut endothelial cell	CD8-positive, alpha-beta T cell	66
+gut endothelial cell	enterocyte of epithelium of large intestine	189
+gut endothelial cell	fibroblast	182
+gut endothelial cell	intestinal crypt stem cell of large intestine	113
+gut endothelial cell	intestinal enteroendocrine cell	89
+gut endothelial cell	intestinal tuft cell	39
+gut endothelial cell	large intestine goblet cell	171
+gut endothelial cell	monocyte	141
+gut endothelial cell	paneth cell of colon	125
+gut endothelial cell	plasma cell	7
+gut endothelial cell	transit amplifying cell of colon	110
+intestinal crypt stem cell of large intestine	B cell	17
+intestinal crypt stem cell of large intestine	CD4-positive, alpha-beta T cell	79
+intestinal crypt stem cell of large intestine	CD8-positive, alpha-beta T cell	77
+intestinal crypt stem cell of large intestine	enterocyte of epithelium of large intestine	233
+intestinal crypt stem cell of large intestine	fibroblast	214
+intestinal crypt stem cell of large intestine	gut endothelial cell	114
+intestinal crypt stem cell of large intestine	intestinal enteroendocrine cell	101
+intestinal crypt stem cell of large intestine	intestinal tuft cell	44
+intestinal crypt stem cell of large intestine	large intestine goblet cell	217
+intestinal crypt stem cell of large intestine	monocyte	182
+intestinal crypt stem cell of large intestine	paneth cell of colon	142
+intestinal crypt stem cell of large intestine	plasma cell	10
+intestinal crypt stem cell of large intestine	transit amplifying cell of colon	127
+intestinal enteroendocrine cell	B cell	10
+intestinal enteroendocrine cell	CD4-positive, alpha-beta T cell	53
+intestinal enteroendocrine cell	CD8-positive, alpha-beta T cell	55
+intestinal enteroendocrine cell	enterocyte of epithelium of large intestine	180
+intestinal enteroendocrine cell	fibroblast	165
+intestinal enteroendocrine cell	gut endothelial cell	83
+intestinal enteroendocrine cell	intestinal crypt stem cell of large intestine	106
+intestinal enteroendocrine cell	intestinal tuft cell	30
+intestinal enteroendocrine cell	large intestine goblet cell	160
+intestinal enteroendocrine cell	monocyte	137
+intestinal enteroendocrine cell	paneth cell of colon	111
+intestinal enteroendocrine cell	plasma cell	5
+intestinal enteroendocrine cell	transit amplifying cell of colon	92
+intestinal tuft cell	B cell	10
+intestinal tuft cell	CD4-positive, alpha-beta T cell	28
+intestinal tuft cell	CD8-positive, alpha-beta T cell	26
+intestinal tuft cell	enterocyte of epithelium of large intestine	90
+intestinal tuft cell	fibroblast	79
+intestinal tuft cell	gut endothelial cell	44
+intestinal tuft cell	intestinal crypt stem cell of large intestine	62
+intestinal tuft cell	intestinal enteroendocrine cell	42
+intestinal tuft cell	large intestine goblet cell	76
+intestinal tuft cell	monocyte	67
+intestinal tuft cell	paneth cell of colon	59
+intestinal tuft cell	plasma cell	4
+intestinal tuft cell	transit amplifying cell of colon	60
+large intestine goblet cell	B cell	25
+large intestine goblet cell	CD4-positive, alpha-beta T cell	98
+large intestine goblet cell	CD8-positive, alpha-beta T cell	89
+large intestine goblet cell	enterocyte of epithelium of large intestine	311
+large intestine goblet cell	fibroblast	286
+large intestine goblet cell	gut endothelial cell	151
+large intestine goblet cell	intestinal crypt stem cell of large intestine	179
+large intestine goblet cell	intestinal enteroendocrine cell	133
+large intestine goblet cell	intestinal tuft cell	64
+large intestine goblet cell	monocyte	239
+large intestine goblet cell	paneth cell of colon	190
+large intestine goblet cell	plasma cell	13
+large intestine goblet cell	transit amplifying cell of colon	167
+monocyte	B cell	21
+monocyte	CD4-positive, alpha-beta T cell	89
+monocyte	CD8-positive, alpha-beta T cell	90
+monocyte	enterocyte of epithelium of large intestine	305
+monocyte	fibroblast	286
+monocyte	gut endothelial cell	138
+monocyte	intestinal crypt stem cell of large intestine	181
+monocyte	intestinal enteroendocrine cell	138
+monocyte	intestinal tuft cell	62
+monocyte	large intestine goblet cell	269
+monocyte	paneth cell of colon	181
+monocyte	plasma cell	8
+monocyte	transit amplifying cell of colon	158
+paneth cell of colon	B cell	19
+paneth cell of colon	CD4-positive, alpha-beta T cell	95
+paneth cell of colon	CD8-positive, alpha-beta T cell	80
+paneth cell of colon	enterocyte of epithelium of large intestine	279
+paneth cell of colon	fibroblast	257
+paneth cell of colon	gut endothelial cell	119
+paneth cell of colon	intestinal crypt stem cell of large intestine	155
+paneth cell of colon	intestinal enteroendocrine cell	113
+paneth cell of colon	intestinal tuft cell	46
+paneth cell of colon	large intestine goblet cell	264
+paneth cell of colon	monocyte	215
+paneth cell of colon	plasma cell	9
+paneth cell of colon	transit amplifying cell of colon	139
+plasma cell	B cell	1
+plasma cell	CD4-positive, alpha-beta T cell	6
+plasma cell	CD8-positive, alpha-beta T cell	9
+plasma cell	enterocyte of epithelium of large intestine	20
+plasma cell	fibroblast	17
+plasma cell	gut endothelial cell	12
+plasma cell	intestinal crypt stem cell of large intestine	11
+plasma cell	intestinal enteroendocrine cell	11
+plasma cell	large intestine goblet cell	20
+plasma cell	monocyte	15
+plasma cell	paneth cell of colon	8
+plasma cell	transit amplifying cell of colon	11
+transit amplifying cell of colon	B cell	16
+transit amplifying cell of colon	CD4-positive, alpha-beta T cell	69
+transit amplifying cell of colon	CD8-positive, alpha-beta T cell	65
+transit amplifying cell of colon	enterocyte of epithelium of large intestine	222
+transit amplifying cell of colon	fibroblast	194
+transit amplifying cell of colon	gut endothelial cell	102
+transit amplifying cell of colon	intestinal crypt stem cell of large intestine	136
+transit amplifying cell of colon	intestinal enteroendocrine cell	100
+transit amplifying cell of colon	intestinal tuft cell	41
+transit amplifying cell of colon	large intestine goblet cell	192
+transit amplifying cell of colon	monocyte	164
+transit amplifying cell of colon	paneth cell of colon	138
+transit amplifying cell of colon	plasma cell	8

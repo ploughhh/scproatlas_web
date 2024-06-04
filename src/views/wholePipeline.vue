@@ -126,6 +126,37 @@
             @current-change="handlePageChange"
           />
         </div>
+        <!-- Cell-cell Interaction Section -->
+        <div class="section-header" style="margin-top: 90px">
+          <h2 class="section-title section-title-color">Cell-cell Interaction</h2>
+        </div>
+        <div
+          class="chart-container"
+          ref="chart"
+          style="width: 1000px; height: 600px"
+        ></div>
+        <div style="margin-top: 20px; width: 1500px">
+          <el-table
+            :data="currentInteractionData"
+            style="width: 100%; height: 500px; overflow-y: auto"
+          >
+            <el-table-column prop="ligand" label="ligand" width="200" />
+            <el-table-column prop="receptor" label="receptor" width="200" />
+            <el-table-column prop="value" label="interaction score" width="200" />
+            <el-table-column prop="source" label="source" width="200" />
+            <el-table-column prop="target" label="target" width="200" />
+            <el-table-column prop="tissue" label="tissue" width="200" />
+            <el-table-column prop="region" label="region" width="200" />
+          </el-table>
+          <el-pagination
+            style="margin-top: 20px"
+            background
+            layout="prev, pager, next"
+            :total="interactionData.length"
+            :page-size="10"
+            @current-change="handleInteractionPageChange"
+          />
+        </div>
       </div>
     </el-main>
   </el-container>
@@ -156,6 +187,10 @@ export default {
       tableHeaders: [],
       currentPage: 1,
       pageSize: 10,
+      interactionData: [],
+      interactionHeaders: [],
+      interactionPage: 1,
+      interactionPageSize: 10,
     };
   },
   computed: {
@@ -176,6 +211,11 @@ export default {
       const end = this.currentPage * this.pageSize;
       return this.tableData.slice(start, end);
     },
+    currentInteractionData() {
+      const start = (this.interactionPage - 1) * this.interactionPageSize;
+      const end = this.interactionPage * this.interactionPageSize;
+      return this.interactionData.slice(start, end);
+    },
   },
   watch: {
     "$route.query": {
@@ -194,6 +234,7 @@ export default {
           this.loadMarkerImage(newQuery);
           this.loadMultiModalImages(newQuery);
           this.loadTableData(newQuery);
+          this.loadGraphData(newQuery); // Load Cell-cell Interaction data
         } else {
           console.error("Missing query parameters:", newQuery);
         }
@@ -465,8 +506,129 @@ export default {
         console.error("Error loading table data:", error);
       }
     },
+    async loadGraphData(query) {
+      const graphFilePath = `/cci/${query.Technology}/${query.Dataset}/${query.Tissue}/${query.Region}/graph.txt`;
+      const resultsFilePath = `/cci/${query.Technology}/${query.Dataset}/${query.Tissue}/${query.Region}/results.txt`;
+      try {
+        const [graphResponse, resultsResponse] = await Promise.all([
+          axios.get(graphFilePath),
+          axios.get(resultsFilePath),
+        ]);
+
+        const graphData = this.parseGraphData(graphResponse.data);
+        this.drawGraph(graphData);
+
+        const lines = resultsResponse.data.split("\n");
+        const headers = lines[0].split("\t");
+        const data = lines.slice(1).map((line) => {
+          const row = line.split("\t");
+          return headers.reduce((obj, header, index) => {
+            obj[header] = row[index];
+            return obj;
+          }, {});
+        });
+        this.interactionHeaders = headers;
+        this.interactionData = data;
+      } catch (error) {
+        console.error("Error loading graph data:", error);
+      }
+    },
+    parseGraphData(data) {
+      const rows = data.trim().split("\n").slice(1); // 去掉标题行
+      const nodes = new Set();
+      const links = [];
+
+      rows.forEach((row) => {
+        const [source, target, count] = row.split("\t");
+        nodes.add(source);
+        nodes.add(target);
+        links.push({
+          source,
+          target,
+          value: count,
+          lineStyle: { curveness: -0.25, color: "#ccc" }, // 边的颜色设置为灰色细线
+        });
+      });
+
+      return {
+        nodes: Array.from(nodes).map((name) => ({
+          name,
+          symbolSize: 50,
+          itemStyle: { color: this.getRandomColor() }, // 保持圆形节点并设置颜色
+        })),
+        links,
+      };
+    },
+    drawGraph({ nodes, links }) {
+      const option = {
+        title: {
+          text: "Interaction Graph",
+        },
+        tooltip: {
+          trigger: "item",
+          formatter: function (params) {
+            if (params.dataType === "edge") {
+              return `${params.data.source} -> ${params.data.target}<br>Count: ${params.data.value}`;
+            }
+            return params.data.name;
+          },
+        },
+        animationDurationUpdate: 1500,
+        animationEasingUpdate: "quinticInOut",
+        series: [
+          {
+            type: "graph",
+            layout: "circular",
+            symbolSize: 50,
+            roam: true,
+            label: {
+              show: true,
+              color: "#000",
+            },
+            edgeSymbol: ["circle", "arrow"],
+            edgeSymbolSize: [4, 10],
+            edgeLabel: {
+              show: false,
+            },
+            data: nodes,
+            links: links,
+            lineStyle: {
+              opacity: 0.9,
+              width: 2,
+              curveness: -0.25,
+            },
+          },
+        ],
+      };
+
+      const chart = echarts.init(this.$refs.chart);
+      chart.setOption(option);
+      chart.on("click", (params) => {
+        if (params.dataType === "edge") {
+          const { source, target } = params.data;
+          this.loadEdgeTableData(source, target);
+        }
+      });
+    },
+    async loadEdgeTableData(source, target) {
+      this.interactionData = this.interactionData.filter(
+        (row) => row.source === source && row.target === target
+      );
+      this.interactionPage = 1; // 重置分页到第一页
+    },
     handlePageChange(page) {
       this.currentPage = page;
+    },
+    handleInteractionPageChange(page) {
+      this.interactionPage = page;
+    },
+    getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
     },
   },
 };
@@ -528,7 +690,7 @@ export default {
 .special-file {
   margin-top: 20px;
   padding: 10px;
-  border: 2px solid #f00;
+  border: 2px solid #fff;
   text-align: center;
   background-color: #fff;
   width: 100%;
@@ -550,5 +712,17 @@ export default {
 .image-container {
   height: 500px; /* 设置固定高度 */
   overflow: auto; /* 启用滚动条 */
+}
+
+.section-content {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+.chart-container {
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
 }
 </style>

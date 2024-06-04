@@ -28,20 +28,11 @@
       >
         Search Result
       </h1>
-      <h5
-        style="
-          float: left;
-          margin-left: 170px;
-          margin-bottom: 20px;
-          font-size: 18px;
-        "
-      >
+      <h5 style="float: left; margin-left: 170px; margin-bottom: 20px; font-size: 18px">
         <!-- Please click the "{{tableObj[route.query.Type].columns[1].label}}" to check all functional annotations related -->
-        Please click the "Taxonomy/Metabolite/CDR3 amino acid
-        sequence/Protein/Gene Symbol" to check all functional annotations
-        related to the query.
-        <br />Please click the "Result" to browse the result page of the
-        dataset.
+        Please click the "Taxonomy/Metabolite/CDR3 amino acid sequence/Protein/Gene
+        Symbol" to check all functional annotations related to the query.
+        <br />Please click the "Result" to browse the result page of the dataset.
       </h5>
       <div class="searchResult">
         <com-table :options="nowObj" v-if="nowObj.apiFunc"></com-table>
@@ -58,7 +49,7 @@ import {
   getepigeneticDetail,
   getproteinDetail,
   getgenomicsearch,
-  getmtdnasearch
+  getmtdnasearch,
 } from "../api/searchResult";
 import Menus from "../layout/menu-item";
 import { ref } from "vue";
@@ -267,7 +258,7 @@ const tableObj = {
       },
     ],
   },
-  'Single Cell Transcriptome': {
+  "Single Cell Transcriptome": {
     apiFunc: getSinglecellsearch,
     params: route.query,
     columns: [
@@ -470,7 +461,7 @@ const tableObj = {
       },
     ],
   },
-  'Bulk Transcriptome': {
+  "Bulk Transcriptome": {
     apiFunc: getgenomicsearch,
     params: route.query,
     columns: [
@@ -536,7 +527,7 @@ const tableObj = {
     ],
   },
 
-  'Mitochondrial Genome': {
+  "Mitochondrial Genome": {
     apiFunc: getmtdnasearch,
     params: route.query,
     columns: [

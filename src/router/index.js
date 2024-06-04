@@ -199,7 +199,12 @@ const routes = [
   {
     path: '/searchResult',
     name: 'searchResult',
-    component: () => import('../components/searchResult.vue')
+    component: () => import('../components/search.vue')
+  },
+  {
+    path: '/search',
+    name: 'search',
+    component: () => import('../components/search.vue')
   },
   {
     path: '/taxonomyDetail',

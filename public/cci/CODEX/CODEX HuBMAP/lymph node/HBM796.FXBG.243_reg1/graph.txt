@@ -1,0 +1,463 @@
+source	target	count
+B cell	CD141-positive myeloid dendritic cell	120
+B cell	CD1c-positive myeloid dendritic cell	104
+B cell	T cell	216
+B cell	classical monocyte	98
+B cell	effector CD4-positive, alpha-beta T cell	220
+B cell	effector CD8-positive, alpha-beta T cell	226
+B cell	endothelial cell	200
+B cell	erythrocyte	21
+B cell	hematopoietic stem cell	57
+B cell	innate lymphoid cell	163
+B cell	intermediate monocyte	107
+B cell	macrophage	204
+B cell	mast cell	41
+B cell	mature NK T cell	129
+B cell	mature conventional dendritic cell	98
+B cell	neutrophil	56
+B cell	non-classical monocyte	47
+B cell	plasma cell	109
+B cell	regulatory T cell	164
+B cell	stromal cell	167
+B cell	type I NK T cell	197
+CD141-positive myeloid dendritic cell	B cell	142
+CD141-positive myeloid dendritic cell	CD1c-positive myeloid dendritic cell	82
+CD141-positive myeloid dendritic cell	T cell	173
+CD141-positive myeloid dendritic cell	classical monocyte	79
+CD141-positive myeloid dendritic cell	effector CD4-positive, alpha-beta T cell	179
+CD141-positive myeloid dendritic cell	effector CD8-positive, alpha-beta T cell	176
+CD141-positive myeloid dendritic cell	endothelial cell	153
+CD141-positive myeloid dendritic cell	erythrocyte	20
+CD141-positive myeloid dendritic cell	hematopoietic stem cell	42
+CD141-positive myeloid dendritic cell	innate lymphoid cell	138
+CD141-positive myeloid dendritic cell	intermediate monocyte	88
+CD141-positive myeloid dendritic cell	macrophage	162
+CD141-positive myeloid dendritic cell	mast cell	30
+CD141-positive myeloid dendritic cell	mature NK T cell	103
+CD141-positive myeloid dendritic cell	mature conventional dendritic cell	81
+CD141-positive myeloid dendritic cell	neutrophil	47
+CD141-positive myeloid dendritic cell	non-classical monocyte	37
+CD141-positive myeloid dendritic cell	plasma cell	78
+CD141-positive myeloid dendritic cell	regulatory T cell	130
+CD141-positive myeloid dendritic cell	stromal cell	113
+CD141-positive myeloid dendritic cell	type I NK T cell	168
+CD1c-positive myeloid dendritic cell	B cell	102
+CD1c-positive myeloid dendritic cell	CD141-positive myeloid dendritic cell	67
+CD1c-positive myeloid dendritic cell	T cell	127
+CD1c-positive myeloid dendritic cell	classical monocyte	65
+CD1c-positive myeloid dendritic cell	effector CD4-positive, alpha-beta T cell	130
+CD1c-positive myeloid dendritic cell	effector CD8-positive, alpha-beta T cell	132
+CD1c-positive myeloid dendritic cell	endothelial cell	103
+CD1c-positive myeloid dendritic cell	erythrocyte	14
+CD1c-positive myeloid dendritic cell	hematopoietic stem cell	26
+CD1c-positive myeloid dendritic cell	innate lymphoid cell	98
+CD1c-positive myeloid dendritic cell	intermediate monocyte	68
+CD1c-positive myeloid dendritic cell	macrophage	121
+CD1c-positive myeloid dendritic cell	mast cell	24
+CD1c-positive myeloid dendritic cell	mature NK T cell	72
+CD1c-positive myeloid dendritic cell	mature conventional dendritic cell	55
+CD1c-positive myeloid dendritic cell	neutrophil	40
+CD1c-positive myeloid dendritic cell	non-classical monocyte	30
+CD1c-positive myeloid dendritic cell	plasma cell	66
+CD1c-positive myeloid dendritic cell	regulatory T cell	99
+CD1c-positive myeloid dendritic cell	stromal cell	78
+CD1c-positive myeloid dendritic cell	type I NK T cell	125
+T cell	B cell	215
+T cell	CD141-positive myeloid dendritic cell	152
+T cell	CD1c-positive myeloid dendritic cell	124
+T cell	classical monocyte	120
+T cell	effector CD4-positive, alpha-beta T cell	264
+T cell	effector CD8-positive, alpha-beta T cell	264
+T cell	endothelial cell	246
+T cell	erythrocyte	29
+T cell	hematopoietic stem cell	67
+T cell	innate lymphoid cell	200
+T cell	intermediate monocyte	134
+T cell	macrophage	247
+T cell	mast cell	50
+T cell	mature NK T cell	156
+T cell	mature conventional dendritic cell	122
+T cell	neutrophil	72
+T cell	non-classical monocyte	57
+T cell	plasma cell	132
+T cell	regulatory T cell	197
+T cell	stromal cell	199
+T cell	type I NK T cell	242
+classical monocyte	B cell	95
+classical monocyte	CD141-positive myeloid dendritic cell	66
+classical monocyte	CD1c-positive myeloid dendritic cell	64
+classical monocyte	T cell	124
+classical monocyte	effector CD4-positive, alpha-beta T cell	123
+classical monocyte	effector CD8-positive, alpha-beta T cell	122
+classical monocyte	endothelial cell	104
+classical monocyte	erythrocyte	16
+classical monocyte	hematopoietic stem cell	27
+classical monocyte	innate lymphoid cell	92
+classical monocyte	intermediate monocyte	71
+classical monocyte	macrophage	116
+classical monocyte	mast cell	24
+classical monocyte	mature NK T cell	68
+classical monocyte	mature conventional dendritic cell	52
+classical monocyte	neutrophil	37
+classical monocyte	non-classical monocyte	29
+classical monocyte	plasma cell	59
+classical monocyte	regulatory T cell	96
+classical monocyte	stromal cell	64
+classical monocyte	type I NK T cell	121
+effector CD4-positive, alpha-beta T cell	B cell	230
+effector CD4-positive, alpha-beta T cell	CD141-positive myeloid dendritic cell	158
+effector CD4-positive, alpha-beta T cell	CD1c-positive myeloid dendritic cell	131
+effector CD4-positive, alpha-beta T cell	T cell	276
+effector CD4-positive, alpha-beta T cell	classical monocyte	125
+effector CD4-positive, alpha-beta T cell	effector CD8-positive, alpha-beta T cell	288
+effector CD4-positive, alpha-beta T cell	endothelial cell	261
+effector CD4-positive, alpha-beta T cell	erythrocyte	30
+effector CD4-positive, alpha-beta T cell	hematopoietic stem cell	69
+effector CD4-positive, alpha-beta T cell	innate lymphoid cell	206
+effector CD4-positive, alpha-beta T cell	intermediate monocyte	144
+effector CD4-positive, alpha-beta T cell	macrophage	262
+effector CD4-positive, alpha-beta T cell	mast cell	52
+effector CD4-positive, alpha-beta T cell	mature NK T cell	163
+effector CD4-positive, alpha-beta T cell	mature conventional dendritic cell	124
+effector CD4-positive, alpha-beta T cell	neutrophil	70
+effector CD4-positive, alpha-beta T cell	non-classical monocyte	64
+effector CD4-positive, alpha-beta T cell	plasma cell	139
+effector CD4-positive, alpha-beta T cell	regulatory T cell	211
+effector CD4-positive, alpha-beta T cell	stromal cell	218
+effector CD4-positive, alpha-beta T cell	type I NK T cell	257
+effector CD8-positive, alpha-beta T cell	B cell	231
+effector CD8-positive, alpha-beta T cell	CD141-positive myeloid dendritic cell	163
+effector CD8-positive, alpha-beta T cell	CD1c-positive myeloid dendritic cell	131
+effector CD8-positive, alpha-beta T cell	T cell	279
+effector CD8-positive, alpha-beta T cell	classical monocyte	128
+effector CD8-positive, alpha-beta T cell	effector CD4-positive, alpha-beta T cell	278
+effector CD8-positive, alpha-beta T cell	endothelial cell	262
+effector CD8-positive, alpha-beta T cell	erythrocyte	30
+effector CD8-positive, alpha-beta T cell	hematopoietic stem cell	71
+effector CD8-positive, alpha-beta T cell	innate lymphoid cell	214
+effector CD8-positive, alpha-beta T cell	intermediate monocyte	142
+effector CD8-positive, alpha-beta T cell	macrophage	262
+effector CD8-positive, alpha-beta T cell	mast cell	56
+effector CD8-positive, alpha-beta T cell	mature NK T cell	167
+effector CD8-positive, alpha-beta T cell	mature conventional dendritic cell	127
+effector CD8-positive, alpha-beta T cell	neutrophil	75
+effector CD8-positive, alpha-beta T cell	non-classical monocyte	67
+effector CD8-positive, alpha-beta T cell	plasma cell	145
+effector CD8-positive, alpha-beta T cell	regulatory T cell	215
+effector CD8-positive, alpha-beta T cell	stromal cell	223
+effector CD8-positive, alpha-beta T cell	type I NK T cell	257
+endothelial cell	B cell	189
+endothelial cell	CD141-positive myeloid dendritic cell	135
+endothelial cell	CD1c-positive myeloid dendritic cell	113
+endothelial cell	T cell	247
+endothelial cell	classical monocyte	118
+endothelial cell	effector CD4-positive, alpha-beta T cell	248
+endothelial cell	effector CD8-positive, alpha-beta T cell	248
+endothelial cell	erythrocyte	29
+endothelial cell	hematopoietic stem cell	53
+endothelial cell	innate lymphoid cell	186
+endothelial cell	intermediate monocyte	138
+endothelial cell	macrophage	251
+endothelial cell	mast cell	37
+endothelial cell	mature NK T cell	141
+endothelial cell	mature conventional dendritic cell	115
+endothelial cell	neutrophil	63
+endothelial cell	non-classical monocyte	53
+endothelial cell	plasma cell	119
+endothelial cell	regulatory T cell	188
+endothelial cell	stromal cell	190
+endothelial cell	type I NK T cell	227
+erythrocyte	B cell	32
+erythrocyte	CD141-positive myeloid dendritic cell	21
+erythrocyte	CD1c-positive myeloid dendritic cell	26
+erythrocyte	T cell	45
+erythrocyte	classical monocyte	25
+erythrocyte	effector CD4-positive, alpha-beta T cell	49
+erythrocyte	effector CD8-positive, alpha-beta T cell	43
+erythrocyte	endothelial cell	29
+erythrocyte	hematopoietic stem cell	8
+erythrocyte	innate lymphoid cell	35
+erythrocyte	intermediate monocyte	27
+erythrocyte	macrophage	40
+erythrocyte	mast cell	8
+erythrocyte	mature NK T cell	23
+erythrocyte	mature conventional dendritic cell	16
+erythrocyte	neutrophil	13
+erythrocyte	non-classical monocyte	13
+erythrocyte	plasma cell	18
+erythrocyte	regulatory T cell	32
+erythrocyte	stromal cell	16
+erythrocyte	type I NK T cell	48
+hematopoietic stem cell	B cell	51
+hematopoietic stem cell	CD141-positive myeloid dendritic cell	38
+hematopoietic stem cell	CD1c-positive myeloid dendritic cell	38
+hematopoietic stem cell	T cell	71
+hematopoietic stem cell	classical monocyte	31
+hematopoietic stem cell	effector CD4-positive, alpha-beta T cell	72
+hematopoietic stem cell	effector CD8-positive, alpha-beta T cell	69
+hematopoietic stem cell	endothelial cell	57
+hematopoietic stem cell	erythrocyte	10
+hematopoietic stem cell	innate lymphoid cell	55
+hematopoietic stem cell	intermediate monocyte	41
+hematopoietic stem cell	macrophage	65
+hematopoietic stem cell	mast cell	15
+hematopoietic stem cell	mature NK T cell	43
+hematopoietic stem cell	mature conventional dendritic cell	34
+hematopoietic stem cell	neutrophil	18
+hematopoietic stem cell	non-classical monocyte	20
+hematopoietic stem cell	plasma cell	27
+hematopoietic stem cell	regulatory T cell	51
+hematopoietic stem cell	stromal cell	45
+hematopoietic stem cell	type I NK T cell	66
+innate lymphoid cell	B cell	183
+innate lymphoid cell	CD141-positive myeloid dendritic cell	135
+innate lymphoid cell	CD1c-positive myeloid dendritic cell	109
+innate lymphoid cell	T cell	220
+innate lymphoid cell	classical monocyte	103
+innate lymphoid cell	effector CD4-positive, alpha-beta T cell	223
+innate lymphoid cell	effector CD8-positive, alpha-beta T cell	226
+innate lymphoid cell	endothelial cell	208
+innate lymphoid cell	erythrocyte	25
+innate lymphoid cell	hematopoietic stem cell	61
+innate lymphoid cell	intermediate monocyte	122
+innate lymphoid cell	macrophage	213
+innate lymphoid cell	mast cell	46
+innate lymphoid cell	mature NK T cell	135
+innate lymphoid cell	mature conventional dendritic cell	105
+innate lymphoid cell	neutrophil	64
+innate lymphoid cell	non-classical monocyte	50
+innate lymphoid cell	plasma cell	117
+innate lymphoid cell	regulatory T cell	173
+innate lymphoid cell	stromal cell	168
+innate lymphoid cell	type I NK T cell	209
+intermediate monocyte	B cell	123
+intermediate monocyte	CD141-positive myeloid dendritic cell	82
+intermediate monocyte	CD1c-positive myeloid dendritic cell	78
+intermediate monocyte	T cell	148
+intermediate monocyte	classical monocyte	81
+intermediate monocyte	effector CD4-positive, alpha-beta T cell	151
+intermediate monocyte	effector CD8-positive, alpha-beta T cell	152
+intermediate monocyte	endothelial cell	119
+intermediate monocyte	erythrocyte	23
+intermediate monocyte	hematopoietic stem cell	33
+intermediate monocyte	innate lymphoid cell	118
+intermediate monocyte	macrophage	136
+intermediate monocyte	mast cell	29
+intermediate monocyte	mature NK T cell	92
+intermediate monocyte	mature conventional dendritic cell	66
+intermediate monocyte	neutrophil	48
+intermediate monocyte	non-classical monocyte	39
+intermediate monocyte	plasma cell	78
+intermediate monocyte	regulatory T cell	116
+intermediate monocyte	stromal cell	80
+intermediate monocyte	type I NK T cell	146
+macrophage	B cell	229
+macrophage	CD141-positive myeloid dendritic cell	160
+macrophage	CD1c-positive myeloid dendritic cell	129
+macrophage	T cell	276
+macrophage	classical monocyte	130
+macrophage	effector CD4-positive, alpha-beta T cell	285
+macrophage	effector CD8-positive, alpha-beta T cell	289
+macrophage	endothelial cell	264
+macrophage	erythrocyte	35
+macrophage	hematopoietic stem cell	65
+macrophage	innate lymphoid cell	210
+macrophage	intermediate monocyte	148
+macrophage	mast cell	47
+macrophage	mature NK T cell	162
+macrophage	mature conventional dendritic cell	133
+macrophage	neutrophil	72
+macrophage	non-classical monocyte	62
+macrophage	plasma cell	145
+macrophage	regulatory T cell	212
+macrophage	stromal cell	209
+macrophage	type I NK T cell	263
+mast cell	B cell	48
+mast cell	CD141-positive myeloid dendritic cell	35
+mast cell	CD1c-positive myeloid dendritic cell	39
+mast cell	T cell	66
+mast cell	classical monocyte	40
+mast cell	effector CD4-positive, alpha-beta T cell	68
+mast cell	effector CD8-positive, alpha-beta T cell	63
+mast cell	endothelial cell	46
+mast cell	erythrocyte	6
+mast cell	hematopoietic stem cell	18
+mast cell	innate lymphoid cell	51
+mast cell	intermediate monocyte	42
+mast cell	macrophage	62
+mast cell	mature NK T cell	43
+mast cell	mature conventional dendritic cell	33
+mast cell	neutrophil	21
+mast cell	non-classical monocyte	20
+mast cell	plasma cell	25
+mast cell	regulatory T cell	43
+mast cell	stromal cell	27
+mast cell	type I NK T cell	66
+mature NK T cell	B cell	141
+mature NK T cell	CD141-positive myeloid dendritic cell	99
+mature NK T cell	CD1c-positive myeloid dendritic cell	88
+mature NK T cell	T cell	169
+mature NK T cell	classical monocyte	81
+mature NK T cell	effector CD4-positive, alpha-beta T cell	170
+mature NK T cell	effector CD8-positive, alpha-beta T cell	170
+mature NK T cell	endothelial cell	145
+mature NK T cell	erythrocyte	17
+mature NK T cell	hematopoietic stem cell	45
+mature NK T cell	innate lymphoid cell	134
+mature NK T cell	intermediate monocyte	94
+mature NK T cell	macrophage	159
+mature NK T cell	mast cell	32
+mature NK T cell	mature conventional dendritic cell	77
+mature NK T cell	neutrophil	52
+mature NK T cell	non-classical monocyte	38
+mature NK T cell	plasma cell	85
+mature NK T cell	regulatory T cell	128
+mature NK T cell	stromal cell	113
+mature NK T cell	type I NK T cell	158
+mature conventional dendritic cell	B cell	130
+mature conventional dendritic cell	CD141-positive myeloid dendritic cell	89
+mature conventional dendritic cell	CD1c-positive myeloid dendritic cell	78
+mature conventional dendritic cell	T cell	153
+mature conventional dendritic cell	classical monocyte	78
+mature conventional dendritic cell	effector CD4-positive, alpha-beta T cell	154
+mature conventional dendritic cell	effector CD8-positive, alpha-beta T cell	158
+mature conventional dendritic cell	endothelial cell	124
+mature conventional dendritic cell	erythrocyte	17
+mature conventional dendritic cell	hematopoietic stem cell	36
+mature conventional dendritic cell	innate lymphoid cell	123
+mature conventional dendritic cell	intermediate monocyte	77
+mature conventional dendritic cell	macrophage	140
+mature conventional dendritic cell	mast cell	30
+mature conventional dendritic cell	mature NK T cell	98
+mature conventional dendritic cell	neutrophil	46
+mature conventional dendritic cell	non-classical monocyte	39
+mature conventional dendritic cell	plasma cell	75
+mature conventional dendritic cell	regulatory T cell	119
+mature conventional dendritic cell	stromal cell	93
+mature conventional dendritic cell	type I NK T cell	153
+neutrophil	B cell	64
+neutrophil	CD141-positive myeloid dendritic cell	49
+neutrophil	CD1c-positive myeloid dendritic cell	51
+neutrophil	T cell	86
+neutrophil	classical monocyte	55
+neutrophil	effector CD4-positive, alpha-beta T cell	86
+neutrophil	effector CD8-positive, alpha-beta T cell	84
+neutrophil	endothelial cell	67
+neutrophil	erythrocyte	11
+neutrophil	hematopoietic stem cell	25
+neutrophil	innate lymphoid cell	68
+neutrophil	intermediate monocyte	52
+neutrophil	macrophage	81
+neutrophil	mast cell	22
+neutrophil	mature NK T cell	53
+neutrophil	mature conventional dendritic cell	43
+neutrophil	non-classical monocyte	23
+neutrophil	plasma cell	41
+neutrophil	regulatory T cell	68
+neutrophil	stromal cell	42
+neutrophil	type I NK T cell	87
+non-classical monocyte	B cell	51
+non-classical monocyte	CD141-positive myeloid dendritic cell	32
+non-classical monocyte	CD1c-positive myeloid dendritic cell	35
+non-classical monocyte	T cell	65
+non-classical monocyte	classical monocyte	37
+non-classical monocyte	effector CD4-positive, alpha-beta T cell	63
+non-classical monocyte	effector CD8-positive, alpha-beta T cell	65
+non-classical monocyte	endothelial cell	42
+non-classical monocyte	erythrocyte	7
+non-classical monocyte	hematopoietic stem cell	15
+non-classical monocyte	innate lymphoid cell	51
+non-classical monocyte	intermediate monocyte	40
+non-classical monocyte	macrophage	59
+non-classical monocyte	mast cell	13
+non-classical monocyte	mature NK T cell	39
+non-classical monocyte	mature conventional dendritic cell	30
+non-classical monocyte	neutrophil	23
+non-classical monocyte	plasma cell	30
+non-classical monocyte	regulatory T cell	45
+non-classical monocyte	stromal cell	29
+non-classical monocyte	type I NK T cell	62
+plasma cell	B cell	164
+plasma cell	CD141-positive myeloid dendritic cell	115
+plasma cell	CD1c-positive myeloid dendritic cell	92
+plasma cell	T cell	200
+plasma cell	classical monocyte	87
+plasma cell	effector CD4-positive, alpha-beta T cell	202
+plasma cell	effector CD8-positive, alpha-beta T cell	204
+plasma cell	endothelial cell	193
+plasma cell	erythrocyte	17
+plasma cell	hematopoietic stem cell	48
+plasma cell	innate lymphoid cell	145
+plasma cell	intermediate monocyte	102
+plasma cell	macrophage	195
+plasma cell	mast cell	36
+plasma cell	mature NK T cell	113
+plasma cell	mature conventional dendritic cell	94
+plasma cell	neutrophil	51
+plasma cell	non-classical monocyte	40
+plasma cell	regulatory T cell	150
+plasma cell	stromal cell	166
+plasma cell	type I NK T cell	183
+regulatory T cell	B cell	162
+regulatory T cell	CD141-positive myeloid dendritic cell	117
+regulatory T cell	CD1c-positive myeloid dendritic cell	97
+regulatory T cell	T cell	197
+regulatory T cell	classical monocyte	94
+regulatory T cell	effector CD4-positive, alpha-beta T cell	202
+regulatory T cell	effector CD8-positive, alpha-beta T cell	206
+regulatory T cell	endothelial cell	179
+regulatory T cell	erythrocyte	19
+regulatory T cell	hematopoietic stem cell	54
+regulatory T cell	innate lymphoid cell	152
+regulatory T cell	intermediate monocyte	101
+regulatory T cell	macrophage	187
+regulatory T cell	mast cell	41
+regulatory T cell	mature NK T cell	121
+regulatory T cell	mature conventional dendritic cell	86
+regulatory T cell	neutrophil	60
+regulatory T cell	non-classical monocyte	43
+regulatory T cell	plasma cell	104
+regulatory T cell	stromal cell	149
+regulatory T cell	type I NK T cell	184
+stromal cell	B cell	171
+stromal cell	CD141-positive myeloid dendritic cell	120
+stromal cell	CD1c-positive myeloid dendritic cell	106
+stromal cell	T cell	222
+stromal cell	classical monocyte	102
+stromal cell	effector CD4-positive, alpha-beta T cell	225
+stromal cell	effector CD8-positive, alpha-beta T cell	225
+stromal cell	endothelial cell	211
+stromal cell	erythrocyte	25
+stromal cell	hematopoietic stem cell	54
+stromal cell	innate lymphoid cell	171
+stromal cell	intermediate monocyte	120
+stromal cell	macrophage	218
+stromal cell	mast cell	38
+stromal cell	mature NK T cell	125
+stromal cell	mature conventional dendritic cell	109
+stromal cell	neutrophil	57
+stromal cell	non-classical monocyte	56
+stromal cell	plasma cell	105
+stromal cell	regulatory T cell	164
+stromal cell	type I NK T cell	202
+type I NK T cell	B cell	212
+type I NK T cell	CD141-positive myeloid dendritic cell	149
+type I NK T cell	CD1c-positive myeloid dendritic cell	123
+type I NK T cell	T cell	257
+type I NK T cell	classical monocyte	124
+type I NK T cell	effector CD4-positive, alpha-beta T cell	256
+type I NK T cell	effector CD8-positive, alpha-beta T cell	266
+type I NK T cell	endothelial cell	245
+type I NK T cell	erythrocyte	26
+type I NK T cell	hematopoietic stem cell	66
+type I NK T cell	innate lymphoid cell	197
+type I NK T cell	intermediate monocyte	136
+type I NK T cell	macrophage	246
+type I NK T cell	mast cell	49
+type I NK T cell	mature NK T cell	154
+type I NK T cell	mature conventional dendritic cell	115
+type I NK T cell	neutrophil	71
+type I NK T cell	non-classical monocyte	60
+type I NK T cell	plasma cell	132
+type I NK T cell	regulatory T cell	197
+type I NK T cell	stromal cell	202

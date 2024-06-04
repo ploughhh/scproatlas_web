@@ -1,0 +1,463 @@
+source	target	count
+B cell	CD4-positive helper T cell	228
+B cell	CD8-positive, alpha-beta cytotoxic T cell	177
+B cell	DN1 thymic pro-T cell	161
+B cell	DN3 thymocyte	155
+B cell	DN4 thymocyte	111
+B cell	T follicular helper cell	160
+B cell	capillary endothelial cell	186
+B cell	endothelial cell of artery	208
+B cell	endothelial cell of lymphatic vessel	210
+B cell	erythrocyte	56
+B cell	fibroblast	318
+B cell	innate lymphoid cell	165
+B cell	macrophage	226
+B cell	mature NK T cell	108
+B cell	medullary thymic epithelial cell	237
+B cell	monocyte	126
+B cell	myeloid dendritic cell	37
+B cell	naive regulatory T cell	171
+B cell	plasma cell	187
+B cell	vascular associated smooth muscle cell	308
+B cell	vein endothelial cell	259
+CD4-positive helper T cell	B cell	235
+CD4-positive helper T cell	CD8-positive, alpha-beta cytotoxic T cell	177
+CD4-positive helper T cell	DN1 thymic pro-T cell	168
+CD4-positive helper T cell	DN3 thymocyte	168
+CD4-positive helper T cell	DN4 thymocyte	117
+CD4-positive helper T cell	T follicular helper cell	156
+CD4-positive helper T cell	capillary endothelial cell	174
+CD4-positive helper T cell	endothelial cell of artery	200
+CD4-positive helper T cell	endothelial cell of lymphatic vessel	197
+CD4-positive helper T cell	erythrocyte	55
+CD4-positive helper T cell	fibroblast	298
+CD4-positive helper T cell	innate lymphoid cell	177
+CD4-positive helper T cell	macrophage	213
+CD4-positive helper T cell	mature NK T cell	107
+CD4-positive helper T cell	medullary thymic epithelial cell	225
+CD4-positive helper T cell	monocyte	131
+CD4-positive helper T cell	myeloid dendritic cell	41
+CD4-positive helper T cell	naive regulatory T cell	166
+CD4-positive helper T cell	plasma cell	183
+CD4-positive helper T cell	vascular associated smooth muscle cell	293
+CD4-positive helper T cell	vein endothelial cell	238
+CD8-positive, alpha-beta cytotoxic T cell	B cell	195
+CD8-positive, alpha-beta cytotoxic T cell	CD4-positive helper T cell	181
+CD8-positive, alpha-beta cytotoxic T cell	DN1 thymic pro-T cell	148
+CD8-positive, alpha-beta cytotoxic T cell	DN3 thymocyte	143
+CD8-positive, alpha-beta cytotoxic T cell	DN4 thymocyte	102
+CD8-positive, alpha-beta cytotoxic T cell	T follicular helper cell	135
+CD8-positive, alpha-beta cytotoxic T cell	capillary endothelial cell	140
+CD8-positive, alpha-beta cytotoxic T cell	endothelial cell of artery	162
+CD8-positive, alpha-beta cytotoxic T cell	endothelial cell of lymphatic vessel	158
+CD8-positive, alpha-beta cytotoxic T cell	erythrocyte	46
+CD8-positive, alpha-beta cytotoxic T cell	fibroblast	236
+CD8-positive, alpha-beta cytotoxic T cell	innate lymphoid cell	155
+CD8-positive, alpha-beta cytotoxic T cell	macrophage	179
+CD8-positive, alpha-beta cytotoxic T cell	mature NK T cell	98
+CD8-positive, alpha-beta cytotoxic T cell	medullary thymic epithelial cell	187
+CD8-positive, alpha-beta cytotoxic T cell	monocyte	114
+CD8-positive, alpha-beta cytotoxic T cell	myeloid dendritic cell	38
+CD8-positive, alpha-beta cytotoxic T cell	naive regulatory T cell	146
+CD8-positive, alpha-beta cytotoxic T cell	plasma cell	145
+CD8-positive, alpha-beta cytotoxic T cell	vascular associated smooth muscle cell	229
+CD8-positive, alpha-beta cytotoxic T cell	vein endothelial cell	191
+DN1 thymic pro-T cell	B cell	178
+DN1 thymic pro-T cell	CD4-positive helper T cell	161
+DN1 thymic pro-T cell	CD8-positive, alpha-beta cytotoxic T cell	138
+DN1 thymic pro-T cell	DN3 thymocyte	129
+DN1 thymic pro-T cell	DN4 thymocyte	91
+DN1 thymic pro-T cell	T follicular helper cell	117
+DN1 thymic pro-T cell	capillary endothelial cell	126
+DN1 thymic pro-T cell	endothelial cell of artery	150
+DN1 thymic pro-T cell	endothelial cell of lymphatic vessel	153
+DN1 thymic pro-T cell	erythrocyte	45
+DN1 thymic pro-T cell	fibroblast	227
+DN1 thymic pro-T cell	innate lymphoid cell	135
+DN1 thymic pro-T cell	macrophage	160
+DN1 thymic pro-T cell	mature NK T cell	91
+DN1 thymic pro-T cell	medullary thymic epithelial cell	167
+DN1 thymic pro-T cell	monocyte	106
+DN1 thymic pro-T cell	myeloid dendritic cell	36
+DN1 thymic pro-T cell	naive regulatory T cell	126
+DN1 thymic pro-T cell	plasma cell	140
+DN1 thymic pro-T cell	vascular associated smooth muscle cell	221
+DN1 thymic pro-T cell	vein endothelial cell	181
+DN3 thymocyte	B cell	186
+DN3 thymocyte	CD4-positive helper T cell	169
+DN3 thymocyte	CD8-positive, alpha-beta cytotoxic T cell	144
+DN3 thymocyte	DN1 thymic pro-T cell	131
+DN3 thymocyte	DN4 thymocyte	96
+DN3 thymocyte	T follicular helper cell	126
+DN3 thymocyte	capillary endothelial cell	138
+DN3 thymocyte	endothelial cell of artery	152
+DN3 thymocyte	endothelial cell of lymphatic vessel	155
+DN3 thymocyte	erythrocyte	44
+DN3 thymocyte	fibroblast	212
+DN3 thymocyte	innate lymphoid cell	137
+DN3 thymocyte	macrophage	175
+DN3 thymocyte	mature NK T cell	92
+DN3 thymocyte	medullary thymic epithelial cell	169
+DN3 thymocyte	monocyte	115
+DN3 thymocyte	myeloid dendritic cell	38
+DN3 thymocyte	naive regulatory T cell	138
+DN3 thymocyte	plasma cell	149
+DN3 thymocyte	vascular associated smooth muscle cell	208
+DN3 thymocyte	vein endothelial cell	184
+DN4 thymocyte	B cell	135
+DN4 thymocyte	CD4-positive helper T cell	125
+DN4 thymocyte	CD8-positive, alpha-beta cytotoxic T cell	106
+DN4 thymocyte	DN1 thymic pro-T cell	104
+DN4 thymocyte	DN3 thymocyte	97
+DN4 thymocyte	T follicular helper cell	93
+DN4 thymocyte	capillary endothelial cell	93
+DN4 thymocyte	endothelial cell of artery	98
+DN4 thymocyte	endothelial cell of lymphatic vessel	100
+DN4 thymocyte	erythrocyte	29
+DN4 thymocyte	fibroblast	144
+DN4 thymocyte	innate lymphoid cell	107
+DN4 thymocyte	macrophage	130
+DN4 thymocyte	mature NK T cell	77
+DN4 thymocyte	medullary thymic epithelial cell	113
+DN4 thymocyte	monocyte	88
+DN4 thymocyte	myeloid dendritic cell	32
+DN4 thymocyte	naive regulatory T cell	98
+DN4 thymocyte	plasma cell	105
+DN4 thymocyte	vascular associated smooth muscle cell	136
+DN4 thymocyte	vein endothelial cell	119
+T follicular helper cell	B cell	178
+T follicular helper cell	CD4-positive helper T cell	160
+T follicular helper cell	CD8-positive, alpha-beta cytotoxic T cell	135
+T follicular helper cell	DN1 thymic pro-T cell	133
+T follicular helper cell	DN3 thymocyte	131
+T follicular helper cell	DN4 thymocyte	91
+T follicular helper cell	capillary endothelial cell	129
+T follicular helper cell	endothelial cell of artery	142
+T follicular helper cell	endothelial cell of lymphatic vessel	146
+T follicular helper cell	erythrocyte	37
+T follicular helper cell	fibroblast	217
+T follicular helper cell	innate lymphoid cell	140
+T follicular helper cell	macrophage	160
+T follicular helper cell	mature NK T cell	93
+T follicular helper cell	medullary thymic epithelial cell	165
+T follicular helper cell	monocyte	101
+T follicular helper cell	myeloid dendritic cell	33
+T follicular helper cell	naive regulatory T cell	128
+T follicular helper cell	plasma cell	135
+T follicular helper cell	vascular associated smooth muscle cell	210
+T follicular helper cell	vein endothelial cell	176
+capillary endothelial cell	B cell	193
+capillary endothelial cell	CD4-positive helper T cell	170
+capillary endothelial cell	CD8-positive, alpha-beta cytotoxic T cell	143
+capillary endothelial cell	DN1 thymic pro-T cell	129
+capillary endothelial cell	DN3 thymocyte	134
+capillary endothelial cell	DN4 thymocyte	93
+capillary endothelial cell	T follicular helper cell	128
+capillary endothelial cell	endothelial cell of artery	158
+capillary endothelial cell	endothelial cell of lymphatic vessel	158
+capillary endothelial cell	erythrocyte	48
+capillary endothelial cell	fibroblast	244
+capillary endothelial cell	innate lymphoid cell	130
+capillary endothelial cell	macrophage	181
+capillary endothelial cell	mature NK T cell	95
+capillary endothelial cell	medullary thymic epithelial cell	178
+capillary endothelial cell	monocyte	115
+capillary endothelial cell	myeloid dendritic cell	24
+capillary endothelial cell	naive regulatory T cell	134
+capillary endothelial cell	plasma cell	138
+capillary endothelial cell	vascular associated smooth muscle cell	237
+capillary endothelial cell	vein endothelial cell	189
+endothelial cell of artery	B cell	233
+endothelial cell of artery	CD4-positive helper T cell	205
+endothelial cell of artery	CD8-positive, alpha-beta cytotoxic T cell	169
+endothelial cell of artery	DN1 thymic pro-T cell	153
+endothelial cell of artery	DN3 thymocyte	154
+endothelial cell of artery	DN4 thymocyte	105
+endothelial cell of artery	T follicular helper cell	148
+endothelial cell of artery	capillary endothelial cell	172
+endothelial cell of artery	endothelial cell of lymphatic vessel	191
+endothelial cell of artery	erythrocyte	58
+endothelial cell of artery	fibroblast	286
+endothelial cell of artery	innate lymphoid cell	155
+endothelial cell of artery	macrophage	207
+endothelial cell of artery	mature NK T cell	106
+endothelial cell of artery	medullary thymic epithelial cell	221
+endothelial cell of artery	monocyte	124
+endothelial cell of artery	myeloid dendritic cell	29
+endothelial cell of artery	naive regulatory T cell	158
+endothelial cell of artery	plasma cell	161
+endothelial cell of artery	vascular associated smooth muscle cell	282
+endothelial cell of artery	vein endothelial cell	230
+endothelial cell of lymphatic vessel	B cell	245
+endothelial cell of lymphatic vessel	CD4-positive helper T cell	220
+endothelial cell of lymphatic vessel	CD8-positive, alpha-beta cytotoxic T cell	176
+endothelial cell of lymphatic vessel	DN1 thymic pro-T cell	155
+endothelial cell of lymphatic vessel	DN3 thymocyte	162
+endothelial cell of lymphatic vessel	DN4 thymocyte	112
+endothelial cell of lymphatic vessel	T follicular helper cell	154
+endothelial cell of lymphatic vessel	capillary endothelial cell	181
+endothelial cell of lymphatic vessel	endothelial cell of artery	209
+endothelial cell of lymphatic vessel	erythrocyte	60
+endothelial cell of lymphatic vessel	fibroblast	328
+endothelial cell of lymphatic vessel	innate lymphoid cell	155
+endothelial cell of lymphatic vessel	macrophage	224
+endothelial cell of lymphatic vessel	mature NK T cell	107
+endothelial cell of lymphatic vessel	medullary thymic epithelial cell	243
+endothelial cell of lymphatic vessel	monocyte	123
+endothelial cell of lymphatic vessel	myeloid dendritic cell	27
+endothelial cell of lymphatic vessel	naive regulatory T cell	166
+endothelial cell of lymphatic vessel	plasma cell	163
+endothelial cell of lymphatic vessel	vascular associated smooth muscle cell	325
+endothelial cell of lymphatic vessel	vein endothelial cell	259
+erythrocyte	B cell	56
+erythrocyte	CD4-positive helper T cell	45
+erythrocyte	CD8-positive, alpha-beta cytotoxic T cell	37
+erythrocyte	DN1 thymic pro-T cell	39
+erythrocyte	DN3 thymocyte	32
+erythrocyte	DN4 thymocyte	25
+erythrocyte	T follicular helper cell	37
+erythrocyte	capillary endothelial cell	42
+erythrocyte	endothelial cell of artery	40
+erythrocyte	endothelial cell of lymphatic vessel	46
+erythrocyte	fibroblast	57
+erythrocyte	innate lymphoid cell	34
+erythrocyte	macrophage	50
+erythrocyte	mature NK T cell	29
+erythrocyte	medullary thymic epithelial cell	46
+erythrocyte	monocyte	34
+erythrocyte	myeloid dendritic cell	9
+erythrocyte	naive regulatory T cell	36
+erythrocyte	plasma cell	34
+erythrocyte	vascular associated smooth muscle cell	54
+erythrocyte	vein endothelial cell	46
+fibroblast	B cell	342
+fibroblast	CD4-positive helper T cell	308
+fibroblast	CD8-positive, alpha-beta cytotoxic T cell	252
+fibroblast	DN1 thymic pro-T cell	229
+fibroblast	DN3 thymocyte	231
+fibroblast	DN4 thymocyte	150
+fibroblast	T follicular helper cell	222
+fibroblast	capillary endothelial cell	258
+fibroblast	endothelial cell of artery	301
+fibroblast	endothelial cell of lymphatic vessel	295
+fibroblast	erythrocyte	78
+fibroblast	innate lymphoid cell	226
+fibroblast	macrophage	314
+fibroblast	mature NK T cell	146
+fibroblast	medullary thymic epithelial cell	348
+fibroblast	monocyte	169
+fibroblast	myeloid dendritic cell	38
+fibroblast	naive regulatory T cell	236
+fibroblast	plasma cell	250
+fibroblast	vascular associated smooth muscle cell	468
+fibroblast	vein endothelial cell	372
+innate lymphoid cell	B cell	191
+innate lymphoid cell	CD4-positive helper T cell	173
+innate lymphoid cell	CD8-positive, alpha-beta cytotoxic T cell	146
+innate lymphoid cell	DN1 thymic pro-T cell	141
+innate lymphoid cell	DN3 thymocyte	138
+innate lymphoid cell	DN4 thymocyte	100
+innate lymphoid cell	T follicular helper cell	127
+innate lymphoid cell	capillary endothelial cell	140
+innate lymphoid cell	endothelial cell of artery	160
+innate lymphoid cell	endothelial cell of lymphatic vessel	159
+innate lymphoid cell	erythrocyte	47
+innate lymphoid cell	fibroblast	231
+innate lymphoid cell	macrophage	177
+innate lymphoid cell	mature NK T cell	98
+innate lymphoid cell	medullary thymic epithelial cell	176
+innate lymphoid cell	monocyte	114
+innate lymphoid cell	myeloid dendritic cell	40
+innate lymphoid cell	naive regulatory T cell	135
+innate lymphoid cell	plasma cell	151
+innate lymphoid cell	vascular associated smooth muscle cell	227
+innate lymphoid cell	vein endothelial cell	193
+macrophage	B cell	229
+macrophage	CD4-positive helper T cell	202
+macrophage	CD8-positive, alpha-beta cytotoxic T cell	177
+macrophage	DN1 thymic pro-T cell	163
+macrophage	DN3 thymocyte	165
+macrophage	DN4 thymocyte	116
+macrophage	T follicular helper cell	150
+macrophage	capillary endothelial cell	161
+macrophage	endothelial cell of artery	181
+macrophage	endothelial cell of lymphatic vessel	171
+macrophage	erythrocyte	60
+macrophage	fibroblast	257
+macrophage	innate lymphoid cell	160
+macrophage	mature NK T cell	106
+macrophage	medullary thymic epithelial cell	201
+macrophage	monocyte	129
+macrophage	myeloid dendritic cell	31
+macrophage	naive regulatory T cell	163
+macrophage	plasma cell	169
+macrophage	vascular associated smooth muscle cell	251
+macrophage	vein endothelial cell	211
+mature NK T cell	B cell	124
+mature NK T cell	CD4-positive helper T cell	114
+mature NK T cell	CD8-positive, alpha-beta cytotoxic T cell	96
+mature NK T cell	DN1 thymic pro-T cell	94
+mature NK T cell	DN3 thymocyte	86
+mature NK T cell	DN4 thymocyte	67
+mature NK T cell	T follicular helper cell	87
+mature NK T cell	capillary endothelial cell	82
+mature NK T cell	endothelial cell of artery	91
+mature NK T cell	endothelial cell of lymphatic vessel	86
+mature NK T cell	erythrocyte	27
+mature NK T cell	fibroblast	125
+mature NK T cell	innate lymphoid cell	100
+mature NK T cell	macrophage	122
+mature NK T cell	medullary thymic epithelial cell	98
+mature NK T cell	monocyte	81
+mature NK T cell	myeloid dendritic cell	27
+mature NK T cell	naive regulatory T cell	87
+mature NK T cell	plasma cell	101
+mature NK T cell	vascular associated smooth muscle cell	119
+mature NK T cell	vein endothelial cell	101
+medullary thymic epithelial cell	B cell	293
+medullary thymic epithelial cell	CD4-positive helper T cell	263
+medullary thymic epithelial cell	CD8-positive, alpha-beta cytotoxic T cell	213
+medullary thymic epithelial cell	DN1 thymic pro-T cell	191
+medullary thymic epithelial cell	DN3 thymocyte	196
+medullary thymic epithelial cell	DN4 thymocyte	133
+medullary thymic epithelial cell	T follicular helper cell	190
+medullary thymic epithelial cell	capillary endothelial cell	217
+medullary thymic epithelial cell	endothelial cell of artery	261
+medullary thymic epithelial cell	endothelial cell of lymphatic vessel	253
+medullary thymic epithelial cell	erythrocyte	73
+medullary thymic epithelial cell	fibroblast	404
+medullary thymic epithelial cell	innate lymphoid cell	193
+medullary thymic epithelial cell	macrophage	271
+medullary thymic epithelial cell	mature NK T cell	126
+medullary thymic epithelial cell	monocyte	149
+medullary thymic epithelial cell	myeloid dendritic cell	34
+medullary thymic epithelial cell	naive regulatory T cell	202
+medullary thymic epithelial cell	plasma cell	203
+medullary thymic epithelial cell	vascular associated smooth muscle cell	400
+medullary thymic epithelial cell	vein endothelial cell	318
+monocyte	B cell	134
+monocyte	CD4-positive helper T cell	115
+monocyte	CD8-positive, alpha-beta cytotoxic T cell	103
+monocyte	DN1 thymic pro-T cell	93
+monocyte	DN3 thymocyte	93
+monocyte	DN4 thymocyte	67
+monocyte	T follicular helper cell	91
+monocyte	capillary endothelial cell	91
+monocyte	endothelial cell of artery	96
+monocyte	endothelial cell of lymphatic vessel	101
+monocyte	erythrocyte	33
+monocyte	fibroblast	141
+monocyte	innate lymphoid cell	98
+monocyte	macrophage	128
+monocyte	mature NK T cell	73
+monocyte	medullary thymic epithelial cell	106
+monocyte	myeloid dendritic cell	22
+monocyte	naive regulatory T cell	92
+monocyte	plasma cell	104
+monocyte	vascular associated smooth muscle cell	135
+monocyte	vein endothelial cell	113
+myeloid dendritic cell	B cell	49
+myeloid dendritic cell	CD4-positive helper T cell	42
+myeloid dendritic cell	CD8-positive, alpha-beta cytotoxic T cell	38
+myeloid dendritic cell	DN1 thymic pro-T cell	34
+myeloid dendritic cell	DN3 thymocyte	28
+myeloid dendritic cell	DN4 thymocyte	24
+myeloid dendritic cell	T follicular helper cell	36
+myeloid dendritic cell	capillary endothelial cell	35
+myeloid dendritic cell	endothelial cell of artery	33
+myeloid dendritic cell	endothelial cell of lymphatic vessel	35
+myeloid dendritic cell	erythrocyte	11
+myeloid dendritic cell	fibroblast	47
+myeloid dendritic cell	innate lymphoid cell	34
+myeloid dendritic cell	macrophage	49
+myeloid dendritic cell	mature NK T cell	31
+myeloid dendritic cell	medullary thymic epithelial cell	40
+myeloid dendritic cell	monocyte	34
+myeloid dendritic cell	naive regulatory T cell	30
+myeloid dendritic cell	plasma cell	34
+myeloid dendritic cell	vascular associated smooth muscle cell	46
+myeloid dendritic cell	vein endothelial cell	39
+naive regulatory T cell	B cell	191
+naive regulatory T cell	CD4-positive helper T cell	179
+naive regulatory T cell	CD8-positive, alpha-beta cytotoxic T cell	147
+naive regulatory T cell	DN1 thymic pro-T cell	138
+naive regulatory T cell	DN3 thymocyte	138
+naive regulatory T cell	DN4 thymocyte	100
+naive regulatory T cell	T follicular helper cell	135
+naive regulatory T cell	capillary endothelial cell	136
+naive regulatory T cell	endothelial cell of artery	153
+naive regulatory T cell	endothelial cell of lymphatic vessel	156
+naive regulatory T cell	erythrocyte	42
+naive regulatory T cell	fibroblast	233
+naive regulatory T cell	innate lymphoid cell	148
+naive regulatory T cell	macrophage	175
+naive regulatory T cell	mature NK T cell	96
+naive regulatory T cell	medullary thymic epithelial cell	178
+naive regulatory T cell	monocyte	108
+naive regulatory T cell	myeloid dendritic cell	36
+naive regulatory T cell	plasma cell	149
+naive regulatory T cell	vascular associated smooth muscle cell	228
+naive regulatory T cell	vein endothelial cell	191
+plasma cell	B cell	207
+plasma cell	CD4-positive helper T cell	195
+plasma cell	CD8-positive, alpha-beta cytotoxic T cell	162
+plasma cell	DN1 thymic pro-T cell	149
+plasma cell	DN3 thymocyte	150
+plasma cell	DN4 thymocyte	101
+plasma cell	T follicular helper cell	139
+plasma cell	capillary endothelial cell	148
+plasma cell	endothelial cell of artery	170
+plasma cell	endothelial cell of lymphatic vessel	168
+plasma cell	erythrocyte	54
+plasma cell	fibroblast	268
+plasma cell	innate lymphoid cell	152
+plasma cell	macrophage	190
+plasma cell	mature NK T cell	94
+plasma cell	medullary thymic epithelial cell	200
+plasma cell	monocyte	114
+plasma cell	myeloid dendritic cell	28
+plasma cell	naive regulatory T cell	154
+plasma cell	vascular associated smooth muscle cell	255
+plasma cell	vein endothelial cell	212
+vascular associated smooth muscle cell	B cell	302
+vascular associated smooth muscle cell	CD4-positive helper T cell	278
+vascular associated smooth muscle cell	CD8-positive, alpha-beta cytotoxic T cell	225
+vascular associated smooth muscle cell	DN1 thymic pro-T cell	201
+vascular associated smooth muscle cell	DN3 thymocyte	208
+vascular associated smooth muscle cell	DN4 thymocyte	136
+vascular associated smooth muscle cell	T follicular helper cell	203
+vascular associated smooth muscle cell	capillary endothelial cell	225
+vascular associated smooth muscle cell	endothelial cell of artery	269
+vascular associated smooth muscle cell	endothelial cell of lymphatic vessel	261
+vascular associated smooth muscle cell	erythrocyte	73
+vascular associated smooth muscle cell	fibroblast	412
+vascular associated smooth muscle cell	innate lymphoid cell	203
+vascular associated smooth muscle cell	macrophage	274
+vascular associated smooth muscle cell	mature NK T cell	131
+vascular associated smooth muscle cell	medullary thymic epithelial cell	304
+vascular associated smooth muscle cell	monocyte	150
+vascular associated smooth muscle cell	myeloid dendritic cell	37
+vascular associated smooth muscle cell	naive regulatory T cell	214
+vascular associated smooth muscle cell	plasma cell	217
+vascular associated smooth muscle cell	vein endothelial cell	324
+vein endothelial cell	B cell	268
+vein endothelial cell	CD4-positive helper T cell	245
+vein endothelial cell	CD8-positive, alpha-beta cytotoxic T cell	198
+vein endothelial cell	DN1 thymic pro-T cell	181
+vein endothelial cell	DN3 thymocyte	187
+vein endothelial cell	DN4 thymocyte	128
+vein endothelial cell	T follicular helper cell	179
+vein endothelial cell	capillary endothelial cell	204
+vein endothelial cell	endothelial cell of artery	236
+vein endothelial cell	endothelial cell of lymphatic vessel	228
+vein endothelial cell	erythrocyte	66
+vein endothelial cell	fibroblast	368
+vein endothelial cell	innate lymphoid cell	183
+vein endothelial cell	macrophage	237
+vein endothelial cell	mature NK T cell	127
+vein endothelial cell	medullary thymic epithelial cell	267
+vein endothelial cell	monocyte	144
+vein endothelial cell	myeloid dendritic cell	32
+vein endothelial cell	naive regulatory T cell	188
+vein endothelial cell	plasma cell	189
+vein endothelial cell	vascular associated smooth muscle cell	359

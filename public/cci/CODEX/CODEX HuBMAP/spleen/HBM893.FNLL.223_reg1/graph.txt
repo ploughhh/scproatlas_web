@@ -1,0 +1,421 @@
+source	target	count
+CD1c-positive myeloid dendritic cell	CD4-positive, alpha-beta memory T cell	120
+CD1c-positive myeloid dendritic cell	CD8-positive, alpha-beta memory T cell	143
+CD1c-positive myeloid dendritic cell	classical monocyte	138
+CD1c-positive myeloid dendritic cell	endothelial cell	134
+CD1c-positive myeloid dendritic cell	erythrocyte	36
+CD1c-positive myeloid dendritic cell	hematopoietic stem cell	50
+CD1c-positive myeloid dendritic cell	innate lymphoid cell	53
+CD1c-positive myeloid dendritic cell	intermediate monocyte	41
+CD1c-positive myeloid dendritic cell	macrophage	134
+CD1c-positive myeloid dendritic cell	mature NK T cell	125
+CD1c-positive myeloid dendritic cell	memory B cell	143
+CD1c-positive myeloid dendritic cell	naive B cell	51
+CD1c-positive myeloid dendritic cell	naive thymus-derived CD4-positive, alpha-beta T cell	103
+CD1c-positive myeloid dendritic cell	naive thymus-derived CD8-positive, alpha-beta T cell	68
+CD1c-positive myeloid dendritic cell	neutrophil	91
+CD1c-positive myeloid dendritic cell	plasma cell	150
+CD1c-positive myeloid dendritic cell	plasmacytoid dendritic cell	88
+CD1c-positive myeloid dendritic cell	platelet	53
+CD1c-positive myeloid dendritic cell	regulatory T cell	96
+CD1c-positive myeloid dendritic cell	type I NK T cell	120
+CD4-positive, alpha-beta memory T cell	CD1c-positive myeloid dendritic cell	115
+CD4-positive, alpha-beta memory T cell	CD8-positive, alpha-beta memory T cell	203
+CD4-positive, alpha-beta memory T cell	classical monocyte	216
+CD4-positive, alpha-beta memory T cell	endothelial cell	210
+CD4-positive, alpha-beta memory T cell	erythrocyte	64
+CD4-positive, alpha-beta memory T cell	hematopoietic stem cell	82
+CD4-positive, alpha-beta memory T cell	innate lymphoid cell	94
+CD4-positive, alpha-beta memory T cell	intermediate monocyte	52
+CD4-positive, alpha-beta memory T cell	macrophage	199
+CD4-positive, alpha-beta memory T cell	mature NK T cell	181
+CD4-positive, alpha-beta memory T cell	memory B cell	208
+CD4-positive, alpha-beta memory T cell	naive B cell	77
+CD4-positive, alpha-beta memory T cell	naive thymus-derived CD4-positive, alpha-beta T cell	147
+CD4-positive, alpha-beta memory T cell	naive thymus-derived CD8-positive, alpha-beta T cell	104
+CD4-positive, alpha-beta memory T cell	neutrophil	142
+CD4-positive, alpha-beta memory T cell	plasma cell	237
+CD4-positive, alpha-beta memory T cell	plasmacytoid dendritic cell	117
+CD4-positive, alpha-beta memory T cell	platelet	80
+CD4-positive, alpha-beta memory T cell	regulatory T cell	131
+CD4-positive, alpha-beta memory T cell	type I NK T cell	158
+CD8-positive, alpha-beta memory T cell	CD1c-positive myeloid dendritic cell	130
+CD8-positive, alpha-beta memory T cell	CD4-positive, alpha-beta memory T cell	201
+CD8-positive, alpha-beta memory T cell	classical monocyte	247
+CD8-positive, alpha-beta memory T cell	endothelial cell	242
+CD8-positive, alpha-beta memory T cell	erythrocyte	74
+CD8-positive, alpha-beta memory T cell	hematopoietic stem cell	94
+CD8-positive, alpha-beta memory T cell	innate lymphoid cell	104
+CD8-positive, alpha-beta memory T cell	intermediate monocyte	58
+CD8-positive, alpha-beta memory T cell	macrophage	228
+CD8-positive, alpha-beta memory T cell	mature NK T cell	209
+CD8-positive, alpha-beta memory T cell	memory B cell	246
+CD8-positive, alpha-beta memory T cell	naive B cell	85
+CD8-positive, alpha-beta memory T cell	naive thymus-derived CD4-positive, alpha-beta T cell	175
+CD8-positive, alpha-beta memory T cell	naive thymus-derived CD8-positive, alpha-beta T cell	119
+CD8-positive, alpha-beta memory T cell	neutrophil	161
+CD8-positive, alpha-beta memory T cell	plasma cell	281
+CD8-positive, alpha-beta memory T cell	plasmacytoid dendritic cell	136
+CD8-positive, alpha-beta memory T cell	platelet	94
+CD8-positive, alpha-beta memory T cell	regulatory T cell	158
+CD8-positive, alpha-beta memory T cell	type I NK T cell	184
+classical monocyte	CD1c-positive myeloid dendritic cell	138
+classical monocyte	CD4-positive, alpha-beta memory T cell	212
+classical monocyte	CD8-positive, alpha-beta memory T cell	257
+classical monocyte	endothelial cell	268
+classical monocyte	erythrocyte	75
+classical monocyte	hematopoietic stem cell	102
+classical monocyte	innate lymphoid cell	103
+classical monocyte	intermediate monocyte	60
+classical monocyte	macrophage	245
+classical monocyte	mature NK T cell	217
+classical monocyte	memory B cell	264
+classical monocyte	naive B cell	89
+classical monocyte	naive thymus-derived CD4-positive, alpha-beta T cell	183
+classical monocyte	naive thymus-derived CD8-positive, alpha-beta T cell	122
+classical monocyte	neutrophil	173
+classical monocyte	plasma cell	300
+classical monocyte	plasmacytoid dendritic cell	142
+classical monocyte	platelet	93
+classical monocyte	regulatory T cell	164
+classical monocyte	type I NK T cell	192
+endothelial cell	CD1c-positive myeloid dendritic cell	130
+endothelial cell	CD4-positive, alpha-beta memory T cell	195
+endothelial cell	CD8-positive, alpha-beta memory T cell	245
+endothelial cell	classical monocyte	258
+endothelial cell	erythrocyte	77
+endothelial cell	hematopoietic stem cell	94
+endothelial cell	innate lymphoid cell	92
+endothelial cell	intermediate monocyte	54
+endothelial cell	macrophage	238
+endothelial cell	mature NK T cell	213
+endothelial cell	memory B cell	255
+endothelial cell	naive B cell	85
+endothelial cell	naive thymus-derived CD4-positive, alpha-beta T cell	174
+endothelial cell	naive thymus-derived CD8-positive, alpha-beta T cell	118
+endothelial cell	neutrophil	165
+endothelial cell	plasma cell	283
+endothelial cell	plasmacytoid dendritic cell	136
+endothelial cell	platelet	87
+endothelial cell	regulatory T cell	154
+endothelial cell	type I NK T cell	178
+erythrocyte	CD1c-positive myeloid dendritic cell	37
+erythrocyte	CD4-positive, alpha-beta memory T cell	55
+erythrocyte	CD8-positive, alpha-beta memory T cell	75
+erythrocyte	classical monocyte	75
+erythrocyte	endothelial cell	68
+erythrocyte	hematopoietic stem cell	26
+erythrocyte	innate lymphoid cell	21
+erythrocyte	intermediate monocyte	18
+erythrocyte	macrophage	68
+erythrocyte	mature NK T cell	59
+erythrocyte	memory B cell	77
+erythrocyte	naive B cell	28
+erythrocyte	naive thymus-derived CD4-positive, alpha-beta T cell	51
+erythrocyte	naive thymus-derived CD8-positive, alpha-beta T cell	33
+erythrocyte	neutrophil	46
+erythrocyte	plasma cell	84
+erythrocyte	plasmacytoid dendritic cell	40
+erythrocyte	platelet	26
+erythrocyte	regulatory T cell	43
+erythrocyte	type I NK T cell	61
+hematopoietic stem cell	CD1c-positive myeloid dendritic cell	65
+hematopoietic stem cell	CD4-positive, alpha-beta memory T cell	94
+hematopoietic stem cell	CD8-positive, alpha-beta memory T cell	116
+hematopoietic stem cell	classical monocyte	118
+hematopoietic stem cell	endothelial cell	114
+hematopoietic stem cell	erythrocyte	24
+hematopoietic stem cell	innate lymphoid cell	42
+hematopoietic stem cell	intermediate monocyte	27
+hematopoietic stem cell	macrophage	106
+hematopoietic stem cell	mature NK T cell	99
+hematopoietic stem cell	memory B cell	118
+hematopoietic stem cell	naive B cell	41
+hematopoietic stem cell	naive thymus-derived CD4-positive, alpha-beta T cell	90
+hematopoietic stem cell	naive thymus-derived CD8-positive, alpha-beta T cell	48
+hematopoietic stem cell	neutrophil	71
+hematopoietic stem cell	plasma cell	128
+hematopoietic stem cell	plasmacytoid dendritic cell	62
+hematopoietic stem cell	platelet	43
+hematopoietic stem cell	regulatory T cell	78
+hematopoietic stem cell	type I NK T cell	97
+innate lymphoid cell	CD1c-positive myeloid dendritic cell	71
+innate lymphoid cell	CD4-positive, alpha-beta memory T cell	110
+innate lymphoid cell	CD8-positive, alpha-beta memory T cell	135
+innate lymphoid cell	classical monocyte	140
+innate lymphoid cell	endothelial cell	125
+innate lymphoid cell	erythrocyte	35
+innate lymphoid cell	hematopoietic stem cell	54
+innate lymphoid cell	intermediate monocyte	39
+innate lymphoid cell	macrophage	129
+innate lymphoid cell	mature NK T cell	116
+innate lymphoid cell	memory B cell	141
+innate lymphoid cell	naive B cell	56
+innate lymphoid cell	naive thymus-derived CD4-positive, alpha-beta T cell	97
+innate lymphoid cell	naive thymus-derived CD8-positive, alpha-beta T cell	67
+innate lymphoid cell	neutrophil	90
+innate lymphoid cell	plasma cell	151
+innate lymphoid cell	plasmacytoid dendritic cell	84
+innate lymphoid cell	platelet	45
+innate lymphoid cell	regulatory T cell	83
+innate lymphoid cell	type I NK T cell	108
+intermediate monocyte	CD1c-positive myeloid dendritic cell	50
+intermediate monocyte	CD4-positive, alpha-beta memory T cell	63
+intermediate monocyte	CD8-positive, alpha-beta memory T cell	76
+intermediate monocyte	classical monocyte	78
+intermediate monocyte	endothelial cell	75
+intermediate monocyte	erythrocyte	18
+intermediate monocyte	hematopoietic stem cell	32
+intermediate monocyte	innate lymphoid cell	26
+intermediate monocyte	macrophage	72
+intermediate monocyte	mature NK T cell	66
+intermediate monocyte	memory B cell	76
+intermediate monocyte	naive B cell	30
+intermediate monocyte	naive thymus-derived CD4-positive, alpha-beta T cell	56
+intermediate monocyte	naive thymus-derived CD8-positive, alpha-beta T cell	32
+intermediate monocyte	neutrophil	49
+intermediate monocyte	plasma cell	81
+intermediate monocyte	plasmacytoid dendritic cell	51
+intermediate monocyte	platelet	33
+intermediate monocyte	regulatory T cell	45
+intermediate monocyte	type I NK T cell	70
+macrophage	CD1c-positive myeloid dendritic cell	138
+macrophage	CD4-positive, alpha-beta memory T cell	210
+macrophage	CD8-positive, alpha-beta memory T cell	244
+macrophage	classical monocyte	249
+macrophage	endothelial cell	240
+macrophage	erythrocyte	75
+macrophage	hematopoietic stem cell	95
+macrophage	innate lymphoid cell	105
+macrophage	intermediate monocyte	57
+macrophage	mature NK T cell	214
+macrophage	memory B cell	251
+macrophage	naive B cell	86
+macrophage	naive thymus-derived CD4-positive, alpha-beta T cell	183
+macrophage	naive thymus-derived CD8-positive, alpha-beta T cell	123
+macrophage	neutrophil	169
+macrophage	plasma cell	277
+macrophage	plasmacytoid dendritic cell	137
+macrophage	platelet	86
+macrophage	regulatory T cell	166
+macrophage	type I NK T cell	188
+mature NK T cell	CD1c-positive myeloid dendritic cell	112
+mature NK T cell	CD4-positive, alpha-beta memory T cell	180
+mature NK T cell	CD8-positive, alpha-beta memory T cell	208
+mature NK T cell	classical monocyte	221
+mature NK T cell	endothelial cell	212
+mature NK T cell	erythrocyte	67
+mature NK T cell	hematopoietic stem cell	87
+mature NK T cell	innate lymphoid cell	96
+mature NK T cell	intermediate monocyte	53
+mature NK T cell	macrophage	206
+mature NK T cell	memory B cell	217
+mature NK T cell	naive B cell	76
+mature NK T cell	naive thymus-derived CD4-positive, alpha-beta T cell	154
+mature NK T cell	naive thymus-derived CD8-positive, alpha-beta T cell	103
+mature NK T cell	neutrophil	145
+mature NK T cell	plasma cell	243
+mature NK T cell	plasmacytoid dendritic cell	118
+mature NK T cell	platelet	77
+mature NK T cell	regulatory T cell	138
+mature NK T cell	type I NK T cell	163
+memory B cell	CD1c-positive myeloid dendritic cell	129
+memory B cell	CD4-positive, alpha-beta memory T cell	212
+memory B cell	CD8-positive, alpha-beta memory T cell	249
+memory B cell	classical monocyte	256
+memory B cell	endothelial cell	252
+memory B cell	erythrocyte	74
+memory B cell	hematopoietic stem cell	93
+memory B cell	innate lymphoid cell	95
+memory B cell	intermediate monocyte	51
+memory B cell	macrophage	235
+memory B cell	mature NK T cell	215
+memory B cell	naive B cell	83
+memory B cell	naive thymus-derived CD4-positive, alpha-beta T cell	189
+memory B cell	naive thymus-derived CD8-positive, alpha-beta T cell	115
+memory B cell	neutrophil	158
+memory B cell	plasma cell	294
+memory B cell	plasmacytoid dendritic cell	130
+memory B cell	platelet	87
+memory B cell	regulatory T cell	165
+memory B cell	type I NK T cell	184
+naive B cell	CD1c-positive myeloid dendritic cell	67
+naive B cell	CD4-positive, alpha-beta memory T cell	95
+naive B cell	CD8-positive, alpha-beta memory T cell	114
+naive B cell	classical monocyte	110
+naive B cell	endothelial cell	101
+naive B cell	erythrocyte	35
+naive B cell	hematopoietic stem cell	40
+naive B cell	innate lymphoid cell	42
+naive B cell	intermediate monocyte	32
+naive B cell	macrophage	107
+naive B cell	mature NK T cell	97
+naive B cell	memory B cell	114
+naive B cell	naive thymus-derived CD4-positive, alpha-beta T cell	82
+naive B cell	naive thymus-derived CD8-positive, alpha-beta T cell	59
+naive B cell	neutrophil	73
+naive B cell	plasma cell	122
+naive B cell	plasmacytoid dendritic cell	72
+naive B cell	platelet	40
+naive B cell	regulatory T cell	69
+naive B cell	type I NK T cell	91
+naive thymus-derived CD4-positive, alpha-beta T cell	CD1c-positive myeloid dendritic cell	104
+naive thymus-derived CD4-positive, alpha-beta T cell	CD4-positive, alpha-beta memory T cell	165
+naive thymus-derived CD4-positive, alpha-beta T cell	CD8-positive, alpha-beta memory T cell	198
+naive thymus-derived CD4-positive, alpha-beta T cell	classical monocyte	202
+naive thymus-derived CD4-positive, alpha-beta T cell	endothelial cell	196
+naive thymus-derived CD4-positive, alpha-beta T cell	erythrocyte	61
+naive thymus-derived CD4-positive, alpha-beta T cell	hematopoietic stem cell	81
+naive thymus-derived CD4-positive, alpha-beta T cell	innate lymphoid cell	86
+naive thymus-derived CD4-positive, alpha-beta T cell	intermediate monocyte	48
+naive thymus-derived CD4-positive, alpha-beta T cell	macrophage	191
+naive thymus-derived CD4-positive, alpha-beta T cell	mature NK T cell	172
+naive thymus-derived CD4-positive, alpha-beta T cell	memory B cell	200
+naive thymus-derived CD4-positive, alpha-beta T cell	naive B cell	71
+naive thymus-derived CD4-positive, alpha-beta T cell	naive thymus-derived CD8-positive, alpha-beta T cell	100
+naive thymus-derived CD4-positive, alpha-beta T cell	neutrophil	133
+naive thymus-derived CD4-positive, alpha-beta T cell	plasma cell	219
+naive thymus-derived CD4-positive, alpha-beta T cell	plasmacytoid dendritic cell	111
+naive thymus-derived CD4-positive, alpha-beta T cell	platelet	70
+naive thymus-derived CD4-positive, alpha-beta T cell	regulatory T cell	128
+naive thymus-derived CD4-positive, alpha-beta T cell	type I NK T cell	152
+naive thymus-derived CD8-positive, alpha-beta T cell	CD1c-positive myeloid dendritic cell	62
+naive thymus-derived CD8-positive, alpha-beta T cell	CD4-positive, alpha-beta memory T cell	95
+naive thymus-derived CD8-positive, alpha-beta T cell	CD8-positive, alpha-beta memory T cell	120
+naive thymus-derived CD8-positive, alpha-beta T cell	classical monocyte	126
+naive thymus-derived CD8-positive, alpha-beta T cell	endothelial cell	114
+naive thymus-derived CD8-positive, alpha-beta T cell	erythrocyte	40
+naive thymus-derived CD8-positive, alpha-beta T cell	hematopoietic stem cell	47
+naive thymus-derived CD8-positive, alpha-beta T cell	innate lymphoid cell	50
+naive thymus-derived CD8-positive, alpha-beta T cell	intermediate monocyte	34
+naive thymus-derived CD8-positive, alpha-beta T cell	macrophage	118
+naive thymus-derived CD8-positive, alpha-beta T cell	mature NK T cell	103
+naive thymus-derived CD8-positive, alpha-beta T cell	memory B cell	118
+naive thymus-derived CD8-positive, alpha-beta T cell	naive B cell	44
+naive thymus-derived CD8-positive, alpha-beta T cell	naive thymus-derived CD4-positive, alpha-beta T cell	82
+naive thymus-derived CD8-positive, alpha-beta T cell	neutrophil	80
+naive thymus-derived CD8-positive, alpha-beta T cell	plasma cell	133
+naive thymus-derived CD8-positive, alpha-beta T cell	plasmacytoid dendritic cell	70
+naive thymus-derived CD8-positive, alpha-beta T cell	platelet	44
+naive thymus-derived CD8-positive, alpha-beta T cell	regulatory T cell	74
+naive thymus-derived CD8-positive, alpha-beta T cell	type I NK T cell	91
+neutrophil	CD1c-positive myeloid dendritic cell	102
+neutrophil	CD4-positive, alpha-beta memory T cell	156
+neutrophil	CD8-positive, alpha-beta memory T cell	182
+neutrophil	classical monocyte	192
+neutrophil	endothelial cell	184
+neutrophil	erythrocyte	49
+neutrophil	hematopoietic stem cell	72
+neutrophil	innate lymphoid cell	71
+neutrophil	intermediate monocyte	49
+neutrophil	macrophage	173
+neutrophil	mature NK T cell	157
+neutrophil	memory B cell	188
+neutrophil	naive B cell	65
+neutrophil	naive thymus-derived CD4-positive, alpha-beta T cell	130
+neutrophil	naive thymus-derived CD8-positive, alpha-beta T cell	87
+neutrophil	plasma cell	208
+neutrophil	plasmacytoid dendritic cell	104
+neutrophil	platelet	67
+neutrophil	regulatory T cell	120
+neutrophil	type I NK T cell	139
+plasma cell	CD1c-positive myeloid dendritic cell	139
+plasma cell	CD4-positive, alpha-beta memory T cell	224
+plasma cell	CD8-positive, alpha-beta memory T cell	269
+plasma cell	classical monocyte	278
+plasma cell	endothelial cell	277
+plasma cell	erythrocyte	85
+plasma cell	hematopoietic stem cell	106
+plasma cell	innate lymphoid cell	105
+plasma cell	intermediate monocyte	60
+plasma cell	macrophage	253
+plasma cell	mature NK T cell	231
+plasma cell	memory B cell	281
+plasma cell	naive B cell	91
+plasma cell	naive thymus-derived CD4-positive, alpha-beta T cell	196
+plasma cell	naive thymus-derived CD8-positive, alpha-beta T cell	126
+plasma cell	neutrophil	174
+plasma cell	plasmacytoid dendritic cell	149
+plasma cell	platelet	98
+plasma cell	regulatory T cell	174
+plasma cell	type I NK T cell	202
+plasmacytoid dendritic cell	CD1c-positive myeloid dendritic cell	81
+plasmacytoid dendritic cell	CD4-positive, alpha-beta memory T cell	111
+plasmacytoid dendritic cell	CD8-positive, alpha-beta memory T cell	133
+plasmacytoid dendritic cell	classical monocyte	126
+plasmacytoid dendritic cell	endothelial cell	122
+plasmacytoid dendritic cell	erythrocyte	38
+plasmacytoid dendritic cell	hematopoietic stem cell	50
+plasmacytoid dendritic cell	innate lymphoid cell	51
+plasmacytoid dendritic cell	intermediate monocyte	37
+plasmacytoid dendritic cell	macrophage	122
+plasmacytoid dendritic cell	mature NK T cell	114
+plasmacytoid dendritic cell	memory B cell	131
+plasmacytoid dendritic cell	naive B cell	49
+plasmacytoid dendritic cell	naive thymus-derived CD4-positive, alpha-beta T cell	96
+plasmacytoid dendritic cell	naive thymus-derived CD8-positive, alpha-beta T cell	60
+plasmacytoid dendritic cell	neutrophil	85
+plasmacytoid dendritic cell	plasma cell	140
+plasmacytoid dendritic cell	platelet	49
+plasmacytoid dendritic cell	regulatory T cell	86
+plasmacytoid dendritic cell	type I NK T cell	111
+platelet	CD1c-positive myeloid dendritic cell	56
+platelet	CD4-positive, alpha-beta memory T cell	80
+platelet	CD8-positive, alpha-beta memory T cell	99
+platelet	classical monocyte	101
+platelet	endothelial cell	99
+platelet	erythrocyte	21
+platelet	hematopoietic stem cell	33
+platelet	innate lymphoid cell	33
+platelet	intermediate monocyte	27
+platelet	macrophage	91
+platelet	mature NK T cell	86
+platelet	memory B cell	101
+platelet	naive B cell	36
+platelet	naive thymus-derived CD4-positive, alpha-beta T cell	73
+platelet	naive thymus-derived CD8-positive, alpha-beta T cell	43
+platelet	neutrophil	60
+platelet	plasma cell	109
+platelet	plasmacytoid dendritic cell	56
+platelet	regulatory T cell	58
+platelet	type I NK T cell	83
+regulatory T cell	CD1c-positive myeloid dendritic cell	84
+regulatory T cell	CD4-positive, alpha-beta memory T cell	126
+regulatory T cell	CD8-positive, alpha-beta memory T cell	150
+regulatory T cell	classical monocyte	152
+regulatory T cell	endothelial cell	144
+regulatory T cell	erythrocyte	47
+regulatory T cell	hematopoietic stem cell	57
+regulatory T cell	innate lymphoid cell	62
+regulatory T cell	intermediate monocyte	41
+regulatory T cell	macrophage	143
+regulatory T cell	mature NK T cell	131
+regulatory T cell	memory B cell	148
+regulatory T cell	naive B cell	54
+regulatory T cell	naive thymus-derived CD4-positive, alpha-beta T cell	107
+regulatory T cell	naive thymus-derived CD8-positive, alpha-beta T cell	77
+regulatory T cell	neutrophil	101
+regulatory T cell	plasma cell	167
+regulatory T cell	plasmacytoid dendritic cell	87
+regulatory T cell	platelet	55
+regulatory T cell	type I NK T cell	116
+type I NK T cell	CD1c-positive myeloid dendritic cell	106
+type I NK T cell	CD4-positive, alpha-beta memory T cell	166
+type I NK T cell	CD8-positive, alpha-beta memory T cell	199
+type I NK T cell	classical monocyte	206
+type I NK T cell	endothelial cell	190
+type I NK T cell	erythrocyte	58
+type I NK T cell	hematopoietic stem cell	77
+type I NK T cell	innate lymphoid cell	85
+type I NK T cell	intermediate monocyte	51
+type I NK T cell	macrophage	189
+type I NK T cell	mature NK T cell	167
+type I NK T cell	memory B cell	204
+type I NK T cell	naive B cell	74
+type I NK T cell	naive thymus-derived CD4-positive, alpha-beta T cell	148
+type I NK T cell	naive thymus-derived CD8-positive, alpha-beta T cell	99
+type I NK T cell	neutrophil	132
+type I NK T cell	plasma cell	221
+type I NK T cell	plasmacytoid dendritic cell	110
+type I NK T cell	platelet	70
+type I NK T cell	regulatory T cell	127

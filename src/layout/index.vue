@@ -11,11 +11,7 @@
       </el-header>
       <el-main style="width: 1500px; margin-right: auto; margin-left: auto">
         <el-row
-          style="
-            border-bottom: #808080 2px solid;
-            padding-top: 1%;
-            padding-bottom: 1%;
-          "
+          style="border-bottom: #808080 2px solid; padding-top: 1%; padding-bottom: 1%"
         >
           <el-col :span="11" :offset="1">
             <el-image
@@ -33,7 +29,7 @@
             <p
               style="
                 font-size: 30px;
-                color: #A25772;
+                color: #a25772;
                 text-align: justify;
                 text-indent: 1em;
                 margin-left: 140px;
@@ -50,15 +46,14 @@
                 margin-left: 20px;
               "
             >
-              Aging is a complex process characterized by the progressive
-              decline in various biological systems at molecular, cellular,
-              tissue, and organ levels. To understand the underlying mechanisms,
-              twelve hallmarks have been identified as common factors
-              contributing to aging. These hallmarks are demonstrated to be
-              remarkable conservation across multiple species. Understanding the
-              regulation of aging factors and their relationships across species
-              can facilitate the translation of anti -aging drug development
-              from model organisms to humans.
+              Aging is a complex process characterized by the progressive decline in
+              various biological systems at molecular, cellular, tissue, and organ levels.
+              To understand the underlying mechanisms, twelve hallmarks have been
+              identified as common factors contributing to aging. These hallmarks are
+              demonstrated to be remarkable conservation across multiple species.
+              Understanding the regulation of aging factors and their relationships across
+              species can facilitate the translation of anti -aging drug development from
+              model organisms to humans.
             </p>
             <p
               style="
@@ -69,39 +64,39 @@
                 margin-left: 20px;
               "
             >
-              Here, we built AgeAnnoMO, a knowledgebase of multi-omics
-              annotation for animal aging. AgeAnnoMO encompasses an extensive
-              collection of 136 datasets from eight modalities, encompassing
-              8,586 samples from 50 representative species, making it a
-              comprehensive resource for aging and longevity research. AgeAnnoMO
-              characterizes multiple aging regulators across species via
-              multi-omics data, comprehensively annotating aging-related genes,
-              aging-related proteins, metabolites, mitochondrial genes,
-              microbiotas, and age-specific TCR and BCR sequences tied to aging
-              hallmarks for these species and tissues. We anticipate that
-              AgeAnnoMO will provide a valuable resource for comprehending and
-              integrating the conserved driving hallmarks in aging biology, and
-              identifying the targetable biomarkers for aging research.
+              Here, we built AgeAnnoMO, a knowledgebase of multi-omics annotation for
+              animal aging. AgeAnnoMO encompasses an extensive collection of 136 datasets
+              from eight modalities, encompassing 8,586 samples from 50 representative
+              species, making it a comprehensive resource for aging and longevity
+              research. AgeAnnoMO characterizes multiple aging regulators across species
+              via multi-omics data, comprehensively annotating aging-related genes,
+              aging-related proteins, metabolites, mitochondrial genes, microbiotas, and
+              age-specific TCR and BCR sequences tied to aging hallmarks for these species
+              and tissues. We anticipate that AgeAnnoMO will provide a valuable resource
+              for comprehending and integrating the conserved driving hallmarks in aging
+              biology, and identifying the targetable biomarkers for aging research.
             </p>
           </el-col>
         </el-row>
         <el-row
-          style="
-            margin-top: 1%;
-            padding-bottom: 3%;
-            border-bottom: #808080 2px solid;
-          "
+          style="margin-top: 1%; padding-bottom: 3%; border-bottom: #808080 2px solid"
         >
-        <el-col>
-          <h3 class="big_title" style="margin-top: 1%; margin-bottom: 10px">
-            Quick Search
-          </h3>
-        </el-col>
+          <el-col>
+            <h3 class="big_title" style="margin-top: 1%; margin-bottom: 10px">
+              Quick Search
+            </h3>
+          </el-col>
 
-        <el-col>
-          <span style="margin-left: 426px;">Gene Symbol</span>
-            <el-input class="myInput" v-model="myInput" style="margin-left: 34px; width: 200px;" />
-            <el-button style="margin-left: 34px;" type="primary" @click="Submit">Search</el-button>
+          <el-col>
+            <span style="margin-left: 426px">Gene Symbol</span>
+            <el-input
+              class="myInput"
+              v-model="myInput"
+              style="margin-left: 34px; width: 200px"
+            />
+            <el-button style="margin-left: 34px" type="primary" @click="Submit"
+              >Search</el-button
+            >
             <el-button @click="Clean">Clean</el-button>
           </el-col>
         </el-row>
@@ -109,11 +104,7 @@
           Browse by hallmarks of aging
         </h1>
         <el-row
-          style="
-            margin-top: 1%;
-            padding-bottom: 3%;
-            border-bottom: #808080 2px solid;
-          "
+          style="margin-top: 1%; padding-bottom: 3%; border-bottom: #808080 2px solid"
         >
           <el-col :span="23" :offset="1">
             <el-space wrap>
@@ -159,9 +150,7 @@
                     }"
                   >
                     <el-image
-                      :src="
-                        require('../.././public/images/animals/' + i + '.png')
-                      "
+                      :src="require('../.././public/images/animals/' + i + '.png')"
                       fit="fill"
                       style="height: 53%; width: 80%; margin-bottom: 20%"
                     />
@@ -230,14 +219,14 @@ const speName = ref([
   "Blattella germanica",
   "Queen bee",
 ]);
-const myInput = ref('TLR2')
+const myInput = ref("TLR2");
 const Submit = () => {
-  router.push({ path: 'geneSearchResult', query: { Symbol: myInput.value }})
-}
+  router.push({ path: "search", query: { Symbol: myInput.value } });
+};
 
 const Clean = () => {
-  myInput.value = ''
-}
+  myInput.value = "";
+};
 
 const initMenu = async () => {
   itemName.value = await getItem();

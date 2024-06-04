@@ -1,0 +1,1592 @@
+source	target	count
+B Cells	Best4+ Enterocytes	3
+B Cells	CD4	1
+B Cells	CD8	23
+B Cells	Crypt Fibroblasts 1 WNT2B+	19
+B Cells	Crypt Fibroblasts 2	2
+B Cells	Crypt Fibroblasts 3 RSPO3+	7
+B Cells	CyclingTA 1	6
+B Cells	D Cells	11
+B Cells	DC	6
+B Cells	Endothelial-CD36+ Microvascular	23
+B Cells	Endothelial-Venules	16
+B Cells	Enterochromaffin	16
+B Cells	Enterocytes	15
+B Cells	Enteroendocrine	5
+B Cells	EnteroendocrineUn 1	5
+B Cells	Epithelial	9
+B Cells	Glia	1
+B Cells	Goblet	2
+B Cells	I Cells	13
+B Cells	ICC	2
+B Cells	Immature Enterocytes	18
+B Cells	Immature Goblet	10
+B Cells	K Cells	6
+B Cells	Lymphatic Endothelial Cells	7
+B Cells	Mo Cells	7
+B Cells	Mono_Macrophages	27
+B Cells	Myofibroblasts/SM 1	11
+B Cells	Myofibroblasts/SM 2	11
+B Cells	Myofibroblasts/SM 3	4
+B Cells	Myofibroblasts/SM DES High	8
+B Cells	NEUROG3high	2
+B Cells	Pericytes	10
+B Cells	Plasma	8
+B Cells	S Cells	5
+B Cells	Secretory Specialized MUC6+	3
+B Cells	Stem	2
+B Cells	TA1	13
+B Cells	TA2	17
+B Cells	Villus Fibroblasts WNT5B+	14
+Best4+ Enterocytes	B Cells	6
+Best4+ Enterocytes	CD4	1
+Best4+ Enterocytes	CD8	18
+Best4+ Enterocytes	Crypt Fibroblasts 1 WNT2B+	23
+Best4+ Enterocytes	Crypt Fibroblasts 2	3
+Best4+ Enterocytes	Crypt Fibroblasts 3 RSPO3+	10
+Best4+ Enterocytes	CyclingTA 1	9
+Best4+ Enterocytes	D Cells	11
+Best4+ Enterocytes	DC	2
+Best4+ Enterocytes	Endothelial-CD36+ Microvascular	23
+Best4+ Enterocytes	Endothelial-Venules	16
+Best4+ Enterocytes	Enterochromaffin	13
+Best4+ Enterocytes	Enterocytes	12
+Best4+ Enterocytes	Enteroendocrine	5
+Best4+ Enterocytes	EnteroendocrineUn 1	5
+Best4+ Enterocytes	Epithelial	6
+Best4+ Enterocytes	Glia	6
+Best4+ Enterocytes	Goblet	3
+Best4+ Enterocytes	I Cells	14
+Best4+ Enterocytes	ICC	7
+Best4+ Enterocytes	Immature Enterocytes	14
+Best4+ Enterocytes	Immature Goblet	12
+Best4+ Enterocytes	K Cells	9
+Best4+ Enterocytes	Lymphatic Endothelial Cells	10
+Best4+ Enterocytes	Mo Cells	15
+Best4+ Enterocytes	Mono_Macrophages	23
+Best4+ Enterocytes	Myofibroblasts/SM 1	12
+Best4+ Enterocytes	Myofibroblasts/SM 2	14
+Best4+ Enterocytes	Myofibroblasts/SM 3	9
+Best4+ Enterocytes	Myofibroblasts/SM DES High	4
+Best4+ Enterocytes	NEUROG3high	2
+Best4+ Enterocytes	Pericytes	8
+Best4+ Enterocytes	Plasma	9
+Best4+ Enterocytes	S Cells	5
+Best4+ Enterocytes	Secretory Specialized MUC6+	2
+Best4+ Enterocytes	Stem	1
+Best4+ Enterocytes	TA1	9
+Best4+ Enterocytes	TA2	13
+Best4+ Enterocytes	Villus Fibroblasts WNT5B+	15
+CD4	CD8	3
+CD4	Crypt Fibroblasts 1 WNT2B+	2
+CD4	Crypt Fibroblasts 3 RSPO3+	1
+CD4	CyclingTA 1	1
+CD4	D Cells	2
+CD4	Endothelial-CD36+ Microvascular	2
+CD4	Endothelial-Venules	2
+CD4	Enterochromaffin	2
+CD4	Enterocytes	1
+CD4	Enteroendocrine	1
+CD4	EnteroendocrineUn 1	1
+CD4	Epithelial	1
+CD4	Glia	2
+CD4	Goblet	1
+CD4	I Cells	4
+CD4	ICC	2
+CD4	Immature Enterocytes	3
+CD4	Immature Goblet	1
+CD4	K Cells	1
+CD4	Lymphatic Endothelial Cells	1
+CD4	Mo Cells	3
+CD4	Mono_Macrophages	3
+CD4	Myofibroblasts/SM 1	3
+CD4	Myofibroblasts/SM 2	2
+CD4	Myofibroblasts/SM 3	2
+CD4	NEUROG3high	1
+CD4	Pericytes	1
+CD4	Plasma	3
+CD4	S Cells	1
+CD4	TA1	2
+CD4	TA2	4
+CD4	Villus Fibroblasts WNT5B+	3
+CD8	B Cells	18
+CD8	Best4+ Enterocytes	8
+CD8	CD4	2
+CD8	Crypt Fibroblasts 1 WNT2B+	74
+CD8	Crypt Fibroblasts 2	3
+CD8	Crypt Fibroblasts 3 RSPO3+	21
+CD8	CyclingTA 1	15
+CD8	D Cells	33
+CD8	DC	17
+CD8	Endothelial-CD36+ Microvascular	79
+CD8	Endothelial-Venules	55
+CD8	Enterochromaffin	39
+CD8	Enterocytes	32
+CD8	Enteroendocrine	11
+CD8	EnteroendocrineUn 1	18
+CD8	Epithelial	14
+CD8	Glia	10
+CD8	Goblet	8
+CD8	I Cells	40
+CD8	ICC	25
+CD8	Immature Enterocytes	44
+CD8	Immature Goblet	27
+CD8	K Cells	19
+CD8	Lymphatic Endothelial Cells	23
+CD8	Mo Cells	32
+CD8	Mono_Macrophages	86
+CD8	Myofibroblasts/SM 1	39
+CD8	Myofibroblasts/SM 2	35
+CD8	Myofibroblasts/SM 3	24
+CD8	Myofibroblasts/SM DES High	10
+CD8	NEUROG3high	3
+CD8	Pericytes	30
+CD8	Plasma	29
+CD8	S Cells	15
+CD8	Secretory Specialized MUC6+	4
+CD8	Stem	5
+CD8	TA1	28
+CD8	TA2	40
+CD8	Villus Fibroblasts WNT5B+	47
+Crypt Fibroblasts 1 WNT2B+	B Cells	25
+Crypt Fibroblasts 1 WNT2B+	Best4+ Enterocytes	15
+Crypt Fibroblasts 1 WNT2B+	CD4	1
+Crypt Fibroblasts 1 WNT2B+	CD8	97
+Crypt Fibroblasts 1 WNT2B+	Crypt Fibroblasts 2	7
+Crypt Fibroblasts 1 WNT2B+	Crypt Fibroblasts 3 RSPO3+	44
+Crypt Fibroblasts 1 WNT2B+	CyclingTA 1	27
+Crypt Fibroblasts 1 WNT2B+	D Cells	47
+Crypt Fibroblasts 1 WNT2B+	DC	27
+Crypt Fibroblasts 1 WNT2B+	Endothelial-CD36+ Microvascular	119
+Crypt Fibroblasts 1 WNT2B+	Endothelial-Venules	84
+Crypt Fibroblasts 1 WNT2B+	Enterochromaffin	71
+Crypt Fibroblasts 1 WNT2B+	Enterocytes	60
+Crypt Fibroblasts 1 WNT2B+	Enteroendocrine	23
+Crypt Fibroblasts 1 WNT2B+	EnteroendocrineUn 1	37
+Crypt Fibroblasts 1 WNT2B+	Epithelial	32
+Crypt Fibroblasts 1 WNT2B+	Glia	31
+Crypt Fibroblasts 1 WNT2B+	Goblet	17
+Crypt Fibroblasts 1 WNT2B+	I Cells	75
+Crypt Fibroblasts 1 WNT2B+	ICC	39
+Crypt Fibroblasts 1 WNT2B+	Immature Enterocytes	74
+Crypt Fibroblasts 1 WNT2B+	Immature Goblet	45
+Crypt Fibroblasts 1 WNT2B+	K Cells	29
+Crypt Fibroblasts 1 WNT2B+	Lymphatic Endothelial Cells	41
+Crypt Fibroblasts 1 WNT2B+	Mo Cells	62
+Crypt Fibroblasts 1 WNT2B+	Mono_Macrophages	132
+Crypt Fibroblasts 1 WNT2B+	Myofibroblasts/SM 1	77
+Crypt Fibroblasts 1 WNT2B+	Myofibroblasts/SM 2	55
+Crypt Fibroblasts 1 WNT2B+	Myofibroblasts/SM 3	49
+Crypt Fibroblasts 1 WNT2B+	Myofibroblasts/SM DES High	21
+Crypt Fibroblasts 1 WNT2B+	NEUROG3high	9
+Crypt Fibroblasts 1 WNT2B+	Pericytes	53
+Crypt Fibroblasts 1 WNT2B+	Plasma	53
+Crypt Fibroblasts 1 WNT2B+	S Cells	30
+Crypt Fibroblasts 1 WNT2B+	Secretory Specialized MUC6+	5
+Crypt Fibroblasts 1 WNT2B+	Stem	4
+Crypt Fibroblasts 1 WNT2B+	TA1	45
+Crypt Fibroblasts 1 WNT2B+	TA2	71
+Crypt Fibroblasts 1 WNT2B+	Villus Fibroblasts WNT5B+	76
+Crypt Fibroblasts 2	B Cells	2
+Crypt Fibroblasts 2	Best4+ Enterocytes	2
+Crypt Fibroblasts 2	CD8	15
+Crypt Fibroblasts 2	Crypt Fibroblasts 1 WNT2B+	10
+Crypt Fibroblasts 2	Crypt Fibroblasts 3 RSPO3+	6
+Crypt Fibroblasts 2	CyclingTA 1	1
+Crypt Fibroblasts 2	D Cells	7
+Crypt Fibroblasts 2	DC	4
+Crypt Fibroblasts 2	Endothelial-CD36+ Microvascular	12
+Crypt Fibroblasts 2	Endothelial-Venules	10
+Crypt Fibroblasts 2	Enterochromaffin	8
+Crypt Fibroblasts 2	Enterocytes	5
+Crypt Fibroblasts 2	Enteroendocrine	4
+Crypt Fibroblasts 2	EnteroendocrineUn 1	2
+Crypt Fibroblasts 2	Epithelial	3
+Crypt Fibroblasts 2	Glia	1
+Crypt Fibroblasts 2	Goblet	2
+Crypt Fibroblasts 2	I Cells	5
+Crypt Fibroblasts 2	ICC	5
+Crypt Fibroblasts 2	Immature Enterocytes	7
+Crypt Fibroblasts 2	Immature Goblet	3
+Crypt Fibroblasts 2	K Cells	2
+Crypt Fibroblasts 2	Lymphatic Endothelial Cells	6
+Crypt Fibroblasts 2	Mo Cells	6
+Crypt Fibroblasts 2	Mono_Macrophages	16
+Crypt Fibroblasts 2	Myofibroblasts/SM 1	5
+Crypt Fibroblasts 2	Myofibroblasts/SM 2	7
+Crypt Fibroblasts 2	Myofibroblasts/SM 3	4
+Crypt Fibroblasts 2	Myofibroblasts/SM DES High	2
+Crypt Fibroblasts 2	NEUROG3high	1
+Crypt Fibroblasts 2	Pericytes	4
+Crypt Fibroblasts 2	Plasma	7
+Crypt Fibroblasts 2	S Cells	4
+Crypt Fibroblasts 2	Secretory Specialized MUC6+	1
+Crypt Fibroblasts 2	Stem	1
+Crypt Fibroblasts 2	TA1	6
+Crypt Fibroblasts 2	TA2	6
+Crypt Fibroblasts 2	Villus Fibroblasts WNT5B+	8
+Crypt Fibroblasts 3 RSPO3+	B Cells	8
+Crypt Fibroblasts 3 RSPO3+	Best4+ Enterocytes	7
+Crypt Fibroblasts 3 RSPO3+	CD4	1
+Crypt Fibroblasts 3 RSPO3+	CD8	28
+Crypt Fibroblasts 3 RSPO3+	Crypt Fibroblasts 1 WNT2B+	43
+Crypt Fibroblasts 3 RSPO3+	Crypt Fibroblasts 2	6
+Crypt Fibroblasts 3 RSPO3+	CyclingTA 1	12
+Crypt Fibroblasts 3 RSPO3+	D Cells	14
+Crypt Fibroblasts 3 RSPO3+	DC	7
+Crypt Fibroblasts 3 RSPO3+	Endothelial-CD36+ Microvascular	42
+Crypt Fibroblasts 3 RSPO3+	Endothelial-Venules	33
+Crypt Fibroblasts 3 RSPO3+	Enterochromaffin	20
+Crypt Fibroblasts 3 RSPO3+	Enterocytes	24
+Crypt Fibroblasts 3 RSPO3+	Enteroendocrine	9
+Crypt Fibroblasts 3 RSPO3+	EnteroendocrineUn 1	9
+Crypt Fibroblasts 3 RSPO3+	Epithelial	16
+Crypt Fibroblasts 3 RSPO3+	Glia	5
+Crypt Fibroblasts 3 RSPO3+	Goblet	7
+Crypt Fibroblasts 3 RSPO3+	I Cells	27
+Crypt Fibroblasts 3 RSPO3+	ICC	18
+Crypt Fibroblasts 3 RSPO3+	Immature Enterocytes	28
+Crypt Fibroblasts 3 RSPO3+	Immature Goblet	20
+Crypt Fibroblasts 3 RSPO3+	K Cells	15
+Crypt Fibroblasts 3 RSPO3+	Lymphatic Endothelial Cells	19
+Crypt Fibroblasts 3 RSPO3+	Mo Cells	20
+Crypt Fibroblasts 3 RSPO3+	Mono_Macrophages	47
+Crypt Fibroblasts 3 RSPO3+	Myofibroblasts/SM 1	35
+Crypt Fibroblasts 3 RSPO3+	Myofibroblasts/SM 2	24
+Crypt Fibroblasts 3 RSPO3+	Myofibroblasts/SM 3	17
+Crypt Fibroblasts 3 RSPO3+	Myofibroblasts/SM DES High	9
+Crypt Fibroblasts 3 RSPO3+	NEUROG3high	5
+Crypt Fibroblasts 3 RSPO3+	Pericytes	16
+Crypt Fibroblasts 3 RSPO3+	Plasma	19
+Crypt Fibroblasts 3 RSPO3+	S Cells	18
+Crypt Fibroblasts 3 RSPO3+	Secretory Specialized MUC6+	2
+Crypt Fibroblasts 3 RSPO3+	Stem	2
+Crypt Fibroblasts 3 RSPO3+	TA1	19
+Crypt Fibroblasts 3 RSPO3+	TA2	29
+Crypt Fibroblasts 3 RSPO3+	Villus Fibroblasts WNT5B+	32
+CyclingTA 1	B Cells	7
+CyclingTA 1	Best4+ Enterocytes	3
+CyclingTA 1	CD4	1
+CyclingTA 1	CD8	22
+CyclingTA 1	Crypt Fibroblasts 1 WNT2B+	25
+CyclingTA 1	Crypt Fibroblasts 2	2
+CyclingTA 1	Crypt Fibroblasts 3 RSPO3+	8
+CyclingTA 1	D Cells	11
+CyclingTA 1	DC	4
+CyclingTA 1	Endothelial-CD36+ Microvascular	32
+CyclingTA 1	Endothelial-Venules	21
+CyclingTA 1	Enterochromaffin	15
+CyclingTA 1	Enterocytes	13
+CyclingTA 1	Enteroendocrine	3
+CyclingTA 1	EnteroendocrineUn 1	6
+CyclingTA 1	Epithelial	5
+CyclingTA 1	Glia	6
+CyclingTA 1	Goblet	1
+CyclingTA 1	I Cells	14
+CyclingTA 1	ICC	12
+CyclingTA 1	Immature Enterocytes	17
+CyclingTA 1	Immature Goblet	10
+CyclingTA 1	K Cells	6
+CyclingTA 1	Lymphatic Endothelial Cells	8
+CyclingTA 1	Mo Cells	16
+CyclingTA 1	Mono_Macrophages	28
+CyclingTA 1	Myofibroblasts/SM 1	18
+CyclingTA 1	Myofibroblasts/SM 2	11
+CyclingTA 1	Myofibroblasts/SM 3	8
+CyclingTA 1	Myofibroblasts/SM DES High	4
+CyclingTA 1	NEUROG3high	1
+CyclingTA 1	Pericytes	8
+CyclingTA 1	Plasma	6
+CyclingTA 1	S Cells	6
+CyclingTA 1	Secretory Specialized MUC6+	2
+CyclingTA 1	Stem	1
+CyclingTA 1	TA1	7
+CyclingTA 1	TA2	16
+CyclingTA 1	Villus Fibroblasts WNT5B+	18
+D Cells	B Cells	12
+D Cells	Best4+ Enterocytes	7
+D Cells	CD4	1
+D Cells	CD8	38
+D Cells	Crypt Fibroblasts 1 WNT2B+	37
+D Cells	Crypt Fibroblasts 2	1
+D Cells	Crypt Fibroblasts 3 RSPO3+	13
+D Cells	CyclingTA 1	9
+D Cells	DC	11
+D Cells	Endothelial-CD36+ Microvascular	42
+D Cells	Endothelial-Venules	27
+D Cells	Enterochromaffin	28
+D Cells	Enterocytes	27
+D Cells	Enteroendocrine	8
+D Cells	EnteroendocrineUn 1	16
+D Cells	Epithelial	10
+D Cells	Glia	14
+D Cells	Goblet	4
+D Cells	I Cells	31
+D Cells	ICC	8
+D Cells	Immature Enterocytes	33
+D Cells	Immature Goblet	20
+D Cells	K Cells	10
+D Cells	Lymphatic Endothelial Cells	17
+D Cells	Mo Cells	22
+D Cells	Mono_Macrophages	46
+D Cells	Myofibroblasts/SM 1	25
+D Cells	Myofibroblasts/SM 2	22
+D Cells	Myofibroblasts/SM 3	19
+D Cells	Myofibroblasts/SM DES High	11
+D Cells	NEUROG3high	2
+D Cells	Pericytes	22
+D Cells	Plasma	18
+D Cells	S Cells	7
+D Cells	Secretory Specialized MUC6+	2
+D Cells	Stem	2
+D Cells	TA1	19
+D Cells	TA2	26
+D Cells	Villus Fibroblasts WNT5B+	28
+DC	B Cells	8
+DC	Best4+ Enterocytes	3
+DC	CD4	1
+DC	CD8	26
+DC	Crypt Fibroblasts 1 WNT2B+	32
+DC	Crypt Fibroblasts 2	2
+DC	Crypt Fibroblasts 3 RSPO3+	10
+DC	CyclingTA 1	8
+DC	D Cells	12
+DC	Endothelial-CD36+ Microvascular	34
+DC	Endothelial-Venules	22
+DC	Enterochromaffin	11
+DC	Enterocytes	16
+DC	Enteroendocrine	5
+DC	EnteroendocrineUn 1	4
+DC	Epithelial	8
+DC	Glia	4
+DC	Goblet	1
+DC	I Cells	14
+DC	ICC	11
+DC	Immature Enterocytes	22
+DC	Immature Goblet	15
+DC	K Cells	9
+DC	Lymphatic Endothelial Cells	10
+DC	Mo Cells	13
+DC	Mono_Macrophages	30
+DC	Myofibroblasts/SM 1	19
+DC	Myofibroblasts/SM 2	14
+DC	Myofibroblasts/SM 3	6
+DC	Myofibroblasts/SM DES High	6
+DC	NEUROG3high	3
+DC	Pericytes	7
+DC	Plasma	12
+DC	S Cells	6
+DC	Secretory Specialized MUC6+	2
+DC	Stem	1
+DC	TA1	15
+DC	TA2	17
+DC	Villus Fibroblasts WNT5B+	20
+Endothelial-CD36+ Microvascular	B Cells	24
+Endothelial-CD36+ Microvascular	Best4+ Enterocytes	13
+Endothelial-CD36+ Microvascular	CD4	2
+Endothelial-CD36+ Microvascular	CD8	87
+Endothelial-CD36+ Microvascular	Crypt Fibroblasts 1 WNT2B+	93
+Endothelial-CD36+ Microvascular	Crypt Fibroblasts 2	5
+Endothelial-CD36+ Microvascular	Crypt Fibroblasts 3 RSPO3+	36
+Endothelial-CD36+ Microvascular	CyclingTA 1	20
+Endothelial-CD36+ Microvascular	D Cells	39
+Endothelial-CD36+ Microvascular	DC	27
+Endothelial-CD36+ Microvascular	Endothelial-Venules	76
+Endothelial-CD36+ Microvascular	Enterochromaffin	55
+Endothelial-CD36+ Microvascular	Enterocytes	52
+Endothelial-CD36+ Microvascular	Enteroendocrine	21
+Endothelial-CD36+ Microvascular	EnteroendocrineUn 1	30
+Endothelial-CD36+ Microvascular	Epithelial	27
+Endothelial-CD36+ Microvascular	Glia	23
+Endothelial-CD36+ Microvascular	Goblet	15
+Endothelial-CD36+ Microvascular	I Cells	62
+Endothelial-CD36+ Microvascular	ICC	30
+Endothelial-CD36+ Microvascular	Immature Enterocytes	68
+Endothelial-CD36+ Microvascular	Immature Goblet	35
+Endothelial-CD36+ Microvascular	K Cells	25
+Endothelial-CD36+ Microvascular	Lymphatic Endothelial Cells	36
+Endothelial-CD36+ Microvascular	Mo Cells	53
+Endothelial-CD36+ Microvascular	Mono_Macrophages	121
+Endothelial-CD36+ Microvascular	Myofibroblasts/SM 1	61
+Endothelial-CD36+ Microvascular	Myofibroblasts/SM 2	45
+Endothelial-CD36+ Microvascular	Myofibroblasts/SM 3	38
+Endothelial-CD36+ Microvascular	Myofibroblasts/SM DES High	20
+Endothelial-CD36+ Microvascular	NEUROG3high	10
+Endothelial-CD36+ Microvascular	Pericytes	44
+Endothelial-CD36+ Microvascular	Plasma	45
+Endothelial-CD36+ Microvascular	S Cells	22
+Endothelial-CD36+ Microvascular	Secretory Specialized MUC6+	5
+Endothelial-CD36+ Microvascular	Stem	5
+Endothelial-CD36+ Microvascular	TA1	41
+Endothelial-CD36+ Microvascular	TA2	64
+Endothelial-CD36+ Microvascular	Villus Fibroblasts WNT5B+	68
+Endothelial-Venules	B Cells	20
+Endothelial-Venules	Best4+ Enterocytes	13
+Endothelial-Venules	CD4	1
+Endothelial-Venules	CD8	63
+Endothelial-Venules	Crypt Fibroblasts 1 WNT2B+	77
+Endothelial-Venules	Crypt Fibroblasts 2	7
+Endothelial-Venules	Crypt Fibroblasts 3 RSPO3+	30
+Endothelial-Venules	CyclingTA 1	19
+Endothelial-Venules	D Cells	31
+Endothelial-Venules	DC	20
+Endothelial-Venules	Endothelial-CD36+ Microvascular	85
+Endothelial-Venules	Enterochromaffin	46
+Endothelial-Venules	Enterocytes	44
+Endothelial-Venules	Enteroendocrine	20
+Endothelial-Venules	EnteroendocrineUn 1	20
+Endothelial-Venules	Epithelial	23
+Endothelial-Venules	Glia	16
+Endothelial-Venules	Goblet	11
+Endothelial-Venules	I Cells	50
+Endothelial-Venules	ICC	25
+Endothelial-Venules	Immature Enterocytes	58
+Endothelial-Venules	Immature Goblet	36
+Endothelial-Venules	K Cells	23
+Endothelial-Venules	Lymphatic Endothelial Cells	33
+Endothelial-Venules	Mo Cells	39
+Endothelial-Venules	Mono_Macrophages	85
+Endothelial-Venules	Myofibroblasts/SM 1	55
+Endothelial-Venules	Myofibroblasts/SM 2	42
+Endothelial-Venules	Myofibroblasts/SM 3	30
+Endothelial-Venules	Myofibroblasts/SM DES High	14
+Endothelial-Venules	NEUROG3high	9
+Endothelial-Venules	NK	1
+Endothelial-Venules	Pericytes	35
+Endothelial-Venules	Plasma	39
+Endothelial-Venules	S Cells	22
+Endothelial-Venules	Secretory Specialized MUC6+	3
+Endothelial-Venules	Stem	4
+Endothelial-Venules	TA1	32
+Endothelial-Venules	TA2	47
+Endothelial-Venules	Villus Fibroblasts WNT5B+	57
+Enterochromaffin	B Cells	16
+Enterochromaffin	Best4+ Enterocytes	9
+Enterochromaffin	CD4	1
+Enterochromaffin	CD8	58
+Enterochromaffin	Crypt Fibroblasts 1 WNT2B+	67
+Enterochromaffin	Crypt Fibroblasts 2	4
+Enterochromaffin	Crypt Fibroblasts 3 RSPO3+	20
+Enterochromaffin	CyclingTA 1	16
+Enterochromaffin	D Cells	29
+Enterochromaffin	DC	12
+Enterochromaffin	Endothelial-CD36+ Microvascular	71
+Enterochromaffin	Endothelial-Venules	46
+Enterochromaffin	Enterocytes	39
+Enterochromaffin	Enteroendocrine	11
+Enterochromaffin	EnteroendocrineUn 1	19
+Enterochromaffin	Epithelial	17
+Enterochromaffin	Glia	18
+Enterochromaffin	Goblet	6
+Enterochromaffin	I Cells	41
+Enterochromaffin	ICC	28
+Enterochromaffin	Immature Enterocytes	49
+Enterochromaffin	Immature Goblet	28
+Enterochromaffin	K Cells	16
+Enterochromaffin	Lymphatic Endothelial Cells	23
+Enterochromaffin	Mo Cells	33
+Enterochromaffin	Mono_Macrophages	75
+Enterochromaffin	Myofibroblasts/SM 1	43
+Enterochromaffin	Myofibroblasts/SM 2	30
+Enterochromaffin	Myofibroblasts/SM 3	26
+Enterochromaffin	Myofibroblasts/SM DES High	14
+Enterochromaffin	NEUROG3high	4
+Enterochromaffin	Pericytes	26
+Enterochromaffin	Plasma	29
+Enterochromaffin	S Cells	17
+Enterochromaffin	Secretory Specialized MUC6+	4
+Enterochromaffin	Stem	2
+Enterochromaffin	TA1	30
+Enterochromaffin	TA2	41
+Enterochromaffin	Villus Fibroblasts WNT5B+	46
+Enterocytes	B Cells	18
+Enterocytes	Best4+ Enterocytes	8
+Enterocytes	CD4	1
+Enterocytes	CD8	56
+Enterocytes	Crypt Fibroblasts 1 WNT2B+	54
+Enterocytes	Crypt Fibroblasts 2	4
+Enterocytes	Crypt Fibroblasts 3 RSPO3+	24
+Enterocytes	CyclingTA 1	14
+Enterocytes	D Cells	27
+Enterocytes	DC	17
+Enterocytes	Endothelial-CD36+ Microvascular	57
+Enterocytes	Endothelial-Venules	46
+Enterocytes	Enterochromaffin	34
+Enterocytes	Enteroendocrine	13
+Enterocytes	EnteroendocrineUn 1	14
+Enterocytes	Epithelial	15
+Enterocytes	Glia	12
+Enterocytes	Goblet	6
+Enterocytes	I Cells	39
+Enterocytes	ICC	21
+Enterocytes	Immature Enterocytes	42
+Enterocytes	Immature Goblet	24
+Enterocytes	K Cells	20
+Enterocytes	Lymphatic Endothelial Cells	23
+Enterocytes	Mo Cells	33
+Enterocytes	Mono_Macrophages	67
+Enterocytes	Myofibroblasts/SM 1	35
+Enterocytes	Myofibroblasts/SM 2	29
+Enterocytes	Myofibroblasts/SM 3	19
+Enterocytes	Myofibroblasts/SM DES High	15
+Enterocytes	NEUROG3high	7
+Enterocytes	Pericytes	25
+Enterocytes	Plasma	26
+Enterocytes	S Cells	13
+Enterocytes	Secretory Specialized MUC6+	4
+Enterocytes	Stem	4
+Enterocytes	TA1	25
+Enterocytes	TA2	31
+Enterocytes	Villus Fibroblasts WNT5B+	39
+Enteroendocrine	B Cells	2
+Enteroendocrine	Best4+ Enterocytes	3
+Enteroendocrine	CD4	1
+Enteroendocrine	CD8	9
+Enteroendocrine	Crypt Fibroblasts 1 WNT2B+	14
+Enteroendocrine	Crypt Fibroblasts 2	1
+Enteroendocrine	Crypt Fibroblasts 3 RSPO3+	4
+Enteroendocrine	CyclingTA 1	3
+Enteroendocrine	D Cells	4
+Enteroendocrine	DC	3
+Enteroendocrine	Endothelial-CD36+ Microvascular	11
+Enteroendocrine	Endothelial-Venules	10
+Enteroendocrine	Enterochromaffin	9
+Enteroendocrine	Enterocytes	7
+Enteroendocrine	EnteroendocrineUn 1	2
+Enteroendocrine	Epithelial	3
+Enteroendocrine	Glia	2
+Enteroendocrine	Goblet	1
+Enteroendocrine	I Cells	6
+Enteroendocrine	ICC	4
+Enteroendocrine	Immature Enterocytes	6
+Enteroendocrine	Immature Goblet	5
+Enteroendocrine	K Cells	5
+Enteroendocrine	Lymphatic Endothelial Cells	6
+Enteroendocrine	Mo Cells	6
+Enteroendocrine	Mono_Macrophages	17
+Enteroendocrine	Myofibroblasts/SM 1	5
+Enteroendocrine	Myofibroblasts/SM 2	7
+Enteroendocrine	Myofibroblasts/SM 3	4
+Enteroendocrine	Myofibroblasts/SM DES High	3
+Enteroendocrine	NEUROG3high	3
+Enteroendocrine	Pericytes	7
+Enteroendocrine	Plasma	7
+Enteroendocrine	S Cells	3
+Enteroendocrine	Secretory Specialized MUC6+	1
+Enteroendocrine	Stem	1
+Enteroendocrine	TA1	4
+Enteroendocrine	TA2	5
+Enteroendocrine	Villus Fibroblasts WNT5B+	8
+EnteroendocrineUn 1	B Cells	5
+EnteroendocrineUn 1	Best4+ Enterocytes	2
+EnteroendocrineUn 1	CD8	18
+EnteroendocrineUn 1	Crypt Fibroblasts 1 WNT2B+	20
+EnteroendocrineUn 1	Crypt Fibroblasts 2	1
+EnteroendocrineUn 1	Crypt Fibroblasts 3 RSPO3+	9
+EnteroendocrineUn 1	CyclingTA 1	6
+EnteroendocrineUn 1	D Cells	11
+EnteroendocrineUn 1	DC	4
+EnteroendocrineUn 1	Endothelial-CD36+ Microvascular	26
+EnteroendocrineUn 1	Endothelial-Venules	20
+EnteroendocrineUn 1	Enterochromaffin	14
+EnteroendocrineUn 1	Enterocytes	11
+EnteroendocrineUn 1	Enteroendocrine	2
+EnteroendocrineUn 1	Epithelial	5
+EnteroendocrineUn 1	Glia	5
+EnteroendocrineUn 1	Goblet	2
+EnteroendocrineUn 1	I Cells	10
+EnteroendocrineUn 1	ICC	8
+EnteroendocrineUn 1	Immature Enterocytes	15
+EnteroendocrineUn 1	Immature Goblet	10
+EnteroendocrineUn 1	K Cells	3
+EnteroendocrineUn 1	Lymphatic Endothelial Cells	10
+EnteroendocrineUn 1	Mo Cells	9
+EnteroendocrineUn 1	Mono_Macrophages	22
+EnteroendocrineUn 1	Myofibroblasts/SM 1	12
+EnteroendocrineUn 1	Myofibroblasts/SM 2	11
+EnteroendocrineUn 1	Myofibroblasts/SM 3	9
+EnteroendocrineUn 1	Myofibroblasts/SM DES High	4
+EnteroendocrineUn 1	NEUROG3high	1
+EnteroendocrineUn 1	Pericytes	8
+EnteroendocrineUn 1	Plasma	8
+EnteroendocrineUn 1	S Cells	2
+EnteroendocrineUn 1	Secretory Specialized MUC6+	2
+EnteroendocrineUn 1	Stem	1
+EnteroendocrineUn 1	TA1	10
+EnteroendocrineUn 1	TA2	10
+EnteroendocrineUn 1	Villus Fibroblasts WNT5B+	13
+Epithelial	B Cells	7
+Epithelial	Best4+ Enterocytes	4
+Epithelial	CD8	18
+Epithelial	Crypt Fibroblasts 1 WNT2B+	21
+Epithelial	Crypt Fibroblasts 2	4
+Epithelial	Crypt Fibroblasts 3 RSPO3+	10
+Epithelial	CyclingTA 1	6
+Epithelial	D Cells	13
+Epithelial	DC	4
+Epithelial	Endothelial-CD36+ Microvascular	26
+Epithelial	Endothelial-Venules	17
+Epithelial	Enterochromaffin	14
+Epithelial	Enterocytes	12
+Epithelial	Enteroendocrine	5
+Epithelial	EnteroendocrineUn 1	5
+Epithelial	Glia	5
+Epithelial	Goblet	2
+Epithelial	I Cells	10
+Epithelial	ICC	11
+Epithelial	Immature Enterocytes	16
+Epithelial	Immature Goblet	8
+Epithelial	K Cells	6
+Epithelial	Lymphatic Endothelial Cells	9
+Epithelial	Mo Cells	14
+Epithelial	Mono_Macrophages	22
+Epithelial	Myofibroblasts/SM 1	17
+Epithelial	Myofibroblasts/SM 2	12
+Epithelial	Myofibroblasts/SM 3	9
+Epithelial	Myofibroblasts/SM DES High	6
+Epithelial	NEUROG3high	3
+Epithelial	Pericytes	9
+Epithelial	Plasma	8
+Epithelial	S Cells	6
+Epithelial	Secretory Specialized MUC6+	1
+Epithelial	Stem	1
+Epithelial	TA1	12
+Epithelial	TA2	15
+Epithelial	Villus Fibroblasts WNT5B+	15
+Glia	B Cells	7
+Glia	Best4+ Enterocytes	2
+Glia	CD4	1
+Glia	CD8	25
+Glia	Crypt Fibroblasts 1 WNT2B+	22
+Glia	Crypt Fibroblasts 2	3
+Glia	Crypt Fibroblasts 3 RSPO3+	14
+Glia	CyclingTA 1	9
+Glia	D Cells	11
+Glia	DC	6
+Glia	Endothelial-CD36+ Microvascular	26
+Glia	Endothelial-Venules	18
+Glia	Enterochromaffin	18
+Glia	Enterocytes	17
+Glia	Enteroendocrine	7
+Glia	EnteroendocrineUn 1	10
+Glia	Epithelial	11
+Glia	Goblet	5
+Glia	I Cells	16
+Glia	ICC	9
+Glia	Immature Enterocytes	19
+Glia	Immature Goblet	15
+Glia	K Cells	8
+Glia	Lymphatic Endothelial Cells	11
+Glia	Mo Cells	18
+Glia	Mono_Macrophages	24
+Glia	Myofibroblasts/SM 1	14
+Glia	Myofibroblasts/SM 2	11
+Glia	Myofibroblasts/SM 3	7
+Glia	Myofibroblasts/SM DES High	8
+Glia	NEUROG3high	4
+Glia	Pericytes	11
+Glia	Plasma	15
+Glia	S Cells	8
+Glia	Secretory Specialized MUC6+	1
+Glia	Stem	1
+Glia	TA1	13
+Glia	TA2	20
+Glia	Villus Fibroblasts WNT5B+	20
+Goblet	B Cells	4
+Goblet	Best4+ Enterocytes	4
+Goblet	CD4	1
+Goblet	CD8	14
+Goblet	Crypt Fibroblasts 1 WNT2B+	15
+Goblet	Crypt Fibroblasts 2	3
+Goblet	Crypt Fibroblasts 3 RSPO3+	8
+Goblet	CyclingTA 1	3
+Goblet	D Cells	4
+Goblet	DC	5
+Goblet	Endothelial-CD36+ Microvascular	17
+Goblet	Endothelial-Venules	14
+Goblet	Enterochromaffin	9
+Goblet	Enterocytes	10
+Goblet	Enteroendocrine	4
+Goblet	EnteroendocrineUn 1	3
+Goblet	Epithelial	7
+Goblet	Glia	2
+Goblet	I Cells	6
+Goblet	ICC	3
+Goblet	Immature Enterocytes	10
+Goblet	Immature Goblet	6
+Goblet	K Cells	3
+Goblet	Lymphatic Endothelial Cells	9
+Goblet	Mo Cells	5
+Goblet	Mono_Macrophages	19
+Goblet	Myofibroblasts/SM 1	9
+Goblet	Myofibroblasts/SM 2	6
+Goblet	Myofibroblasts/SM 3	6
+Goblet	Myofibroblasts/SM DES High	4
+Goblet	NEUROG3high	2
+Goblet	Pericytes	9
+Goblet	Plasma	8
+Goblet	S Cells	3
+Goblet	Secretory Specialized MUC6+	1
+Goblet	Stem	1
+Goblet	TA1	8
+Goblet	TA2	9
+Goblet	Villus Fibroblasts WNT5B+	11
+I Cells	B Cells	14
+I Cells	Best4+ Enterocytes	11
+I Cells	CD4	1
+I Cells	CD8	53
+I Cells	Crypt Fibroblasts 1 WNT2B+	61
+I Cells	Crypt Fibroblasts 2	6
+I Cells	Crypt Fibroblasts 3 RSPO3+	20
+I Cells	CyclingTA 1	13
+I Cells	D Cells	30
+I Cells	DC	11
+I Cells	Endothelial-CD36+ Microvascular	62
+I Cells	Endothelial-Venules	42
+I Cells	Enterochromaffin	36
+I Cells	Enterocytes	36
+I Cells	Enteroendocrine	12
+I Cells	EnteroendocrineUn 1	16
+I Cells	Epithelial	15
+I Cells	Glia	17
+I Cells	Goblet	8
+I Cells	ICC	18
+I Cells	Immature Enterocytes	45
+I Cells	Immature Goblet	33
+I Cells	K Cells	17
+I Cells	Lymphatic Endothelial Cells	20
+I Cells	Mo Cells	35
+I Cells	Mono_Macrophages	65
+I Cells	Myofibroblasts/SM 1	34
+I Cells	Myofibroblasts/SM 2	31
+I Cells	Myofibroblasts/SM 3	22
+I Cells	Myofibroblasts/SM DES High	12
+I Cells	NEUROG3high	8
+I Cells	Pericytes	30
+I Cells	Plasma	27
+I Cells	S Cells	15
+I Cells	Secretory Specialized MUC6+	3
+I Cells	Stem	4
+I Cells	TA1	24
+I Cells	TA2	39
+I Cells	Villus Fibroblasts WNT5B+	42
+ICC	B Cells	8
+ICC	Best4+ Enterocytes	5
+ICC	CD8	32
+ICC	Crypt Fibroblasts 1 WNT2B+	40
+ICC	Crypt Fibroblasts 2	2
+ICC	Crypt Fibroblasts 3 RSPO3+	12
+ICC	CyclingTA 1	10
+ICC	D Cells	15
+ICC	DC	6
+ICC	Endothelial-CD36+ Microvascular	44
+ICC	Endothelial-Venules	27
+ICC	Enterochromaffin	19
+ICC	Enterocytes	20
+ICC	Enteroendocrine	5
+ICC	EnteroendocrineUn 1	8
+ICC	Epithelial	8
+ICC	Glia	6
+ICC	Goblet	4
+ICC	I Cells	14
+ICC	Immature Enterocytes	25
+ICC	Immature Goblet	17
+ICC	K Cells	13
+ICC	Lymphatic Endothelial Cells	15
+ICC	Mo Cells	17
+ICC	Mono_Macrophages	39
+ICC	Myofibroblasts/SM 1	28
+ICC	Myofibroblasts/SM 2	19
+ICC	Myofibroblasts/SM 3	10
+ICC	Myofibroblasts/SM DES High	6
+ICC	NEUROG3high	3
+ICC	Pericytes	17
+ICC	Plasma	13
+ICC	S Cells	10
+ICC	Secretory Specialized MUC6+	2
+ICC	Stem	2
+ICC	TA1	18
+ICC	TA2	21
+ICC	Villus Fibroblasts WNT5B+	26
+Immature Enterocytes	B Cells	15
+Immature Enterocytes	Best4+ Enterocytes	10
+Immature Enterocytes	CD4	1
+Immature Enterocytes	CD8	52
+Immature Enterocytes	Crypt Fibroblasts 1 WNT2B+	58
+Immature Enterocytes	Crypt Fibroblasts 2	4
+Immature Enterocytes	Crypt Fibroblasts 3 RSPO3+	21
+Immature Enterocytes	CyclingTA 1	15
+Immature Enterocytes	D Cells	29
+Immature Enterocytes	DC	16
+Immature Enterocytes	Endothelial-CD36+ Microvascular	67
+Immature Enterocytes	Endothelial-Venules	51
+Immature Enterocytes	Enterochromaffin	34
+Immature Enterocytes	Enterocytes	33
+Immature Enterocytes	Enteroendocrine	10
+Immature Enterocytes	EnteroendocrineUn 1	14
+Immature Enterocytes	Epithelial	15
+Immature Enterocytes	Glia	12
+Immature Enterocytes	Goblet	5
+Immature Enterocytes	I Cells	38
+Immature Enterocytes	ICC	23
+Immature Enterocytes	Immature Goblet	30
+Immature Enterocytes	K Cells	15
+Immature Enterocytes	Lymphatic Endothelial Cells	22
+Immature Enterocytes	Mo Cells	32
+Immature Enterocytes	Mono_Macrophages	71
+Immature Enterocytes	Myofibroblasts/SM 1	37
+Immature Enterocytes	Myofibroblasts/SM 2	32
+Immature Enterocytes	Myofibroblasts/SM 3	23
+Immature Enterocytes	Myofibroblasts/SM DES High	10
+Immature Enterocytes	NEUROG3high	7
+Immature Enterocytes	NK	1
+Immature Enterocytes	Pericytes	29
+Immature Enterocytes	Plasma	26
+Immature Enterocytes	S Cells	12
+Immature Enterocytes	Secretory Specialized MUC6+	4
+Immature Enterocytes	Stem	3
+Immature Enterocytes	TA1	21
+Immature Enterocytes	TA2	38
+Immature Enterocytes	Villus Fibroblasts WNT5B+	42
+Immature Goblet	B Cells	13
+Immature Goblet	Best4+ Enterocytes	7
+Immature Goblet	CD4	1
+Immature Goblet	CD8	42
+Immature Goblet	Crypt Fibroblasts 1 WNT2B+	42
+Immature Goblet	Crypt Fibroblasts 2	3
+Immature Goblet	Crypt Fibroblasts 3 RSPO3+	11
+Immature Goblet	CyclingTA 1	8
+Immature Goblet	D Cells	21
+Immature Goblet	DC	10
+Immature Goblet	Endothelial-CD36+ Microvascular	50
+Immature Goblet	Endothelial-Venules	28
+Immature Goblet	Enterochromaffin	27
+Immature Goblet	Enterocytes	24
+Immature Goblet	Enteroendocrine	7
+Immature Goblet	EnteroendocrineUn 1	11
+Immature Goblet	Epithelial	11
+Immature Goblet	Glia	10
+Immature Goblet	Goblet	3
+Immature Goblet	I Cells	29
+Immature Goblet	ICC	17
+Immature Goblet	Immature Enterocytes	31
+Immature Goblet	K Cells	11
+Immature Goblet	Lymphatic Endothelial Cells	14
+Immature Goblet	Mo Cells	22
+Immature Goblet	Mono_Macrophages	50
+Immature Goblet	Myofibroblasts/SM 1	27
+Immature Goblet	Myofibroblasts/SM 2	25
+Immature Goblet	Myofibroblasts/SM 3	17
+Immature Goblet	Myofibroblasts/SM DES High	9
+Immature Goblet	NEUROG3high	3
+Immature Goblet	Pericytes	21
+Immature Goblet	Plasma	17
+Immature Goblet	S Cells	8
+Immature Goblet	Secretory Specialized MUC6+	3
+Immature Goblet	Stem	2
+Immature Goblet	TA1	17
+Immature Goblet	TA2	26
+Immature Goblet	Villus Fibroblasts WNT5B+	29
+K Cells	B Cells	9
+K Cells	Best4+ Enterocytes	9
+K Cells	CD4	1
+K Cells	CD8	35
+K Cells	Crypt Fibroblasts 1 WNT2B+	36
+K Cells	Crypt Fibroblasts 2	2
+K Cells	Crypt Fibroblasts 3 RSPO3+	14
+K Cells	CyclingTA 1	8
+K Cells	D Cells	15
+K Cells	DC	8
+K Cells	Endothelial-CD36+ Microvascular	41
+K Cells	Endothelial-Venules	28
+K Cells	Enterochromaffin	26
+K Cells	Enterocytes	23
+K Cells	Enteroendocrine	8
+K Cells	EnteroendocrineUn 1	11
+K Cells	Epithelial	9
+K Cells	Glia	11
+K Cells	Goblet	4
+K Cells	I Cells	22
+K Cells	ICC	12
+K Cells	Immature Enterocytes	29
+K Cells	Immature Goblet	17
+K Cells	Lymphatic Endothelial Cells	18
+K Cells	Mo Cells	22
+K Cells	Mono_Macrophages	47
+K Cells	Myofibroblasts/SM 1	19
+K Cells	Myofibroblasts/SM 2	15
+K Cells	Myofibroblasts/SM 3	14
+K Cells	Myofibroblasts/SM DES High	8
+K Cells	NEUROG3high	5
+K Cells	Pericytes	20
+K Cells	Plasma	21
+K Cells	S Cells	5
+K Cells	Secretory Specialized MUC6+	2
+K Cells	Stem	2
+K Cells	TA1	19
+K Cells	TA2	21
+K Cells	Villus Fibroblasts WNT5B+	28
+Lymphatic Endothelial Cells	B Cells	12
+Lymphatic Endothelial Cells	Best4+ Enterocytes	5
+Lymphatic Endothelial Cells	CD8	37
+Lymphatic Endothelial Cells	Crypt Fibroblasts 1 WNT2B+	33
+Lymphatic Endothelial Cells	Crypt Fibroblasts 2	2
+Lymphatic Endothelial Cells	Crypt Fibroblasts 3 RSPO3+	12
+Lymphatic Endothelial Cells	CyclingTA 1	10
+Lymphatic Endothelial Cells	D Cells	13
+Lymphatic Endothelial Cells	DC	10
+Lymphatic Endothelial Cells	Endothelial-CD36+ Microvascular	45
+Lymphatic Endothelial Cells	Endothelial-Venules	26
+Lymphatic Endothelial Cells	Enterochromaffin	23
+Lymphatic Endothelial Cells	Enterocytes	23
+Lymphatic Endothelial Cells	Enteroendocrine	9
+Lymphatic Endothelial Cells	EnteroendocrineUn 1	13
+Lymphatic Endothelial Cells	Epithelial	10
+Lymphatic Endothelial Cells	Glia	7
+Lymphatic Endothelial Cells	Goblet	5
+Lymphatic Endothelial Cells	I Cells	15
+Lymphatic Endothelial Cells	ICC	14
+Lymphatic Endothelial Cells	Immature Enterocytes	27
+Lymphatic Endothelial Cells	Immature Goblet	15
+Lymphatic Endothelial Cells	K Cells	13
+Lymphatic Endothelial Cells	Mo Cells	19
+Lymphatic Endothelial Cells	Mono_Macrophages	38
+Lymphatic Endothelial Cells	Myofibroblasts/SM 1	25
+Lymphatic Endothelial Cells	Myofibroblasts/SM 2	13
+Lymphatic Endothelial Cells	Myofibroblasts/SM 3	11
+Lymphatic Endothelial Cells	Myofibroblasts/SM DES High	10
+Lymphatic Endothelial Cells	NEUROG3high	5
+Lymphatic Endothelial Cells	Pericytes	16
+Lymphatic Endothelial Cells	Plasma	15
+Lymphatic Endothelial Cells	S Cells	10
+Lymphatic Endothelial Cells	Secretory Specialized MUC6+	3
+Lymphatic Endothelial Cells	Stem	2
+Lymphatic Endothelial Cells	TA1	16
+Lymphatic Endothelial Cells	TA2	25
+Lymphatic Endothelial Cells	Villus Fibroblasts WNT5B+	22
+Mast	CD8	1
+Mast	Crypt Fibroblasts 1 WNT2B+	1
+Mast	Crypt Fibroblasts 3 RSPO3+	1
+Mast	Endothelial-CD36+ Microvascular	1
+Mast	Endothelial-Venules	1
+Mast	Enterochromaffin	1
+Mast	ICC	1
+Mast	Immature Goblet	1
+Mast	Mo Cells	1
+Mast	Mono_Macrophages	1
+Mast	Myofibroblasts/SM 1	1
+Mast	Pericytes	1
+Mast	Villus Fibroblasts WNT5B+	1
+Mo Cells	B Cells	9
+Mo Cells	Best4+ Enterocytes	9
+Mo Cells	CD4	1
+Mo Cells	CD8	40
+Mo Cells	Crypt Fibroblasts 1 WNT2B+	41
+Mo Cells	Crypt Fibroblasts 2	7
+Mo Cells	Crypt Fibroblasts 3 RSPO3+	18
+Mo Cells	CyclingTA 1	13
+Mo Cells	D Cells	19
+Mo Cells	DC	8
+Mo Cells	Endothelial-CD36+ Microvascular	42
+Mo Cells	Endothelial-Venules	33
+Mo Cells	Enterochromaffin	27
+Mo Cells	Enterocytes	26
+Mo Cells	Enteroendocrine	7
+Mo Cells	EnteroendocrineUn 1	17
+Mo Cells	Epithelial	12
+Mo Cells	Glia	9
+Mo Cells	Goblet	8
+Mo Cells	I Cells	25
+Mo Cells	ICC	13
+Mo Cells	Immature Enterocytes	31
+Mo Cells	Immature Goblet	22
+Mo Cells	K Cells	12
+Mo Cells	Lymphatic Endothelial Cells	18
+Mo Cells	Mono_Macrophages	53
+Mo Cells	Myofibroblasts/SM 1	26
+Mo Cells	Myofibroblasts/SM 2	25
+Mo Cells	Myofibroblasts/SM 3	15
+Mo Cells	Myofibroblasts/SM DES High	10
+Mo Cells	NEUROG3high	5
+Mo Cells	NK	1
+Mo Cells	Pericytes	22
+Mo Cells	Plasma	22
+Mo Cells	S Cells	14
+Mo Cells	Secretory Specialized MUC6+	2
+Mo Cells	Stem	3
+Mo Cells	TA1	19
+Mo Cells	TA2	29
+Mo Cells	Villus Fibroblasts WNT5B+	31
+Mono_Macrophages	B Cells	32
+Mono_Macrophages	Best4+ Enterocytes	16
+Mono_Macrophages	CD4	1
+Mono_Macrophages	CD8	96
+Mono_Macrophages	Crypt Fibroblasts 1 WNT2B+	111
+Mono_Macrophages	Crypt Fibroblasts 2	7
+Mono_Macrophages	Crypt Fibroblasts 3 RSPO3+	38
+Mono_Macrophages	CyclingTA 1	25
+Mono_Macrophages	D Cells	46
+Mono_Macrophages	DC	30
+Mono_Macrophages	Endothelial-CD36+ Microvascular	123
+Mono_Macrophages	Endothelial-Venules	86
+Mono_Macrophages	Enterochromaffin	68
+Mono_Macrophages	Enterocytes	61
+Mono_Macrophages	Enteroendocrine	19
+Mono_Macrophages	EnteroendocrineUn 1	32
+Mono_Macrophages	Epithelial	28
+Mono_Macrophages	Glia	24
+Mono_Macrophages	Goblet	18
+Mono_Macrophages	I Cells	63
+Mono_Macrophages	ICC	38
+Mono_Macrophages	Immature Enterocytes	77
+Mono_Macrophages	Immature Goblet	48
+Mono_Macrophages	K Cells	29
+Mono_Macrophages	Lymphatic Endothelial Cells	45
+Mono_Macrophages	Mo Cells	53
+Mono_Macrophages	Myofibroblasts/SM 1	73
+Mono_Macrophages	Myofibroblasts/SM 2	56
+Mono_Macrophages	Myofibroblasts/SM 3	44
+Mono_Macrophages	Myofibroblasts/SM DES High	23
+Mono_Macrophages	NEUROG3high	8
+Mono_Macrophages	Pericytes	52
+Mono_Macrophages	Plasma	44
+Mono_Macrophages	S Cells	26
+Mono_Macrophages	Secretory Specialized MUC6+	5
+Mono_Macrophages	Stem	3
+Mono_Macrophages	TA1	49
+Mono_Macrophages	TA2	59
+Mono_Macrophages	Villus Fibroblasts WNT5B+	74
+Myofibroblasts/SM 1	B Cells	16
+Myofibroblasts/SM 1	Best4+ Enterocytes	5
+Myofibroblasts/SM 1	CD4	1
+Myofibroblasts/SM 1	CD8	50
+Myofibroblasts/SM 1	Crypt Fibroblasts 1 WNT2B+	55
+Myofibroblasts/SM 1	Crypt Fibroblasts 2	5
+Myofibroblasts/SM 1	Crypt Fibroblasts 3 RSPO3+	22
+Myofibroblasts/SM 1	CyclingTA 1	13
+Myofibroblasts/SM 1	D Cells	23
+Myofibroblasts/SM 1	DC	16
+Myofibroblasts/SM 1	Endothelial-CD36+ Microvascular	61
+Myofibroblasts/SM 1	Endothelial-Venules	44
+Myofibroblasts/SM 1	Enterochromaffin	32
+Myofibroblasts/SM 1	Enterocytes	28
+Myofibroblasts/SM 1	Enteroendocrine	11
+Myofibroblasts/SM 1	EnteroendocrineUn 1	16
+Myofibroblasts/SM 1	Epithelial	19
+Myofibroblasts/SM 1	Glia	10
+Myofibroblasts/SM 1	Goblet	6
+Myofibroblasts/SM 1	I Cells	35
+Myofibroblasts/SM 1	ICC	18
+Myofibroblasts/SM 1	Immature Enterocytes	38
+Myofibroblasts/SM 1	Immature Goblet	21
+Myofibroblasts/SM 1	K Cells	18
+Myofibroblasts/SM 1	Lymphatic Endothelial Cells	20
+Myofibroblasts/SM 1	Mo Cells	29
+Myofibroblasts/SM 1	Mono_Macrophages	64
+Myofibroblasts/SM 1	Myofibroblasts/SM 2	26
+Myofibroblasts/SM 1	Myofibroblasts/SM 3	20
+Myofibroblasts/SM 1	Myofibroblasts/SM DES High	12
+Myofibroblasts/SM 1	NEUROG3high	5
+Myofibroblasts/SM 1	NK	1
+Myofibroblasts/SM 1	Pericytes	28
+Myofibroblasts/SM 1	Plasma	24
+Myofibroblasts/SM 1	S Cells	14
+Myofibroblasts/SM 1	Secretory Specialized MUC6+	2
+Myofibroblasts/SM 1	Stem	3
+Myofibroblasts/SM 1	TA1	24
+Myofibroblasts/SM 1	TA2	37
+Myofibroblasts/SM 1	Villus Fibroblasts WNT5B+	37
+Myofibroblasts/SM 2	B Cells	15
+Myofibroblasts/SM 2	Best4+ Enterocytes	12
+Myofibroblasts/SM 2	CD8	54
+Myofibroblasts/SM 2	Crypt Fibroblasts 1 WNT2B+	63
+Myofibroblasts/SM 2	Crypt Fibroblasts 2	4
+Myofibroblasts/SM 2	Crypt Fibroblasts 3 RSPO3+	23
+Myofibroblasts/SM 2	CyclingTA 1	12
+Myofibroblasts/SM 2	D Cells	22
+Myofibroblasts/SM 2	DC	16
+Myofibroblasts/SM 2	Endothelial-CD36+ Microvascular	70
+Myofibroblasts/SM 2	Endothelial-Venules	41
+Myofibroblasts/SM 2	Enterochromaffin	35
+Myofibroblasts/SM 2	Enterocytes	36
+Myofibroblasts/SM 2	Enteroendocrine	18
+Myofibroblasts/SM 2	EnteroendocrineUn 1	18
+Myofibroblasts/SM 2	Epithelial	18
+Myofibroblasts/SM 2	Glia	11
+Myofibroblasts/SM 2	Goblet	8
+Myofibroblasts/SM 2	I Cells	35
+Myofibroblasts/SM 2	ICC	21
+Myofibroblasts/SM 2	Immature Enterocytes	39
+Myofibroblasts/SM 2	Immature Goblet	26
+Myofibroblasts/SM 2	K Cells	16
+Myofibroblasts/SM 2	Lymphatic Endothelial Cells	21
+Myofibroblasts/SM 2	Mo Cells	34
+Myofibroblasts/SM 2	Mono_Macrophages	73
+Myofibroblasts/SM 2	Myofibroblasts/SM 1	39
+Myofibroblasts/SM 2	Myofibroblasts/SM 3	25
+Myofibroblasts/SM 2	Myofibroblasts/SM DES High	16
+Myofibroblasts/SM 2	NEUROG3high	8
+Myofibroblasts/SM 2	Pericytes	32
+Myofibroblasts/SM 2	Plasma	24
+Myofibroblasts/SM 2	S Cells	14
+Myofibroblasts/SM 2	Secretory Specialized MUC6+	3
+Myofibroblasts/SM 2	Stem	2
+Myofibroblasts/SM 2	TA1	25
+Myofibroblasts/SM 2	TA2	35
+Myofibroblasts/SM 2	Villus Fibroblasts WNT5B+	36
+Myofibroblasts/SM 3	B Cells	10
+Myofibroblasts/SM 3	Best4+ Enterocytes	9
+Myofibroblasts/SM 3	CD8	41
+Myofibroblasts/SM 3	Crypt Fibroblasts 1 WNT2B+	49
+Myofibroblasts/SM 3	Crypt Fibroblasts 2	3
+Myofibroblasts/SM 3	Crypt Fibroblasts 3 RSPO3+	20
+Myofibroblasts/SM 3	CyclingTA 1	10
+Myofibroblasts/SM 3	D Cells	17
+Myofibroblasts/SM 3	DC	12
+Myofibroblasts/SM 3	Endothelial-CD36+ Microvascular	53
+Myofibroblasts/SM 3	Endothelial-Venules	39
+Myofibroblasts/SM 3	Enterochromaffin	29
+Myofibroblasts/SM 3	Enterocytes	27
+Myofibroblasts/SM 3	Enteroendocrine	9
+Myofibroblasts/SM 3	EnteroendocrineUn 1	15
+Myofibroblasts/SM 3	Epithelial	16
+Myofibroblasts/SM 3	Glia	13
+Myofibroblasts/SM 3	Goblet	4
+Myofibroblasts/SM 3	I Cells	25
+Myofibroblasts/SM 3	ICC	19
+Myofibroblasts/SM 3	Immature Enterocytes	33
+Myofibroblasts/SM 3	Immature Goblet	20
+Myofibroblasts/SM 3	K Cells	10
+Myofibroblasts/SM 3	Lymphatic Endothelial Cells	16
+Myofibroblasts/SM 3	Mo Cells	24
+Myofibroblasts/SM 3	Mono_Macrophages	57
+Myofibroblasts/SM 3	Myofibroblasts/SM 1	31
+Myofibroblasts/SM 3	Myofibroblasts/SM 2	20
+Myofibroblasts/SM 3	Myofibroblasts/SM DES High	9
+Myofibroblasts/SM 3	NEUROG3high	5
+Myofibroblasts/SM 3	Pericytes	22
+Myofibroblasts/SM 3	Plasma	21
+Myofibroblasts/SM 3	S Cells	14
+Myofibroblasts/SM 3	Secretory Specialized MUC6+	3
+Myofibroblasts/SM 3	Stem	3
+Myofibroblasts/SM 3	TA1	19
+Myofibroblasts/SM 3	TA2	33
+Myofibroblasts/SM 3	Villus Fibroblasts WNT5B+	36
+Myofibroblasts/SM DES High	B Cells	8
+Myofibroblasts/SM DES High	Best4+ Enterocytes	2
+Myofibroblasts/SM DES High	CD4	1
+Myofibroblasts/SM DES High	CD8	23
+Myofibroblasts/SM DES High	Crypt Fibroblasts 1 WNT2B+	27
+Myofibroblasts/SM DES High	Crypt Fibroblasts 2	3
+Myofibroblasts/SM DES High	Crypt Fibroblasts 3 RSPO3+	9
+Myofibroblasts/SM DES High	CyclingTA 1	8
+Myofibroblasts/SM DES High	D Cells	10
+Myofibroblasts/SM DES High	DC	5
+Myofibroblasts/SM DES High	Endothelial-CD36+ Microvascular	31
+Myofibroblasts/SM DES High	Endothelial-Venules	18
+Myofibroblasts/SM DES High	Enterochromaffin	16
+Myofibroblasts/SM DES High	Enterocytes	14
+Myofibroblasts/SM DES High	Enteroendocrine	6
+Myofibroblasts/SM DES High	EnteroendocrineUn 1	6
+Myofibroblasts/SM DES High	Epithelial	9
+Myofibroblasts/SM DES High	Glia	1
+Myofibroblasts/SM DES High	Goblet	3
+Myofibroblasts/SM DES High	I Cells	11
+Myofibroblasts/SM DES High	ICC	9
+Myofibroblasts/SM DES High	Immature Enterocytes	20
+Myofibroblasts/SM DES High	Immature Goblet	12
+Myofibroblasts/SM DES High	K Cells	9
+Myofibroblasts/SM DES High	Lymphatic Endothelial Cells	10
+Myofibroblasts/SM DES High	Mo Cells	12
+Myofibroblasts/SM DES High	Mono_Macrophages	27
+Myofibroblasts/SM DES High	Myofibroblasts/SM 1	18
+Myofibroblasts/SM DES High	Myofibroblasts/SM 2	14
+Myofibroblasts/SM DES High	Myofibroblasts/SM 3	6
+Myofibroblasts/SM DES High	NEUROG3high	4
+Myofibroblasts/SM DES High	Pericytes	12
+Myofibroblasts/SM DES High	Plasma	10
+Myofibroblasts/SM DES High	S Cells	9
+Myofibroblasts/SM DES High	Secretory Specialized MUC6+	2
+Myofibroblasts/SM DES High	Stem	2
+Myofibroblasts/SM DES High	TA1	12
+Myofibroblasts/SM DES High	TA2	18
+Myofibroblasts/SM DES High	Villus Fibroblasts WNT5B+	19
+NEUROG3high	B Cells	1
+NEUROG3high	Best4+ Enterocytes	2
+NEUROG3high	CD8	7
+NEUROG3high	Crypt Fibroblasts 1 WNT2B+	8
+NEUROG3high	Crypt Fibroblasts 3 RSPO3+	3
+NEUROG3high	D Cells	2
+NEUROG3high	DC	1
+NEUROG3high	Endothelial-CD36+ Microvascular	7
+NEUROG3high	Endothelial-Venules	6
+NEUROG3high	Enterochromaffin	5
+NEUROG3high	Enterocytes	4
+NEUROG3high	Enteroendocrine	3
+NEUROG3high	EnteroendocrineUn 1	2
+NEUROG3high	Epithelial	1
+NEUROG3high	Glia	3
+NEUROG3high	Goblet	1
+NEUROG3high	I Cells	3
+NEUROG3high	ICC	3
+NEUROG3high	Immature Enterocytes	5
+NEUROG3high	Immature Goblet	2
+NEUROG3high	K Cells	2
+NEUROG3high	Lymphatic Endothelial Cells	2
+NEUROG3high	Mo Cells	5
+NEUROG3high	Mono_Macrophages	12
+NEUROG3high	Myofibroblasts/SM 1	3
+NEUROG3high	Myofibroblasts/SM 2	3
+NEUROG3high	Myofibroblasts/SM 3	2
+NEUROG3high	Myofibroblasts/SM DES High	1
+NEUROG3high	Pericytes	5
+NEUROG3high	Plasma	5
+NEUROG3high	S Cells	1
+NEUROG3high	TA1	3
+NEUROG3high	TA2	5
+NEUROG3high	Villus Fibroblasts WNT5B+	7
+NK	B Cells	1
+NK	CD8	2
+NK	Crypt Fibroblasts 1 WNT2B+	2
+NK	Crypt Fibroblasts 3 RSPO3+	2
+NK	D Cells	2
+NK	DC	1
+NK	Endothelial-CD36+ Microvascular	2
+NK	Endothelial-Venules	1
+NK	Enterochromaffin	1
+NK	EnteroendocrineUn 1	1
+NK	Epithelial	1
+NK	Glia	2
+NK	I Cells	1
+NK	Immature Enterocytes	2
+NK	Immature Goblet	1
+NK	K Cells	1
+NK	Mono_Macrophages	2
+NK	Myofibroblasts/SM 1	2
+NK	Myofibroblasts/SM 2	2
+NK	Myofibroblasts/SM 3	1
+NK	TA1	1
+NK	TA2	1
+NK	Villus Fibroblasts WNT5B+	1
+Paneth	CD8	1
+Paneth	Crypt Fibroblasts 1 WNT2B+	1
+Paneth	D Cells	1
+Paneth	Endothelial-CD36+ Microvascular	1
+Paneth	Endothelial-Venules	1
+Paneth	Enterochromaffin	1
+Paneth	I Cells	1
+Paneth	Immature Enterocytes	1
+Paneth	Mono_Macrophages	1
+Paneth	Myofibroblasts/SM 1	1
+Paneth	Myofibroblasts/SM 2	1
+Paneth	Plasma	1
+Paneth	TA1	1
+Paneth	TA2	1
+Paneth	Villus Fibroblasts WNT5B+	1
+Pericytes	B Cells	11
+Pericytes	Best4+ Enterocytes	6
+Pericytes	CD8	37
+Pericytes	Crypt Fibroblasts 1 WNT2B+	38
+Pericytes	Crypt Fibroblasts 2	4
+Pericytes	Crypt Fibroblasts 3 RSPO3+	16
+Pericytes	CyclingTA 1	11
+Pericytes	D Cells	12
+Pericytes	DC	10
+Pericytes	Endothelial-CD36+ Microvascular	41
+Pericytes	Endothelial-Venules	32
+Pericytes	Enterochromaffin	24
+Pericytes	Enterocytes	22
+Pericytes	Enteroendocrine	10
+Pericytes	EnteroendocrineUn 1	11
+Pericytes	Epithelial	12
+Pericytes	Glia	5
+Pericytes	Goblet	6
+Pericytes	I Cells	23
+Pericytes	ICC	8
+Pericytes	Immature Enterocytes	28
+Pericytes	Immature Goblet	15
+Pericytes	K Cells	12
+Pericytes	Lymphatic Endothelial Cells	15
+Pericytes	Mo Cells	20
+Pericytes	Mono_Macrophages	44
+Pericytes	Myofibroblasts/SM 1	25
+Pericytes	Myofibroblasts/SM 2	23
+Pericytes	Myofibroblasts/SM 3	14
+Pericytes	Myofibroblasts/SM DES High	9
+Pericytes	NEUROG3high	4
+Pericytes	Plasma	19
+Pericytes	S Cells	12
+Pericytes	Secretory Specialized MUC6+	2
+Pericytes	Stem	3
+Pericytes	TA1	18
+Pericytes	TA2	27
+Pericytes	Villus Fibroblasts WNT5B+	31
+Plasma	B Cells	13
+Plasma	Best4+ Enterocytes	7
+Plasma	CD4	1
+Plasma	CD8	36
+Plasma	Crypt Fibroblasts 1 WNT2B+	31
+Plasma	Crypt Fibroblasts 2	3
+Plasma	Crypt Fibroblasts 3 RSPO3+	15
+Plasma	CyclingTA 1	12
+Plasma	D Cells	17
+Plasma	DC	16
+Plasma	Endothelial-CD36+ Microvascular	35
+Plasma	Endothelial-Venules	26
+Plasma	Enterochromaffin	25
+Plasma	Enterocytes	22
+Plasma	Enteroendocrine	9
+Plasma	EnteroendocrineUn 1	13
+Plasma	Epithelial	13
+Plasma	Glia	9
+Plasma	Goblet	5
+Plasma	I Cells	20
+Plasma	ICC	13
+Plasma	Immature Enterocytes	27
+Plasma	Immature Goblet	21
+Plasma	K Cells	13
+Plasma	Lymphatic Endothelial Cells	14
+Plasma	Mo Cells	20
+Plasma	Mono_Macrophages	41
+Plasma	Myofibroblasts/SM 1	25
+Plasma	Myofibroblasts/SM 2	13
+Plasma	Myofibroblasts/SM 3	12
+Plasma	Myofibroblasts/SM DES High	10
+Plasma	NEUROG3high	9
+Plasma	Pericytes	19
+Plasma	S Cells	12
+Plasma	Secretory Specialized MUC6+	3
+Plasma	Stem	2
+Plasma	TA1	18
+Plasma	TA2	27
+Plasma	Villus Fibroblasts WNT5B+	25
+S Cells	B Cells	8
+S Cells	Best4+ Enterocytes	4
+S Cells	CD4	1
+S Cells	CD8	21
+S Cells	Crypt Fibroblasts 1 WNT2B+	34
+S Cells	Crypt Fibroblasts 2	3
+S Cells	Crypt Fibroblasts 3 RSPO3+	11
+S Cells	CyclingTA 1	7
+S Cells	D Cells	11
+S Cells	DC	5
+S Cells	Endothelial-CD36+ Microvascular	36
+S Cells	Endothelial-Venules	26
+S Cells	Enterochromaffin	15
+S Cells	Enterocytes	17
+S Cells	Enteroendocrine	5
+S Cells	EnteroendocrineUn 1	5
+S Cells	Epithelial	8
+S Cells	Glia	4
+S Cells	Goblet	2
+S Cells	I Cells	16
+S Cells	ICC	13
+S Cells	Immature Enterocytes	18
+S Cells	Immature Goblet	15
+S Cells	K Cells	8
+S Cells	Lymphatic Endothelial Cells	10
+S Cells	Mo Cells	14
+S Cells	Mono_Macrophages	33
+S Cells	Myofibroblasts/SM 1	22
+S Cells	Myofibroblasts/SM 2	16
+S Cells	Myofibroblasts/SM 3	11
+S Cells	Myofibroblasts/SM DES High	6
+S Cells	NEUROG3high	1
+S Cells	Pericytes	11
+S Cells	Plasma	9
+S Cells	Secretory Specialized MUC6+	1
+S Cells	Stem	1
+S Cells	TA1	11
+S Cells	TA2	14
+S Cells	Villus Fibroblasts WNT5B+	24
+Secretory Specialized MUC6+	B Cells	2
+Secretory Specialized MUC6+	Best4+ Enterocytes	1
+Secretory Specialized MUC6+	CD8	6
+Secretory Specialized MUC6+	Crypt Fibroblasts 1 WNT2B+	8
+Secretory Specialized MUC6+	Crypt Fibroblasts 2	1
+Secretory Specialized MUC6+	Crypt Fibroblasts 3 RSPO3+	4
+Secretory Specialized MUC6+	CyclingTA 1	2
+Secretory Specialized MUC6+	D Cells	4
+Secretory Specialized MUC6+	DC	1
+Secretory Specialized MUC6+	Endothelial-CD36+ Microvascular	10
+Secretory Specialized MUC6+	Endothelial-Venules	7
+Secretory Specialized MUC6+	Enterochromaffin	4
+Secretory Specialized MUC6+	Enterocytes	4
+Secretory Specialized MUC6+	Enteroendocrine	1
+Secretory Specialized MUC6+	EnteroendocrineUn 1	1
+Secretory Specialized MUC6+	Epithelial	2
+Secretory Specialized MUC6+	Glia	1
+Secretory Specialized MUC6+	Goblet	1
+Secretory Specialized MUC6+	I Cells	3
+Secretory Specialized MUC6+	ICC	5
+Secretory Specialized MUC6+	Immature Enterocytes	5
+Secretory Specialized MUC6+	Immature Goblet	5
+Secretory Specialized MUC6+	K Cells	3
+Secretory Specialized MUC6+	Lymphatic Endothelial Cells	2
+Secretory Specialized MUC6+	Mo Cells	4
+Secretory Specialized MUC6+	Mono_Macrophages	9
+Secretory Specialized MUC6+	Myofibroblasts/SM 1	6
+Secretory Specialized MUC6+	Myofibroblasts/SM 2	7
+Secretory Specialized MUC6+	Myofibroblasts/SM 3	2
+Secretory Specialized MUC6+	Myofibroblasts/SM DES High	1
+Secretory Specialized MUC6+	NEUROG3high	1
+Secretory Specialized MUC6+	Pericytes	2
+Secretory Specialized MUC6+	Plasma	3
+Secretory Specialized MUC6+	S Cells	2
+Secretory Specialized MUC6+	Stem	1
+Secretory Specialized MUC6+	TA1	3
+Secretory Specialized MUC6+	TA2	5
+Secretory Specialized MUC6+	Villus Fibroblasts WNT5B+	6
+Stem	B Cells	2
+Stem	Best4+ Enterocytes	1
+Stem	CD8	5
+Stem	Crypt Fibroblasts 1 WNT2B+	6
+Stem	Crypt Fibroblasts 2	2
+Stem	Crypt Fibroblasts 3 RSPO3+	4
+Stem	CyclingTA 1	2
+Stem	D Cells	3
+Stem	DC	2
+Stem	Endothelial-CD36+ Microvascular	7
+Stem	Endothelial-Venules	6
+Stem	Enterochromaffin	4
+Stem	Enterocytes	4
+Stem	Enteroendocrine	3
+Stem	EnteroendocrineUn 1	1
+Stem	Epithelial	4
+Stem	I Cells	2
+Stem	ICC	2
+Stem	Immature Enterocytes	4
+Stem	Immature Goblet	4
+Stem	K Cells	2
+Stem	Lymphatic Endothelial Cells	6
+Stem	Mo Cells	3
+Stem	Mono_Macrophages	8
+Stem	Myofibroblasts/SM 1	5
+Stem	Myofibroblasts/SM 2	4
+Stem	Myofibroblasts/SM 3	3
+Stem	Myofibroblasts/SM DES High	3
+Stem	NEUROG3high	1
+Stem	Pericytes	2
+Stem	Plasma	5
+Stem	S Cells	2
+Stem	TA1	4
+Stem	TA2	4
+Stem	Villus Fibroblasts WNT5B+	5
+TA1	B Cells	15
+TA1	Best4+ Enterocytes	5
+TA1	CD4	1
+TA1	CD8	35
+TA1	Crypt Fibroblasts 1 WNT2B+	39
+TA1	Crypt Fibroblasts 2	5
+TA1	Crypt Fibroblasts 3 RSPO3+	14
+TA1	CyclingTA 1	8
+TA1	D Cells	18
+TA1	DC	8
+TA1	Endothelial-CD36+ Microvascular	48
+TA1	Endothelial-Venules	32
+TA1	Enterochromaffin	24
+TA1	Enterocytes	23
+TA1	Enteroendocrine	6
+TA1	EnteroendocrineUn 1	8
+TA1	Epithelial	13
+TA1	Glia	5
+TA1	Goblet	5
+TA1	I Cells	21
+TA1	ICC	16
+TA1	Immature Enterocytes	30
+TA1	Immature Goblet	18
+TA1	K Cells	12
+TA1	Lymphatic Endothelial Cells	14
+TA1	Mo Cells	20
+TA1	Mono_Macrophages	48
+TA1	Myofibroblasts/SM 1	24
+TA1	Myofibroblasts/SM 2	21
+TA1	Myofibroblasts/SM 3	11
+TA1	Myofibroblasts/SM DES High	10
+TA1	NEUROG3high	2
+TA1	Pericytes	15
+TA1	Plasma	16
+TA1	S Cells	12
+TA1	Secretory Specialized MUC6+	2
+TA1	Stem	2
+TA1	TA2	25
+TA1	Villus Fibroblasts WNT5B+	26
+TA2	B Cells	15
+TA2	Best4+ Enterocytes	9
+TA2	CD4	1
+TA2	CD8	57
+TA2	Crypt Fibroblasts 1 WNT2B+	58
+TA2	Crypt Fibroblasts 2	6
+TA2	Crypt Fibroblasts 3 RSPO3+	21
+TA2	CyclingTA 1	16
+TA2	D Cells	27
+TA2	DC	14
+TA2	Endothelial-CD36+ Microvascular	67
+TA2	Endothelial-Venules	50
+TA2	Enterochromaffin	34
+TA2	Enterocytes	29
+TA2	Enteroendocrine	9
+TA2	EnteroendocrineUn 1	14
+TA2	Epithelial	13
+TA2	Glia	9
+TA2	Goblet	10
+TA2	I Cells	36
+TA2	ICC	22
+TA2	Immature Enterocytes	45
+TA2	Immature Goblet	27
+TA2	K Cells	17
+TA2	Lymphatic Endothelial Cells	24
+TA2	Mo Cells	27
+TA2	Mono_Macrophages	68
+TA2	Myofibroblasts/SM 1	33
+TA2	Myofibroblasts/SM 2	36
+TA2	Myofibroblasts/SM 3	23
+TA2	Myofibroblasts/SM DES High	8
+TA2	NEUROG3high	5
+TA2	NK	1
+TA2	Pericytes	26
+TA2	Plasma	23
+TA2	S Cells	13
+TA2	Secretory Specialized MUC6+	4
+TA2	Stem	4
+TA2	TA1	25
+TA2	Villus Fibroblasts WNT5B+	43
+Villus Fibroblasts WNT5B+	B Cells	18
+Villus Fibroblasts WNT5B+	Best4+ Enterocytes	9
+Villus Fibroblasts WNT5B+	CD4	1
+Villus Fibroblasts WNT5B+	CD8	61
+Villus Fibroblasts WNT5B+	Crypt Fibroblasts 1 WNT2B+	70
+Villus Fibroblasts WNT5B+	Crypt Fibroblasts 2	5
+Villus Fibroblasts WNT5B+	Crypt Fibroblasts 3 RSPO3+	26
+Villus Fibroblasts WNT5B+	CyclingTA 1	21
+Villus Fibroblasts WNT5B+	D Cells	25
+Villus Fibroblasts WNT5B+	DC	16
+Villus Fibroblasts WNT5B+	Endothelial-CD36+ Microvascular	76
+Villus Fibroblasts WNT5B+	Endothelial-Venules	48
+Villus Fibroblasts WNT5B+	Enterochromaffin	40
+Villus Fibroblasts WNT5B+	Enterocytes	40
+Villus Fibroblasts WNT5B+	Enteroendocrine	17
+Villus Fibroblasts WNT5B+	EnteroendocrineUn 1	24
+Villus Fibroblasts WNT5B+	Epithelial	23
+Villus Fibroblasts WNT5B+	Glia	14
+Villus Fibroblasts WNT5B+	Goblet	8
+Villus Fibroblasts WNT5B+	I Cells	42
+Villus Fibroblasts WNT5B+	ICC	25
+Villus Fibroblasts WNT5B+	Immature Enterocytes	48
+Villus Fibroblasts WNT5B+	Immature Goblet	34
+Villus Fibroblasts WNT5B+	K Cells	25
+Villus Fibroblasts WNT5B+	Lymphatic Endothelial Cells	26
+Villus Fibroblasts WNT5B+	Mo Cells	40
+Villus Fibroblasts WNT5B+	Mono_Macrophages	78
+Villus Fibroblasts WNT5B+	Myofibroblasts/SM 1	46
+Villus Fibroblasts WNT5B+	Myofibroblasts/SM 2	32
+Villus Fibroblasts WNT5B+	Myofibroblasts/SM 3	23
+Villus Fibroblasts WNT5B+	Myofibroblasts/SM DES High	18
+Villus Fibroblasts WNT5B+	NEUROG3high	11
+Villus Fibroblasts WNT5B+	Pericytes	30
+Villus Fibroblasts WNT5B+	Plasma	34
+Villus Fibroblasts WNT5B+	S Cells	25
+Villus Fibroblasts WNT5B+	Secretory Specialized MUC6+	5
+Villus Fibroblasts WNT5B+	Stem	3
+Villus Fibroblasts WNT5B+	TA1	30
+Villus Fibroblasts WNT5B+	TA2	48
