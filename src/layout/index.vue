@@ -219,9 +219,9 @@ const speName = ref([
   "Blattella germanica",
   "Queen bee",
 ]);
-const myInput = ref("TLR2");
+const myInput = ref("CDH1");
 const Submit = () => {
-  router.push({ path: "search", query: { Symbol: myInput.value } });
+  router.push({ path: "searchResult", query: { Symbol: myInput.value } });
 };
 
 const Clean = () => {

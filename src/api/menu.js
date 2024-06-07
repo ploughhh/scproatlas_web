@@ -1,7 +1,6 @@
 export const getItem = () => {
   return [
     { value: 'Dataset Statistics', path: 'dataset_statistics', icon: 'images/icon/statistics.png' },
-    { value: 'Cell Type visualization', path: 'cell_type_viz', icon: 'images/icon/Cells.png' },
     { value: 'Neighborhood analysis', path: 'neighborhood', icon: 'images/icon/neighborhood.png' },
     { value: 'Marker Visualization', path: 'markerviz', icon: 'images/icon/TCRInfo.png' },
     { value: 'Neighborhood network', path: 'neighborhoodnet', icon: 'images/icon/neighbor_net.png' },
