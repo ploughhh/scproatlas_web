@@ -7,7 +7,8 @@
       <el-container>
         <el-aside width="300px" class="aside-custom">
           <el-menu
-            default-active="1"
+            :default-active="defaultActive"
+            :default-openeds="defaultOpeneds"
             class="el-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
@@ -93,6 +94,8 @@ export default {
   data() {
     return {
       treeData: [],
+      defaultActive: "0-0-0-0",
+      defaultOpeneds: ["0", "0-0", "0-0-0"],
       chart: null,
       tableData: [],
       tableColumns: [],
@@ -123,6 +126,7 @@ export default {
         const sheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(sheet);
         this.treeData = this.buildTree(jsonData);
+        this.setDefaultOpenAndActive(jsonData);
       } catch (error) {
         console.error("Error loading Excel data:", error);
       }
@@ -172,6 +176,38 @@ export default {
       };
 
       return tree.map(convertToArray);
+    },
+    setDefaultOpenAndActive(data) {
+      if (data.length > 0) {
+        const firstRow = data[0];
+        const { Technology, Dataset, Tissue, Region } = firstRow;
+
+        const technologyIndex = this.treeData.findIndex(
+          (tech) => tech.label === Technology
+        );
+        const datasetIndex = this.treeData[technologyIndex].children.findIndex(
+          (dataset) => dataset.label === Dataset
+        );
+        const tissueIndex = this.treeData[technologyIndex].children[
+          datasetIndex
+        ].children.findIndex((tissue) => tissue.label === Tissue);
+        const regionIndex = this.treeData[technologyIndex].children[
+          datasetIndex
+        ].children[tissueIndex].children.findIndex((region) => region.label === Region);
+
+        this.defaultOpeneds = [
+          String(technologyIndex),
+          `${technologyIndex}-${datasetIndex}`,
+          `${technologyIndex}-${datasetIndex}-${tissueIndex}`,
+        ];
+        this.defaultActive = `${technologyIndex}-${datasetIndex}-${tissueIndex}-${regionIndex}`;
+
+        this.$nextTick(() => {
+          const regionNode = this.treeData[technologyIndex].children[datasetIndex]
+            .children[tissueIndex].children[regionIndex];
+          this.handleNodeClick(regionNode);
+        });
+      }
     },
     async handleNodeClick(region) {
       const path = this.getNodePath(region);

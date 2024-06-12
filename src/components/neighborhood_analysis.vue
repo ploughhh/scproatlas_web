@@ -7,7 +7,8 @@
       <el-container>
         <el-aside width="300px" class="aside-custom">
           <el-menu
-            default-active="1"
+            :default-active="defaultActive"
+            :default-openeds="defaultOpeneds"
             class="el-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
@@ -27,8 +28,14 @@
                         <template #title>
                           <span>{{ tissue.label }}</span>
                         </template>
-                        <template v-for="(region, rIndex) in tissue.children" :key="rIndex">
-                          <el-menu-item :index="`${index}-${dIndex}-${tIndex}-${rIndex}`" @click="handleNodeClick(region)">
+                        <template
+                          v-for="(region, rIndex) in tissue.children"
+                          :key="rIndex"
+                        >
+                          <el-menu-item
+                            :index="`${index}-${dIndex}-${tIndex}-${rIndex}`"
+                            @click="handleNodeClick(region)"
+                          >
                             <span>{{ region.label }}</span>
                           </el-menu-item>
                         </template>
@@ -41,8 +48,79 @@
           </el-menu>
         </el-aside>
         <el-main>
+          <el-main
+            style="
+              margin-left: auto;
+              width: 1650px;
+              margin-right: auto;
+              font-size: 23px;
+              margin-top: -50px;
+              text-align: center;
+            "
+          >
+            <h1
+              class="title"
+              style="
+                background-color: #006e54;
+                color: #fcbb7b;
+                text-align: center;
+                margin: 20px 0 10px 97px;
+                padding: 10px 0 40px 0;
+                width: 1400px;
+                height: 20px;
+                float: left;
+              "
+            >
+              Neighborhood Identification in Spatial Protein
+            </h1>
+            <p
+              style="
+                color: #000;
+                text-align: left;
+                margin: 10px 0 10px 97px;
+                width: 1400px;
+                float: left;
+              "
+            >
+              Cell types in tissues are organized into specific patterns, forming
+              different neighborhoods. By identifying neighborhoods, we can recognize
+              potential functional structures or anatomical features within tissues.
+
+              <br /><br />
+              Here, we performed neighborhood identification for each sample with the
+              method in cited study below. We take windows of cells across the entire cell
+              type in this region with each cell as the center of the window. We
+              calculated the number of each cell type within this window. We clusterd
+              these cell type proporsion vector and mmanually annotated each cluster into
+              neighborhoods. The annotation criterion is provided in the heatmap below
+              (The greener the representation, the higher the clustering enrichment of
+              that cell type.).
+
+              <br /><br />
+              <el-tooltip
+                content="Hickey, J.W., Becker, W.R., Nevins, S.A. et al. Organization of the human intestine at single-cell resolution. Nature 619, 572–584 (2023)"
+              >
+                <el-button>
+                  <a
+                    href="https://www.nature.com/articles/s41586-023-05915-x"
+                    target="_blank"
+                    style="color: inherit; text-decoration: none"
+                  >
+                    citation
+                  </a>
+                </el-button>
+              </el-tooltip>
+            </p>
+            <div style="text-align: center">
+              <img src="images/neighbor_ident.png" fit="fill" />
+            </div>
+          </el-main>
           <div v-if="selectedImagePaths.length">
-            <div v-for="(path, index) in selectedImagePaths" :key="index" class="image-container">
+            <div
+              v-for="(path, index) in selectedImagePaths"
+              :key="index"
+              class="image-container"
+            >
               <div v-if="index === 0" class="image-title">
                 <h3 class="title">Cell Type Visualization</h3>
                 <hr class="cell-line" />
@@ -72,10 +150,10 @@
 </template>
 
 <script>
-import axios from 'axios';
-import * as XLSX from 'xlsx';
-import * as echarts from 'echarts';
-import Menus from '../layout/menu-item'; // 导入Menus组件
+import axios from "axios";
+import * as XLSX from "xlsx";
+import * as echarts from "echarts";
+import Menus from "../layout/menu-item"; // 导入Menus组件
 
 export default {
   components: {
@@ -85,9 +163,11 @@ export default {
     return {
       treeData: [],
       defaultProps: {
-        children: 'children',
-        label: 'label',
+        children: "children",
+        label: "label",
       },
+      defaultActive: "0-0-0-0",
+      defaultOpeneds: ["0", "0-0", "0-0-0"],
       selectedImagePaths: [],
       chartData: [],
       lineChartData: [],
@@ -104,39 +184,57 @@ export default {
   methods: {
     async loadExcelData() {
       try {
-        const response = await axios.get('/datasets/datasets.xlsx', { responseType: 'arraybuffer' });
+        const response = await axios.get("/datasets/datasets.xlsx", {
+          responseType: "arraybuffer",
+        });
         const data = new Uint8Array(response.data);
-        const workbook = XLSX.read(data, { type: 'array' });
+        const workbook = XLSX.read(data, { type: "array" });
         const sheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(sheet);
         this.treeData = this.buildTree(jsonData);
+        this.setDefaultOpenAndActive(jsonData);
       } catch (error) {
-        console.error('Error loading Excel data:', error);
+        console.error("Error loading Excel data:", error);
       }
     },
     buildTree(data) {
       const tree = [];
       const map = new Map();
 
-      data.forEach(row => {
+      data.forEach((row) => {
         const { Technology, Dataset, Tissue, Region } = row;
         if (!map.has(Technology)) {
           map.set(Technology, { label: Technology, children: new Map(), parent: null });
           tree.push(map.get(Technology));
         }
         if (!map.get(Technology).children.has(Dataset)) {
-          const datasetNode = { label: Dataset, children: new Map(), parent: map.get(Technology) };
+          const datasetNode = {
+            label: Dataset,
+            children: new Map(),
+            parent: map.get(Technology),
+          };
           map.get(Technology).children.set(Dataset, datasetNode);
         }
         if (!map.get(Technology).children.get(Dataset).children.has(Tissue)) {
-          const tissueNode = { label: Tissue, children: [], parent: map.get(Technology).children.get(Dataset) };
+          const tissueNode = {
+            label: Tissue,
+            children: [],
+            parent: map.get(Technology).children.get(Dataset),
+          };
           map.get(Technology).children.get(Dataset).children.set(Tissue, tissueNode);
         }
-        const regionNode = { label: Region, parent: map.get(Technology).children.get(Dataset).children.get(Tissue) };
-        map.get(Technology).children.get(Dataset).children.get(Tissue).children.push(regionNode);
+        const regionNode = {
+          label: Region,
+          parent: map.get(Technology).children.get(Dataset).children.get(Tissue),
+        };
+        map
+          .get(Technology)
+          .children.get(Dataset)
+          .children.get(Tissue)
+          .children.push(regionNode);
       });
 
-      const convertToArray = node => {
+      const convertToArray = (node) => {
         if (node.children instanceof Map) {
           node.children = Array.from(node.children.values()).map(convertToArray);
         }
@@ -145,13 +243,45 @@ export default {
 
       return tree.map(convertToArray);
     },
+    setDefaultOpenAndActive(data) {
+      if (data.length > 0) {
+        const firstRow = data[0];
+        const { Technology, Dataset, Tissue, Region } = firstRow;
+
+        const technologyIndex = this.treeData.findIndex(
+          (tech) => tech.label === Technology
+        );
+        const datasetIndex = this.treeData[technologyIndex].children.findIndex(
+          (dataset) => dataset.label === Dataset
+        );
+        const tissueIndex = this.treeData[technologyIndex].children[
+          datasetIndex
+        ].children.findIndex((tissue) => tissue.label === Tissue);
+        const regionIndex = this.treeData[technologyIndex].children[
+          datasetIndex
+        ].children[tissueIndex].children.findIndex((region) => region.label === Region);
+
+        this.defaultOpeneds = [
+          String(technologyIndex),
+          `${technologyIndex}-${datasetIndex}`,
+          `${technologyIndex}-${datasetIndex}-${tissueIndex}`,
+        ];
+        this.defaultActive = `${technologyIndex}-${datasetIndex}-${tissueIndex}-${regionIndex}`;
+
+        this.$nextTick(() => {
+          const regionNode = this.treeData[technologyIndex].children[datasetIndex]
+            .children[tissueIndex].children[regionIndex];
+          this.handleNodeClick(regionNode);
+        });
+      }
+    },
     async handleNodeClick(region) {
       const path = this.getNodePath(region);
-      console.log('Node path:', path); // 调试信息
+      console.log("Node path:", path); // 调试信息
       if (path.length === 4) {
         const [technology, dataset, tissue, regionLabel] = path;
         const imagePathBase = `/datasets/${technology}/${dataset}/${tissue}/${regionLabel}/`;
-        console.log('Image paths:', [
+        console.log("Image paths:", [
           `${imagePathBase}celltype.png`,
           `${imagePathBase}neighborhood.png`,
         ]); // 调试信息
@@ -176,17 +306,20 @@ export default {
     },
     async loadStatisticsData(technology, dataset, tissue, region) {
       try {
-        const response = await axios.get(`/datasets/${technology}/${dataset}/${tissue}/statistics.tsv`, { responseType: 'text' });
-        const rows = response.data.split('\n').map(row => row.split('\t'));
+        const response = await axios.get(
+          `/datasets/${technology}/${dataset}/${tissue}/statistics.tsv`,
+          { responseType: "text" }
+        );
+        const rows = response.data.split("\n").map((row) => row.split("\t"));
         const headers = rows[0];
-        const regionIndex = headers.indexOf('Region');
-        const dataRow = rows.find(row => row[regionIndex] === region);
+        const regionIndex = headers.indexOf("Region");
+        const dataRow = rows.find((row) => row[regionIndex] === region);
 
         // 数据用于玫瑰饼图
         if (dataRow) {
           const chartData = headers.slice(1).map((header, index) => ({
             value: parseFloat(dataRow[index + 1]),
-            name: header
+            name: header,
           }));
 
           this.chartData = chartData;
@@ -198,38 +331,40 @@ export default {
         }
 
         // 数据用于堆叠折线图
-        this.xAxisData = rows.slice(1).map(row => row[regionIndex]);
+        this.xAxisData = rows.slice(1).map((row) => row[regionIndex]);
         this.seriesData = headers.slice(1).map((header, index) => ({
           name: header,
-          type: 'line',
-          stack: 'Total',
+          type: "line",
+          stack: "Total",
           areaStyle: {},
           emphasis: {
-            focus: 'series'
+            focus: "series",
           },
-          data: rows.slice(1).map(row => parseFloat(row[index + 1]))
+          data: rows.slice(1).map((row) => parseFloat(row[index + 1])),
         }));
 
         this.lineChartData = true;
         this.$nextTick(() => {
           this.renderLineChart();
         });
-
       } catch (error) {
-        console.error('Error loading statistics data:', error);
+        console.error("Error loading statistics data:", error);
       }
     },
     async loadHeatmapData(technology, dataset, tissue) {
       try {
-        const response = await axios.get(`/datasets/${technology}/${dataset}/${tissue}/fc.tsv`, { responseType: 'text' });
-        const rows = response.data.split('\n').map(row => row.split('\t'));
+        const response = await axios.get(
+          `/datasets/${technology}/${dataset}/${tissue}/fc.tsv`,
+          { responseType: "text" }
+        );
+        const rows = response.data.split("\n").map((row) => row.split("\t"));
         const headers = rows[0];
         const data = rows.slice(1);
 
         // 解析热力图数据
         const heatmapData = [];
         const heatmapColumns = headers.slice(1);
-        const heatmapRows = data.map(row => row[0]);
+        const heatmapRows = data.map((row) => row[0]);
 
         data.forEach((row, rowIndex) => {
           row.slice(1).forEach((value, colIndex) => {
@@ -248,14 +383,14 @@ export default {
           this.renderHeatmap();
         });
       } catch (error) {
-        console.error('Error loading heatmap data:', error);
+        console.error("Error loading heatmap data:", error);
       }
     },
     standardizeHeatmapData(data) {
-      const values = data.map(item => item[2]);
+      const values = data.map((item) => item[2]);
       const min = Math.min(...values);
       const max = Math.max(...values);
-      return data.map(item => {
+      return data.map((item) => {
         const normalizedValue = ((item[2] - min) / (max - min)) * 2 - 1;
         return [item[0], item[1], parseFloat(normalizedValue.toFixed(2))];
       });
@@ -265,17 +400,17 @@ export default {
         const chart = echarts.init(this.$refs.chart);
         const option = {
           title: {
-            text: 'Whole neighborhood statistics in this dataset',
-            top: '1%',
+            text: "Whole neighborhood statistics in this dataset",
+            top: "1%",
           },
           tooltip: {
-            trigger: 'item',
-            formatter: '{a} <br/>{b} : {c} ({d}%)'
+            trigger: "item",
+            formatter: "{a} <br/>{b} : {c} ({d}%)",
           },
           legend: {
-            top: 'middle',
-            orient: 'vertical',
-            left: '70%', // 调整标签位置
+            top: "middle",
+            orient: "vertical",
+            left: "70%", // 调整标签位置
             itemGap: 10, // 减小标签之间的间距
           },
           toolbox: {
@@ -284,26 +419,26 @@ export default {
               mark: { show: true },
               dataView: { show: true, readOnly: false },
               restore: { show: true },
-              saveAsImage: { show: true }
-            }
+              saveAsImage: { show: true },
+            },
           },
           series: [
             {
-              name: 'Neighborhood statistics in this region',
-              type: 'pie',
+              name: "Neighborhood statistics in this region",
+              type: "pie",
               radius: [40, 150], // 调整饼图的半径
-              center: ['40%', '50%'], // 调整饼图的位置
-              roseType: 'area',
+              center: ["40%", "50%"], // 调整饼图的位置
+              roseType: "area",
               itemStyle: {
-                borderRadius: 8
+                borderRadius: 8,
               },
-              data: this.chartData
-            }
-          ]
+              data: this.chartData,
+            },
+          ],
         };
         chart.setOption(option);
       } else {
-        console.error('Chart DOM element not found.');
+        console.error("Chart DOM element not found.");
       }
     },
     renderLineChart() {
@@ -311,55 +446,55 @@ export default {
         const lineChart = echarts.init(this.$refs.lineChart);
         const option = {
           title: {
-            text: 'Whole neighborhood statistics in this dataset',
-            top: '1%',
+            text: "Whole neighborhood statistics in this dataset",
+            top: "1%",
           },
           tooltip: {
-            trigger: 'axis',
+            trigger: "axis",
             axisPointer: {
-              type: 'cross',
+              type: "cross",
               label: {
-                backgroundColor: '#6a7985'
-              }
-            }
+                backgroundColor: "#6a7985",
+              },
+            },
           },
           legend: {
-            data: this.seriesData.map(item => item.name),
-            top: '5%', // 调整图例的位置，使其稍微往上
+            data: this.seriesData.map((item) => item.name),
+            top: "5%", // 调整图例的位置，使其稍微往上
             itemGap: 5, // 减小标签之间的间距
           },
           toolbox: {
             feature: {
-              saveAsImage: {}
-            }
+              saveAsImage: {},
+            },
           },
           grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '-1%',
-            containLabel: true
+            left: "3%",
+            right: "4%",
+            bottom: "-1%",
+            containLabel: true,
           },
           xAxis: [
             {
-              type: 'category',
+              type: "category",
               boundaryGap: false,
               data: this.xAxisData,
               axisLabel: {
                 interval: 0,
-                rotate: 60 // 旋转标签
-              }
-            }
+                rotate: 60, // 旋转标签
+              },
+            },
           ],
           yAxis: [
             {
-              type: 'value'
-            }
+              type: "value",
+            },
           ],
-          series: this.seriesData
+          series: this.seriesData,
         };
         lineChart.setOption(option);
       } else {
-        console.error('Line Chart DOM element not found.');
+        console.error("Line Chart DOM element not found.");
       }
     },
     renderHeatmap() {
@@ -367,27 +502,27 @@ export default {
         const heatmap = echarts.init(this.$refs.heatmap);
         const option = {
           tooltip: {
-            position: 'top',
+            position: "top",
           },
           grid: {
-            height: '70%', // 增加热力图的高度
-            width: '70%', // 增加热力图的宽度
-            top: '10%',
-            left: '15%',
+            height: "70%", // 增加热力图的高度
+            width: "70%", // 增加热力图的宽度
+            top: "10%",
+            left: "15%",
           },
           xAxis: {
-            type: 'category',
+            type: "category",
             data: this.heatmapColumns,
             splitArea: {
               show: true,
             },
             axisLabel: {
               interval: 0, // 每个标签都显示
-              rotate: 30 // 旋转标签
-            }
+              rotate: 30, // 旋转标签
+            },
           },
           yAxis: {
-            type: 'category',
+            type: "category",
             data: this.heatmapRows,
             splitArea: {
               show: true,
@@ -397,16 +532,16 @@ export default {
             min: -1,
             max: 1,
             calculable: true,
-            orient: 'horizontal',
-            left: 'center',
+            orient: "horizontal",
+            left: "center",
             // bottom: '15%',
-            top: '10%',
-            color: ['#006E54', '#FCBB7B'],
+            top: "10%",
+            color: ["#006E54", "#FCBB7B"],
           },
           series: [
             {
-              name: 'Heatmap',
-              type: 'heatmap',
+              name: "Heatmap",
+              type: "heatmap",
               data: this.heatmapData,
               label: {
                 show: true,
@@ -415,7 +550,7 @@ export default {
               emphasis: {
                 itemStyle: {
                   shadowBlur: 10,
-                  shadowColor: 'rgba(0, 0, 0, 0.5)',
+                  shadowColor: "rgba(0, 0, 0, 0.5)",
                 },
               },
             },
@@ -423,24 +558,26 @@ export default {
         };
         heatmap.setOption(option);
       } else {
-        console.error('Heatmap DOM element not found.');
+        console.error("Heatmap DOM element not found.");
       }
     },
     imageLoadError(event) {
       console.error(`Failed to load image: ${event.target.src}`);
     },
     handleOpen(key, keyPath) {
-      console.log(key, keyPath)
+      console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath)
+      console.log(key, keyPath);
     },
   },
 };
 </script>
 
 <style>
-body, html, #app {
+body,
+html,
+#app {
   height: 100%;
   margin: 0;
 }
@@ -462,14 +599,15 @@ body, html, #app {
 }
 
 .el-menu-item:hover {
-  background-color: #FFC947; /* 设置悬停背景颜色 */
+  background-color: #ffc947; /* 设置悬停背景颜色 */
 }
 
 .image-container {
   margin-bottom: 20px;
 }
 
-.image-title, .heatmap-title {
+.image-title,
+.heatmap-title {
   margin-bottom: 10px;
   text-align: left; /* 标题靠左对齐 */
 }

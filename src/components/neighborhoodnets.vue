@@ -7,9 +7,9 @@
       <el-container>
         <el-aside width="300px" class="aside-custom">
           <el-menu
-            default-active="1"
-            class="el-menu-vertical-demo"
+            :default-active="defaultActive"
             :default-openeds="defaultOpeneds"
+            class="el-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
           >
@@ -50,6 +50,72 @@
           </el-menu>
         </el-aside>
         <el-main ref="mainContainer">
+          <el-main
+            style="
+              margin-left: auto;
+              width: 1650px;
+              margin-right: auto;
+              font-size: 23px;
+              margin-top: -50px;
+              text-align: center;
+            "
+          >
+            <h1
+              class="title"
+              style="
+                background-color: #006e54;
+                color: #fcbb7b;
+                text-align: center;
+                margin: 20px 0 10px 97px;
+                padding: 10px 0 40px 0;
+                width: 1400px;
+                height: 20px;
+                float: left;
+              "
+            >
+              Neighborhood Network for Spatial Communication
+            </h1>
+            <p
+              style="
+                color: #000;
+                text-align: left;
+                margin: 10px 0 10px 97px;
+                width: 1400px;
+                float: left;
+              "
+            >
+              In neighborhood identification, we manually annotated the neighborhood
+              components present in each tissue region. To explore the potential spatial
+              communication between different neighborhood components within the tissue,
+              we identified the spatial community network present in each region.
+
+              <br /><br />
+              Here, we performed neighborhood communication network for each sample. Using
+              the previously identified neighborhood labels, we segmented each individual
+              cellular neighborhood (CN) to examine which neighborhood components are
+              spatially clustered together. By disassembling and aggregating all
+              neighborhoods, we mapped out the corresponding neighborhood spatial
+              communication network.
+
+              <br /><br />
+              <el-tooltip
+                content="Schürch CM, Bhate SS, Barlow GL, Phillips DJ, Noti L, Zlobec I, Chu P, Black S, Demeter J, McIlwain DR, Kinoshita S, Samusik N, Goltsev Y, Nolan GP. Coordinated Cellular Neighborhoods Orchestrate Antitumoral Immunity at the Colorectal Cancer Invasive Front. Cell. 2020 Sep 3"
+              >
+                <el-button>
+                  <a
+                    href="https://www.cell.com/cell/fulltext/S0092-8674(20)30870-9"
+                    target="_blank"
+                    style="color: inherit; text-decoration: none"
+                  >
+                    citation
+                  </a>
+                </el-button>
+              </el-tooltip>
+            </p>
+            <div style="text-align: center">
+              <img src="images/neighbor_net.png" fit="fill" />
+            </div>
+          </el-main>
           <div class="file-grid">
             <div v-for="file in otherFiles" :key="file" class="file-item">
               <img :src="file" alt="file" class="file-image" />
@@ -76,9 +142,10 @@ export default {
   data() {
     return {
       treeData: [],
+      defaultActive: "0-0-0-0",
+      defaultOpeneds: ["0", "0-0", "0-0-0"],
       specialFile: null,
       otherFiles: [],
-      defaultOpeneds: [], // 新增此属性用于默认展开菜单
     };
   },
   created() {
@@ -95,7 +162,9 @@ export default {
         const sheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(sheet);
         this.treeData = this.buildTree(jsonData);
-        this.defaultOpeneds = this.generateDefaultOpeneds(); // 调用方法生成默认展开的菜单项
+        this.$nextTick(() => {
+          this.setDefaultOpenAndActive(jsonData);
+        });
       } catch (error) {
         console.error("Error loading Excel data:", error);
       }
@@ -146,21 +215,43 @@ export default {
 
       return tree.map(convertToArray);
     },
-    generateDefaultOpeneds() {
-      const openeds = [];
-      this.treeData.forEach((tech, techIndex) => {
-        openeds.push(String(techIndex));
-        tech.children.forEach((dataset, datasetIndex) => {
-          openeds.push(`${techIndex}-${datasetIndex}`);
-          dataset.children.forEach((tissue, tissueIndex) => {
-            openeds.push(`${techIndex}-${datasetIndex}-${tissueIndex}`);
-            tissue.children.forEach((region, regionIndex) => {
-              openeds.push(`${techIndex}-${datasetIndex}-${tissueIndex}-${regionIndex}`);
-            });
-          });
+    setDefaultOpenAndActive(data) {
+      if (data.length > 0) {
+        const firstRow = data[0];
+        const { Technology, Dataset, Tissue, Region } = firstRow;
+
+        const technologyIndex = this.treeData.findIndex(
+          (tech) => tech.label === Technology
+        );
+        const datasetIndex = this.treeData[technologyIndex].children.findIndex(
+          (dataset) => dataset.label === Dataset
+        );
+        const tissueIndex = this.treeData[technologyIndex].children[
+          datasetIndex
+        ].children.findIndex((tissue) => tissue.label === Tissue);
+        const regionIndex = this.treeData[technologyIndex].children[
+          datasetIndex
+        ].children[tissueIndex].children.findIndex((region) => region.label === Region);
+
+        this.defaultOpeneds = [
+          String(technologyIndex),
+          `${technologyIndex}-${datasetIndex}`,
+          `${technologyIndex}-${datasetIndex}-${tissueIndex}`,
+        ];
+        this.defaultActive = `${technologyIndex}-${datasetIndex}-${tissueIndex}-${regionIndex}`;
+
+        this.$nextTick(() => {
+          const regionNode = this.treeData[technologyIndex].children[datasetIndex]
+            .children[tissueIndex].children[regionIndex];
+          this.handleNodeClick(
+            regionNode,
+            technologyIndex,
+            datasetIndex,
+            tissueIndex,
+            regionIndex
+          );
         });
-      });
-      return openeds;
+      }
     },
     async handleNodeClick(region, index, dIndex, tIndex, rIndex) {
       const path = this.getNodePath(region, index, dIndex, tIndex, rIndex);
@@ -246,7 +337,7 @@ export default {
 .special-file {
   margin-top: 20px;
   padding: 10px;
-  border: 2px solid #f00;
+  border: 2px solid #ddd;
   text-align: center;
   background-color: #fff;
   width: 100%;

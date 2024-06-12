@@ -66,7 +66,7 @@
       >
         Cell-cell Interaction
       </h1>
-      <div class="searchResult">
+      <div class="searchResult" style="margin-right: 11.5px">
         <el-table :data="cciTable" style="width: 1290px; font-size: 18px">
           <el-table-column prop="gene_a" label="gene_a">
             <template #default="{ row }">{{ row.gene_a }}</template>

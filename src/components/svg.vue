@@ -7,7 +7,8 @@
       <el-container>
         <el-aside width="300px" class="aside-custom">
           <el-menu
-            default-active="1"
+            :default-active="defaultActive"
+            :default-openeds="defaultOpeneds"
             class="el-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
@@ -27,8 +28,14 @@
                         <template #title>
                           <span>{{ tissue.label }}</span>
                         </template>
-                        <template v-for="(region, rIndex) in tissue.children" :key="rIndex">
-                          <el-menu-item :index="`${index}-${dIndex}-${tIndex}-${rIndex}`" @click="handleNodeClick(region)">
+                        <template
+                          v-for="(region, rIndex) in tissue.children"
+                          :key="rIndex"
+                        >
+                          <el-menu-item
+                            :index="`${index}-${dIndex}-${tIndex}-${rIndex}`"
+                            @click="handleNodeClick(region)"
+                          >
                             <span>{{ region.label }}</span>
                           </el-menu-item>
                         </template>
@@ -43,7 +50,12 @@
         <el-main>
           <div v-if="tableData.length">
             <el-table :data="paginatedData" style="width: 100%" class="custom-table">
-              <el-table-column v-for="column in tableColumns" :key="column" :prop="column" :label="column" />
+              <el-table-column
+                v-for="column in tableColumns"
+                :key="column"
+                :prop="column"
+                :label="column"
+              />
             </el-table>
             <el-pagination
               background
@@ -60,9 +72,9 @@
 </template>
 
 <script>
-import axios from 'axios';
-import * as XLSX from 'xlsx';
-import Menus from '../layout/menu-item'; // 导入Menus组件
+import axios from "axios";
+import * as XLSX from "xlsx";
+import Menus from "../layout/menu-item"; // 导入Menus组件
 
 export default {
   components: {
@@ -71,9 +83,11 @@ export default {
   data() {
     return {
       treeData: [],
+      defaultActive: "0-0-0-0",
+      defaultOpeneds: ["0", "0-0", "0-0-0"],
       defaultProps: {
-        children: 'children',
-        label: 'label',
+        children: "children",
+        label: "label",
       },
       tableData: [], // 存储表格数据
       tableColumns: [], // 存储表格列
@@ -87,39 +101,57 @@ export default {
   methods: {
     async loadExcelData() {
       try {
-        const response = await axios.get('/proximity/datasets.xlsx', { responseType: 'arraybuffer' });
+        const response = await axios.get("/proximity/datasets.xlsx", {
+          responseType: "arraybuffer",
+        });
         const data = new Uint8Array(response.data);
-        const workbook = XLSX.read(data, { type: 'array' });
+        const workbook = XLSX.read(data, { type: "array" });
         const sheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(sheet);
         this.treeData = this.buildTree(jsonData);
+        this.setDefaultOpenAndActive(jsonData);
       } catch (error) {
-        console.error('Error loading Excel data:', error);
+        console.error("Error loading Excel data:", error);
       }
     },
     buildTree(data) {
       const tree = [];
       const map = new Map();
 
-      data.forEach(row => {
+      data.forEach((row) => {
         const { Technology, Dataset, Tissue, Region } = row;
         if (!map.has(Technology)) {
           map.set(Technology, { label: Technology, children: new Map(), parent: null });
           tree.push(map.get(Technology));
         }
         if (!map.get(Technology).children.has(Dataset)) {
-          const datasetNode = { label: Dataset, children: new Map(), parent: map.get(Technology) };
+          const datasetNode = {
+            label: Dataset,
+            children: new Map(),
+            parent: map.get(Technology),
+          };
           map.get(Technology).children.set(Dataset, datasetNode);
         }
         if (!map.get(Technology).children.get(Dataset).children.has(Tissue)) {
-          const tissueNode = { label: Tissue, children: [], parent: map.get(Technology).children.get(Dataset) };
+          const tissueNode = {
+            label: Tissue,
+            children: [],
+            parent: map.get(Technology).children.get(Dataset),
+          };
           map.get(Technology).children.get(Dataset).children.set(Tissue, tissueNode);
         }
-        const regionNode = { label: Region, parent: map.get(Technology).children.get(Dataset).children.get(Tissue) };
-        map.get(Technology).children.get(Dataset).children.get(Tissue).children.push(regionNode);
+        const regionNode = {
+          label: Region,
+          parent: map.get(Technology).children.get(Dataset).children.get(Tissue),
+        };
+        map
+          .get(Technology)
+          .children.get(Dataset)
+          .children.get(Tissue)
+          .children.push(regionNode);
       });
 
-      const convertToArray = node => {
+      const convertToArray = (node) => {
         if (node.children instanceof Map) {
           node.children = Array.from(node.children.values()).map(convertToArray);
         }
@@ -128,27 +160,59 @@ export default {
 
       return tree.map(convertToArray);
     },
+    setDefaultOpenAndActive(data) {
+      if (data.length > 0) {
+        const firstRow = data[0];
+        const { Technology, Dataset, Tissue, Region } = firstRow;
+
+        const technologyIndex = this.treeData.findIndex(
+          (tech) => tech.label === Technology
+        );
+        const datasetIndex = this.treeData[technologyIndex].children.findIndex(
+          (dataset) => dataset.label === Dataset
+        );
+        const tissueIndex = this.treeData[technologyIndex].children[
+          datasetIndex
+        ].children.findIndex((tissue) => tissue.label === Tissue);
+        const regionIndex = this.treeData[technologyIndex].children[
+          datasetIndex
+        ].children[tissueIndex].children.findIndex((region) => region.label === Region);
+
+        this.defaultOpeneds = [
+          String(technologyIndex),
+          `${technologyIndex}-${datasetIndex}`,
+          `${technologyIndex}-${datasetIndex}-${tissueIndex}`,
+        ];
+        this.defaultActive = `${technologyIndex}-${datasetIndex}-${tissueIndex}-${regionIndex}`;
+
+        this.$nextTick(() => {
+          const regionNode = this.treeData[technologyIndex].children[datasetIndex]
+            .children[tissueIndex].children[regionIndex];
+          this.handleNodeClick(regionNode);
+        });
+      }
+    },
     async handleNodeClick(region) {
       const path = this.getNodePath(region);
-      console.log('Node path:', path); // 调试信息
+      console.log("Node path:", path); // 调试信息
       if (path.length === 4) {
         const [technology, dataset, tissue, regionLabel] = path;
         const filePath = `/svg/${technology}/${dataset}/${tissue}/${regionLabel}/svg.tsv`;
-        console.log('File path:', filePath); // 调试信息
+        console.log("File path:", filePath); // 调试信息
         try {
           const response = await axios.get(filePath);
           const tsvData = response.data;
           this.parseTsvData(tsvData);
         } catch (error) {
-          console.error('Error loading TSV data:', error);
+          console.error("Error loading TSV data:", error);
         }
       }
     },
     parseTsvData(tsvData) {
-      const rows = tsvData.split('\n');
-      const columns = rows[0].split('\t');
-      const data = rows.slice(1).map(row => {
-        const values = row.split('\t');
+      const rows = tsvData.split("\n");
+      const columns = rows[0].split("\t");
+      const data = rows.slice(1).map((row) => {
+        const values = row.split("\t");
         const rowData = {};
         columns.forEach((col, index) => {
           rowData[col] = values[index];
@@ -182,7 +246,9 @@ export default {
 </script>
 
 <style>
-body, html, #app {
+body,
+html,
+#app {
   height: 100%;
   margin: 0;
 }
@@ -204,7 +270,7 @@ body, html, #app {
 }
 
 .el-menu-item:hover {
-  background-color: #FFC947; /* 设置悬停背景颜色 */
+  background-color: #ffc947; /* 设置悬停背景颜色 */
 }
 
 .custom-table .el-table {

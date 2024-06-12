@@ -7,7 +7,8 @@
       <el-container>
         <el-aside width="300px" class="aside-custom">
           <el-menu
-            default-active="1"
+            :default-active="defaultActive"
+            :default-openeds="defaultOpeneds"
             class="el-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
@@ -27,8 +28,14 @@
                         <template #title>
                           <span>{{ tissue.label }}</span>
                         </template>
-                        <template v-for="(region, rIndex) in tissue.children" :key="rIndex">
-                          <el-menu-item :index="`${index}-${dIndex}-${tIndex}-${rIndex}`" @click="handleNodeClick(region)">
+                        <template
+                          v-for="(region, rIndex) in tissue.children"
+                          :key="rIndex"
+                        >
+                          <el-menu-item
+                            :index="`${index}-${dIndex}-${tIndex}-${rIndex}`"
+                            @click="handleNodeClick(region)"
+                          >
                             <span>{{ region.label }}</span>
                           </el-menu-item>
                         </template>
@@ -60,10 +67,10 @@
 </template>
 
 <script>
-import axios from 'axios';
-import * as XLSX from 'xlsx';
-import * as echarts from 'echarts';
-import Menus from '../layout/menu-item'; // 导入Menus组件
+import axios from "axios";
+import * as XLSX from "xlsx";
+import * as echarts from "echarts";
+import Menus from "../layout/menu-item"; // 导入Menus组件
 
 export default {
   components: {
@@ -72,15 +79,13 @@ export default {
   data() {
     return {
       treeData: [],
-      defaultProps: {
-        children: 'children',
-        label: 'label',
-      },
+      defaultActive: "0-0-0-0",
+      defaultOpeneds: ["0", "0-0", "0-0-0"],
       chartData1: [],
       chartData2: [],
       seriesData1: [],
       seriesData2: [],
-      xAxisData: []
+      xAxisData: [],
     };
   },
   created() {
@@ -89,39 +94,59 @@ export default {
   methods: {
     async loadExcelData() {
       try {
-        const response = await axios.get('/statistics/datasets.xlsx', { responseType: 'arraybuffer' });
+        const response = await axios.get("/statistics/datasets.xlsx", {
+          responseType: "arraybuffer",
+        });
         const data = new Uint8Array(response.data);
-        const workbook = XLSX.read(data, { type: 'array' });
+        const workbook = XLSX.read(data, { type: "array" });
         const sheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(sheet);
         this.treeData = this.buildTree(jsonData);
+
+        // Set default open and active states
+        this.setDefaultOpenAndActive(jsonData);
       } catch (error) {
-        console.error('Error loading Excel data:', error);
+        console.error("Error loading Excel data:", error);
       }
     },
     buildTree(data) {
       const tree = [];
       const map = new Map();
 
-      data.forEach(row => {
+      data.forEach((row) => {
         const { Technology, Dataset, Tissue, Region } = row;
         if (!map.has(Technology)) {
           map.set(Technology, { label: Technology, children: new Map(), parent: null });
           tree.push(map.get(Technology));
         }
         if (!map.get(Technology).children.has(Dataset)) {
-          const datasetNode = { label: Dataset, children: new Map(), parent: map.get(Technology) };
+          const datasetNode = {
+            label: Dataset,
+            children: new Map(),
+            parent: map.get(Technology),
+          };
           map.get(Technology).children.set(Dataset, datasetNode);
         }
         if (!map.get(Technology).children.get(Dataset).children.has(Tissue)) {
-          const tissueNode = { label: Tissue, children: [], parent: map.get(Technology).children.get(Dataset) };
+          const tissueNode = {
+            label: Tissue,
+            children: [],
+            parent: map.get(Technology).children.get(Dataset),
+          };
           map.get(Technology).children.get(Dataset).children.set(Tissue, tissueNode);
         }
-        const regionNode = { label: Region, parent: map.get(Technology).children.get(Dataset).children.get(Tissue) };
-        map.get(Technology).children.get(Dataset).children.get(Tissue).children.push(regionNode);
+        const regionNode = {
+          label: Region,
+          parent: map.get(Technology).children.get(Dataset).children.get(Tissue),
+        };
+        map
+          .get(Technology)
+          .children.get(Dataset)
+          .children.get(Tissue)
+          .children.push(regionNode);
       });
 
-      const convertToArray = node => {
+      const convertToArray = (node) => {
         if (node.children instanceof Map) {
           node.children = Array.from(node.children.values()).map(convertToArray);
         }
@@ -129,6 +154,38 @@ export default {
       };
 
       return tree.map(convertToArray);
+    },
+    setDefaultOpenAndActive(data) {
+      if (data.length > 0) {
+        const firstRow = data[0];
+        const { Technology, Dataset, Tissue, Region } = firstRow;
+
+        const technologyIndex = this.treeData.findIndex(
+          (tech) => tech.label === Technology
+        );
+        const datasetIndex = this.treeData[technologyIndex].children.findIndex(
+          (dataset) => dataset.label === Dataset
+        );
+        const tissueIndex = this.treeData[technologyIndex].children[
+          datasetIndex
+        ].children.findIndex((tissue) => tissue.label === Tissue);
+        const regionIndex = this.treeData[technologyIndex].children[
+          datasetIndex
+        ].children[tissueIndex].children.findIndex((region) => region.label === Region);
+
+        this.defaultOpeneds = [
+          String(technologyIndex),
+          `${technologyIndex}-${datasetIndex}`,
+          `${technologyIndex}-${datasetIndex}-${tissueIndex}`,
+        ];
+        this.defaultActive = `${technologyIndex}-${datasetIndex}-${tissueIndex}-${regionIndex}`;
+
+        this.$nextTick(() => {
+          const regionNode = this.treeData[technologyIndex].children[datasetIndex]
+            .children[tissueIndex].children[regionIndex];
+          this.handleNodeClick(regionNode);
+        });
+      }
     },
     async handleNodeClick(region) {
       const path = this.getNodePath(region);
@@ -150,12 +207,16 @@ export default {
     async loadStatisticsData(technology, dataset, tissue, region) {
       try {
         const [cellResponse, neighborResponse] = await Promise.all([
-          axios.get(`/statistics/${technology}/${dataset}/${tissue}/cell_type.tsv`, { responseType: 'text' }),
-          axios.get(`/statistics/${technology}/${dataset}/${tissue}/neighbor.tsv`, { responseType: 'text' })
+          axios.get(`/statistics/${technology}/${dataset}/${tissue}/cell_type.tsv`, {
+            responseType: "text",
+          }),
+          axios.get(`/statistics/${technology}/${dataset}/${tissue}/neighbor.tsv`, {
+            responseType: "text",
+          }),
         ]);
 
-        const parseTSV = tsv => {
-          const rows = tsv.split('\n').map(row => row.split('\t'));
+        const parseTSV = (tsv) => {
+          const rows = tsv.split("\n").map((row) => row.split("\t"));
           const headers = rows[0];
           const dataRows = rows.slice(1);
           return { headers, dataRows };
@@ -165,12 +226,12 @@ export default {
         const neighborData = parseTSV(neighborResponse.data);
 
         const findRow = (dataRows, headers, region) => {
-          const regionIndex = headers.indexOf('Region');
+          const regionIndex = headers.indexOf("Region");
           if (regionIndex === -1) {
-            console.error('Region column not found in TSV data');
+            console.error("Region column not found in TSV data");
             return null;
           }
-          return dataRows.find(row => row[regionIndex] === region);
+          return dataRows.find((row) => row[regionIndex] === region);
         };
 
         const cellRow = findRow(cellData.dataRows, cellData.headers, region);
@@ -180,7 +241,7 @@ export default {
         if (cellRow) {
           this.chartData1 = cellData.headers.slice(1).map((header, index) => ({
             value: parseFloat(cellRow[index + 1]),
-            name: header
+            name: header,
           }));
         } else {
           console.error(`Region ${region} not found in cell_type.tsv`);
@@ -189,53 +250,67 @@ export default {
         if (neighborRow) {
           this.chartData2 = neighborData.headers.slice(1).map((header, index) => ({
             value: parseFloat(neighborRow[index + 1]),
-            name: header
+            name: header,
           }));
         } else {
           console.error(`Region ${region} not found in neighbor.tsv`);
         }
 
         // 数据用于堆叠折线图
-        this.xAxisData = cellData.dataRows.map(row => row[cellData.headers.indexOf('Region')]);
+        this.xAxisData = cellData.dataRows.map(
+          (row) => row[cellData.headers.indexOf("Region")]
+        );
         this.seriesData1 = cellData.headers.slice(1).map((header, index) => ({
           name: header,
-          type: 'line',
-          stack: 'Total',
+          type: "line",
+          stack: "Total",
           areaStyle: {},
           emphasis: {
-            focus: 'series'
+            focus: "series",
           },
-          data: cellData.dataRows.map(row => parseFloat(row[index + 1]))
+          data: cellData.dataRows.map((row) => parseFloat(row[index + 1])),
         }));
         this.seriesData2 = neighborData.headers.slice(1).map((header, index) => ({
           name: header,
-          type: 'line',
-          stack: 'Total',
+          type: "line",
+          stack: "Total",
           areaStyle: {},
           emphasis: {
-            focus: 'series'
+            focus: "series",
           },
-          data: neighborData.dataRows.map(row => parseFloat(row[index + 1]))
+          data: neighborData.dataRows.map((row) => parseFloat(row[index + 1])),
         }));
 
         this.renderCharts();
       } catch (error) {
-        console.error('Error loading statistics data:', error);
+        console.error("Error loading statistics data:", error);
       }
     },
     renderCharts() {
       this.$nextTick(() => {
         if (this.$refs.chart1) {
-          this.renderChart(this.$refs.chart1, this.chartData1, 'Cell Type Distribution');
+          this.renderChart(this.$refs.chart1, this.chartData1, "Cell Type Distribution");
         }
         if (this.$refs.chart2) {
-          this.renderChart(this.$refs.chart2, this.chartData2, 'Neighborhood Distribution');
+          this.renderChart(
+            this.$refs.chart2,
+            this.chartData2,
+            "Neighborhood Distribution"
+          );
         }
         if (this.$refs.lineChart1) {
-          this.renderLineChart(this.$refs.lineChart1, this.seriesData1, 'Cell Type Trends');
+          this.renderLineChart(
+            this.$refs.lineChart1,
+            this.seriesData1,
+            "Cell Type In This Region"
+          );
         }
         if (this.$refs.lineChart2) {
-          this.renderLineChart(this.$refs.lineChart2, this.seriesData2, 'Neighborhood Trends');
+          this.renderLineChart(
+            this.$refs.lineChart2,
+            this.seriesData2,
+            "Neighborhood In This Region"
+          );
         }
       });
     },
@@ -245,16 +320,16 @@ export default {
         const option = {
           title: {
             text: title,
-            top: '1%',
+            top: "1%",
           },
           tooltip: {
-            trigger: 'item',
-            formatter: '{a} <br/>{b} : {c} ({d}%)'
+            trigger: "item",
+            formatter: "{a} <br/>{b} : {c} ({d}%)",
           },
           legend: {
-            top: 'middle',
-            orient: 'vertical',
-            left: '70%', // 调整标签位置
+            top: "middle",
+            orient: "vertical",
+            left: "70%", // 调整标签位置
             itemGap: 10, // 减小标签之间的间距
           },
           toolbox: {
@@ -263,26 +338,26 @@ export default {
               mark: { show: true },
               dataView: { show: true, readOnly: false },
               restore: { show: true },
-              saveAsImage: { show: true }
-            }
+              saveAsImage: { show: true },
+            },
           },
           series: [
             {
               name: title,
-              type: 'pie',
+              type: "pie",
               radius: [40, 150], // 调整饼图的半径
-              center: ['40%', '50%'], // 调整饼图的位置
-              roseType: 'area',
+              center: ["40%", "50%"], // 调整饼图的位置
+              roseType: "area",
               itemStyle: {
-                borderRadius: 8
+                borderRadius: 8,
               },
-              data: data
-            }
-          ]
+              data: data,
+            },
+          ],
         };
         chart.setOption(option);
       } else {
-        console.error('Chart DOM element not found.');
+        console.error("Chart DOM element not found.");
       }
     },
     renderLineChart(chartRef, seriesData, title) {
@@ -291,68 +366,70 @@ export default {
         const option = {
           title: {
             text: title,
-            top: '1%',
+            top: "1%",
           },
           tooltip: {
-            trigger: 'axis',
+            trigger: "axis",
             axisPointer: {
-              type: 'cross',
+              type: "cross",
               label: {
-                backgroundColor: '#6a7985'
-              }
-            }
+                backgroundColor: "#6a7985",
+              },
+            },
           },
           legend: {
-            data: seriesData.map(item => item.name),
-            top: '5%', // 调整图例的位置，使其稍微往上
+            data: seriesData.map((item) => item.name),
+            top: "5%", // 调整图例的位置，使其稍微往上
             itemGap: 5, // 减小标签之间的间距
           },
           toolbox: {
             feature: {
-              saveAsImage: {}
-            }
+              saveAsImage: {},
+            },
           },
           grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
+            left: "3%",
+            right: "4%",
+            bottom: "3%",
+            containLabel: true,
           },
           xAxis: [
             {
-              type: 'category',
+              type: "category",
               boundaryGap: false,
               data: this.xAxisData,
               axisLabel: {
                 interval: 0,
-                rotate: 45
-              }
-            }
+                rotate: 45,
+              },
+            },
           ],
           yAxis: [
             {
-              type: 'value'
-            }
+              type: "value",
+            },
           ],
-          series: seriesData
+          series: seriesData,
         };
         lineChart.setOption(option);
       } else {
-        console.error('Line Chart DOM element not found.');
+        console.error("Line Chart DOM element not found.");
       }
     },
     handleOpen(key, keyPath) {
-      console.log(key, keyPath)
+      console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath)
+      console.log(key, keyPath);
     },
   },
 };
 </script>
 
 <style>
-body, html, #app {
+body,
+html,
+#app {
   height: 100%;
   margin: 0;
 }
@@ -374,7 +451,11 @@ body, html, #app {
 }
 
 .el-menu-item:hover {
-  background-color: #FFC947; /* 设置悬停背景颜色 */
+  background-color: #ffc947; /* 设置悬停背景颜色 */
+}
+
+.is-active {
+  background-color: #ffc947 !important; /* 设置选中背景颜色 */
 }
 
 .chart-container {
